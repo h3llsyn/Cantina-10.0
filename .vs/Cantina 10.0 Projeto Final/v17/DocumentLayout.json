@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\lavin\\OneDrive\\Documentos\\c#\\Cantina 10.0 Projeto Final\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ECBF13C8-721E-4740-B1B4-043D09B46F69}|Cantina 10.0 Projeto Final.csproj|c:\\users\\lavin\\onedrive\\documentos\\c#\\cantina 10.0 projeto final\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ECBF13C8-721E-4740-B1B4-043D09B46F69}|Cantina 10.0 Projeto Final.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{ECBF13C8-721E-4740-B1B4-043D09B46F69}|Cantina 10.0 Projeto Final.csproj|c:\\users\\lavin\\onedrive\\documentos\\c#\\cantina 10.0 projeto final\\produtos p\u00E1g 1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ECBF13C8-721E-4740-B1B4-043D09B46F69}|Cantina 10.0 Projeto Final.csproj|solutionrelative:produtos p\u00E1g 1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECBF13C8-721E-4740-B1B4-043D09B46F69}|Cantina 10.0 Projeto Final.csproj|c:\\users\\lavin\\onedrive\\documentos\\c#\\cantina 10.0 projeto final\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECBF13C8-721E-4740-B1B4-043D09B46F69}|Cantina 10.0 Projeto Final.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ECBF13C8-721E-4740-B1B4-043D09B46F69}|Cantina 10.0 Projeto Final.csproj|c:\\users\\lavin\\onedrive\\documentos\\c#\\cantina 10.0 projeto final\\produtos p\u00E1g 1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECBF13C8-721E-4740-B1B4-043D09B46F69}|Cantina 10.0 Projeto Final.csproj|solutionrelative:produtos p\u00E1g 1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,12 +27,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\lavin\\OneDrive\\Documentos\\c#\\Cantina 10.0 Projeto Final\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\lavin\\OneDrive\\Documentos\\c#\\Cantina 10.0 Projeto Final\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAzwDAAAAAdAAAAAAAAAA==",
+              "Title": "Produtos P\u00E1g 1.cs",
+              "DocumentMoniker": "C:\\Users\\lavin\\OneDrive\\Documentos\\c#\\Cantina 10.0 Projeto Final\\Produtos P\u00E1g 1.cs",
+              "RelativeDocumentMoniker": "Produtos P\u00E1g 1.cs",
+              "ToolTip": "C:\\Users\\lavin\\OneDrive\\Documentos\\c#\\Cantina 10.0 Projeto Final\\Produtos P\u00E1g 1.cs",
+              "RelativeToolTip": "Produtos P\u00E1g 1.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAD4vx4AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T11:43:07.477Z",
               "EditorCaption": ""
@@ -40,11 +40,11 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\lavin\\OneDrive\\Documentos\\c#\\Cantina 10.0 Projeto Final\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\lavin\\OneDrive\\Documentos\\c#\\Cantina 10.0 Projeto Final\\Form1.cs [Projeto]",
-              "RelativeToolTip": "Form1.cs [Projeto]",
+              "Title": "Produtos P\u00E1g 1.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\lavin\\OneDrive\\Documentos\\c#\\Cantina 10.0 Projeto Final\\Produtos P\u00E1g 1.cs",
+              "RelativeDocumentMoniker": "Produtos P\u00E1g 1.cs",
+              "ToolTip": "C:\\Users\\lavin\\OneDrive\\Documentos\\c#\\Cantina 10.0 Projeto Final\\Produtos P\u00E1g 1.cs [Projeto]",
+              "RelativeToolTip": "Produtos P\u00E1g 1.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T11:36:34.004Z",
               "EditorCaption": " [Projeto]"
