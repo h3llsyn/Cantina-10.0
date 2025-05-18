@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace Cantina_10._0_Projeto_Final
 {
     public partial class ProdutosPág2 : Form
@@ -15,6 +17,40 @@ namespace Cantina_10._0_Projeto_Final
         {
             InitializeComponent();
             this.produtosPág3 = produtosPág3;
+        }
+        private void AdicionarAoCarrinho(int index, int quantidade)
+        {
+            Produtos produto = Produtos.ListaProdutos[index];
+            double total = produto.Preço * quantidade;
+            carrinhoListBox2.Items.Add($"{produto.Descriçao} - R${total.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} x{quantidade}");
+        }
+        public void AtualizarTotal()
+        {
+            double total = 0;
+
+            foreach (var item in carrinhoListBox2.Items)
+            {
+                string texto = item.ToString();
+
+                int indiceX = texto.LastIndexOf('x');
+                if (indiceX == -1) continue;
+
+                if (!int.TryParse(texto.Substring(indiceX + 1).Trim(), out int quantidade))
+                    quantidade = 1;
+
+                int indiceR = texto.IndexOf("R$");
+                if (indiceR == -1) continue;
+
+                string precoStr = texto.Substring(indiceR + 2, indiceX - (indiceR + 2)).Trim();
+                precoStr = precoStr.Replace(',', '.');
+
+                if (double.TryParse(precoStr, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out double preco))
+                {
+                    total += preco;
+                }
+            }
+
+            preçoTotalCarrinhoLabel.Text = "R$" + total.ToString("F2").Replace('.', ',');
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -36,14 +72,18 @@ namespace Cantina_10._0_Projeto_Final
         {
             pictureBox5.Visible = true;
             pictureBox7.Visible = true;
-            carrinhoListBox.Visible = true;
+            carrinhoListBox2.Visible = true;
             finalizarButton.Visible = true;
             excluirItemButton.Visible = true;
+            totalCarrinhoLabel.Visible = true;
+            preçoTotalCarrinhoLabel.Visible = true;
             pictureBox5.BringToFront();
             pictureBox7.BringToFront();
             finalizarButton.BringToFront();
             excluirItemButton.BringToFront();
-            carrinhoListBox.BringToFront();
+            carrinhoListBox2.BringToFront();
+            totalCarrinhoLabel.BringToFront();
+            preçoTotalCarrinhoLabel.BringToFront();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -57,7 +97,9 @@ namespace Cantina_10._0_Projeto_Final
             pictureBox7.Visible = false;
             finalizarButton.Visible = false;
             excluirItemButton.Visible = false;
-            carrinhoListBox.Visible = false;
+            carrinhoListBox2.Visible = false;
+            totalCarrinhoLabel.Visible = false;
+            preçoTotalCarrinhoLabel.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -117,6 +159,36 @@ namespace Cantina_10._0_Projeto_Final
             ProdutosPág3 produtosPág3 = new ProdutosPág3(this);
             this.Hide();
             produtosPág3.ShowDialog();
+        }
+
+        private void menosButtonPastelQueijo_Click(object sender, EventArgs e)
+        {
+            int quantidade = int.Parse(quantidadePastelQueijoLabel.Text);
+
+            if (quantidade > 1)
+            {
+                quantidade--;
+                quantidadePastelQueijoLabel.Text = quantidade.ToString();
+            }
+        }
+
+        private void maisButtonPastelQueijo_Click(object sender, EventArgs e)
+        {
+            int quantidade = int.Parse(quantidadePastelQueijoLabel.Text);
+            quantidade++;
+            quantidadePastelQueijoLabel.Text = quantidade.ToString();
+        }
+
+        private void adicionarPastelQueijo_Click(object sender, EventArgs e)
+        {
+            int quantidade = int.Parse(quantidadePastelQueijoLabel.Text);
+            AdicionarAoCarrinho(3, quantidade);
+            AtualizarTotal();
+        }
+
+        private void carrinhoListBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

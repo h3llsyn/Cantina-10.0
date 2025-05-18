@@ -2137,7 +2137,7 @@
   <data name="pictureBox10.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAANwAAAFeCAIAAABhN+axAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAKRlJREFUeF7t3Wd0XOW56PH74dx1P9wA7iqjGcnYFCchOfRiSMCAIXQ46TkBckLC
+        vAAADrwBlbxySQAAKRlJREFUeF7t3Wd0XOW56PH74dx1P9wA7iqjGcnYFCchOfRiSMCAIXQ46TkBckLC
         SSCBnBMSWpKbHEISXNSrJVmuKjMa9dFImrb3nt7Um7st2epWmb33NOfe+7x7xrI8tiWLA1mv5Get39Ia
         jNCMFn+/Ze9Xo//hmz6LEFUwSkQdjBJRB6NE1MEoEXUwSkQdjBJRB6NE1MEoz86AKUnk8YLOf3LM10Gf
         lWsuykhY8IAHM5PCzKSfnwoS0wF+CsA/+n2XkP488gnwmfD58I/izBT85/B15n5Z9N93TUR5IcSZs1BY
@@ -2775,7 +2775,7 @@ ideal para quem ama um lanche
 cheio de sabor. Uma opção
 irresistível pra qualquer hora!</value>
   </data>
-  <data name="pictureBox19.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="menosButtonPastelQueijo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAABphJREFUeF7tm2tPFGcUx8EX1cbUtql93aZpTamxb9r6aRoprUqaguLCLiiVm1wE
@@ -2809,7 +2809,7 @@ irresistível pra qualquer hora!</value>
         BA5ZpwhzL6SXLRaKSkapY5OMJB7I/5HZ/A7asqEzAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox20.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="maisButtonPastelQueijo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAB4ZJREFUeF7tm1lTFFcUx4lPEfV7+JSYqhjfYip5SEpjJWVFxJVgVCRqZJsBJGwq
@@ -2883,7 +2883,7 @@ irresistível pra qualquer hora!</value>
   <data name="pictureBox8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAANwAAAFeCAIAAABhN+axAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAHQFJREFUeF7t3YdXlHeixvH7T2TvbnazGqQzBWZggEhMooBGo2A0xcS4GzfZrElM
+        vAAADrwBlbxySQAAHQFJREFUeF7t3YdXlHeixvH7T2TvbnazGqQzBWZggEhMooBGo2A0xcS4GzfZrElM
         NBqNJUWN7lpi1JS1xEJUYgGGMiBNQDpTGAEBK72ICIgUMdk99z7vvEhGbIzivb/F5z2fM2d4p8DJfvdX
         Zgb8r67OdiKhMEoSDqMk4TBKEg6jJOEwShIOoyThMEoSDqO8H1evtEFnx+VO25VbDZwf9EAaCkY5JAOF
         dV/t6Om60tfb9cv1nl+u9/7S1/PzLXBSvqnvWve17k48xP4Z6J4Y5d3IJaEqVIjakGP75ZbGhrqK8rK8

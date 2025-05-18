@@ -36,7 +36,6 @@
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox7 = new PictureBox();
-            carrinhoListBox = new ListBox();
             finalizarButton = new PictureBox();
             excluirItemButton = new PictureBox();
             pictureBox9 = new PictureBox();
@@ -73,6 +72,9 @@
             label17 = new Label();
             label18 = new Label();
             pictureBox22 = new PictureBox();
+            totalCarrinhoLabel = new Label();
+            preçoTotalCarrinhoLabel = new Label();
+            carrinhoListBox3 = new ListBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -181,17 +183,6 @@
             pictureBox7.TabStop = false;
             pictureBox7.Visible = false;
             pictureBox7.Click += pictureBox7_Click;
-            // 
-            // carrinhoListBox
-            // 
-            carrinhoListBox.BackColor = Color.FromArgb(202, 196, 183);
-            carrinhoListBox.FormattingEnabled = true;
-            carrinhoListBox.ItemHeight = 15;
-            carrinhoListBox.Location = new Point(637, 45);
-            carrinhoListBox.Name = "carrinhoListBox";
-            carrinhoListBox.Size = new Size(151, 364);
-            carrinhoListBox.TabIndex = 8;
-            carrinhoListBox.Visible = false;
             // 
             // finalizarButton
             // 
@@ -601,24 +592,52 @@
             pictureBox22.TabStop = false;
             pictureBox22.Click += pictureBox22_Click;
             // 
+            // totalCarrinhoLabel
+            // 
+            totalCarrinhoLabel.AutoSize = true;
+            totalCarrinhoLabel.BackColor = Color.FromArgb(202, 196, 183);
+            totalCarrinhoLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            totalCarrinhoLabel.ForeColor = Color.Black;
+            totalCarrinhoLabel.Location = new Point(697, 390);
+            totalCarrinhoLabel.Name = "totalCarrinhoLabel";
+            totalCarrinhoLabel.Size = new Size(41, 17);
+            totalCarrinhoLabel.TabIndex = 58;
+            totalCarrinhoLabel.Text = "Total:";
+            // 
+            // preçoTotalCarrinhoLabel
+            // 
+            preçoTotalCarrinhoLabel.AutoSize = true;
+            preçoTotalCarrinhoLabel.BackColor = Color.FromArgb(202, 196, 183);
+            preçoTotalCarrinhoLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            preçoTotalCarrinhoLabel.ForeColor = Color.Black;
+            preçoTotalCarrinhoLabel.Location = new Point(734, 390);
+            preçoTotalCarrinhoLabel.Name = "preçoTotalCarrinhoLabel";
+            preçoTotalCarrinhoLabel.Size = new Size(54, 17);
+            preçoTotalCarrinhoLabel.TabIndex = 59;
+            preçoTotalCarrinhoLabel.Text = "R$00,00";
+            // 
+            // carrinhoListBox3
+            // 
+            carrinhoListBox3.BackColor = Color.FromArgb(202, 196, 183);
+            carrinhoListBox3.FormattingEnabled = true;
+            carrinhoListBox3.ItemHeight = 15;
+            carrinhoListBox3.Location = new Point(637, 45);
+            carrinhoListBox3.Name = "carrinhoListBox3";
+            carrinhoListBox3.Size = new Size(151, 319);
+            carrinhoListBox3.TabIndex = 61;
+            carrinhoListBox3.Visible = false;
+            // 
             // ProdutosPág3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox12);
+            Controls.Add(carrinhoListBox3);
+            Controls.Add(preçoTotalCarrinhoLabel);
+            Controls.Add(totalCarrinhoLabel);
             Controls.Add(pictureBox22);
             Controls.Add(label18);
-            Controls.Add(label17);
-            Controls.Add(pictureBox15);
-            Controls.Add(pictureBox14);
-            Controls.Add(label16);
-            Controls.Add(pictureBox13);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(pictureBox8);
             Controls.Add(label2);
             Controls.Add(label15);
             Controls.Add(label14);
@@ -644,13 +663,22 @@
             Controls.Add(pictureBox7);
             Controls.Add(excluirItemButton);
             Controls.Add(finalizarButton);
-            Controls.Add(carrinhoListBox);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox1);
+            Controls.Add(pictureBox12);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(pictureBox13);
+            Controls.Add(pictureBox14);
+            Controls.Add(label16);
+            Controls.Add(label17);
+            Controls.Add(pictureBox15);
+            Controls.Add(pictureBox8);
             Name = "ProdutosPág3";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
@@ -694,7 +722,6 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox7;
-        private ListBox carrinhoListBox;
         private PictureBox finalizarButton;
         private PictureBox excluirItemButton;
         private PictureBox pictureBox9;
@@ -731,5 +758,8 @@
         private Label label17;
         private Label label18;
         private PictureBox pictureBox22;
+        private Label totalCarrinhoLabel;
+        private Label preçoTotalCarrinhoLabel;
+        public ListBox carrinhoListBox3;
     }
 }

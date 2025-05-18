@@ -36,7 +36,6 @@
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox7 = new PictureBox();
-            carrinhoListBox = new ListBox();
             finalizarButton = new PictureBox();
             excluirItemButton = new PictureBox();
             pictureBox8 = new PictureBox();
@@ -49,30 +48,33 @@
             label3 = new Label();
             label4 = new Label();
             quantidadePaoQueijoLabel = new Label();
-            pictureBox14 = new PictureBox();
-            pictureBox13 = new PictureBox();
+            menosButtonPaodeQueijo = new PictureBox();
+            maisButtonPaodeQueijo = new PictureBox();
             pictureBox15 = new PictureBox();
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
-            pictureBox16 = new PictureBox();
+            menosButtonCoxinha = new PictureBox();
             quantidadeCoxinhaLabel = new Label();
-            pictureBox17 = new PictureBox();
+            maisButtonCoxinha = new PictureBox();
             pictureBox18 = new PictureBox();
-            label9 = new Label();
+            adicionarCoxinha = new Label();
             label10 = new Label();
             label11 = new Label();
             label12 = new Label();
-            pictureBox19 = new PictureBox();
-            label13 = new Label();
-            pictureBox20 = new PictureBox();
+            menosButtonPastelCarne = new PictureBox();
+            quantidadePastelCarneLabel = new Label();
+            maisButtonPastelCarne = new PictureBox();
             pictureBox21 = new PictureBox();
-            label14 = new Label();
+            adicionarPastelCarne = new Label();
             label15 = new Label();
             label16 = new Label();
             label17 = new Label();
             pictureBox22 = new PictureBox();
+            totalCarrinhoLabel = new Label();
+            carrinhoListBox1 = new ListBox();
+            preçoTotalCarrinhoLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -87,14 +89,14 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)menosButtonPaodeQueijo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)maisButtonPaodeQueijo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)menosButtonCoxinha).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)maisButtonCoxinha).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox20).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)menosButtonPastelCarne).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)maisButtonPastelCarne).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox22).BeginInit();
             SuspendLayout();
@@ -180,18 +182,8 @@
             pictureBox7.TabIndex = 7;
             pictureBox7.TabStop = false;
             pictureBox7.Visible = false;
+            pictureBox7.CursorChanged += pictureBox7_CursorChanged;
             pictureBox7.Click += pictureBox7_Click;
-            // 
-            // carrinhoListBox
-            // 
-            carrinhoListBox.BackColor = Color.FromArgb(202, 196, 183);
-            carrinhoListBox.FormattingEnabled = true;
-            carrinhoListBox.ItemHeight = 15;
-            carrinhoListBox.Location = new Point(637, 45);
-            carrinhoListBox.Name = "carrinhoListBox";
-            carrinhoListBox.Size = new Size(151, 364);
-            carrinhoListBox.TabIndex = 8;
-            carrinhoListBox.Visible = false;
             // 
             // finalizarButton
             // 
@@ -327,26 +319,31 @@
             quantidadePaoQueijoLabel.Size = new Size(15, 17);
             quantidadePaoQueijoLabel.TabIndex = 21;
             quantidadePaoQueijoLabel.Text = "1";
+            quantidadePaoQueijoLabel.Click += quantidadePaoQueijoLabel_Click;
             // 
-            // pictureBox14
+            // menosButtonPaodeQueijo
             // 
-            pictureBox14.Image = (Image)resources.GetObject("pictureBox14.Image");
-            pictureBox14.Location = new Point(40, 379);
-            pictureBox14.Name = "pictureBox14";
-            pictureBox14.Size = new Size(30, 30);
-            pictureBox14.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox14.TabIndex = 22;
-            pictureBox14.TabStop = false;
+            menosButtonPaodeQueijo.Cursor = Cursors.Hand;
+            menosButtonPaodeQueijo.Image = (Image)resources.GetObject("menosButtonPaodeQueijo.Image");
+            menosButtonPaodeQueijo.Location = new Point(40, 379);
+            menosButtonPaodeQueijo.Name = "menosButtonPaodeQueijo";
+            menosButtonPaodeQueijo.Size = new Size(30, 30);
+            menosButtonPaodeQueijo.SizeMode = PictureBoxSizeMode.Zoom;
+            menosButtonPaodeQueijo.TabIndex = 22;
+            menosButtonPaodeQueijo.TabStop = false;
+            menosButtonPaodeQueijo.Click += menosButtonPaodeQueijo_Click;
             // 
-            // pictureBox13
+            // maisButtonPaodeQueijo
             // 
-            pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(91, 379);
-            pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(30, 30);
-            pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox13.TabIndex = 18;
-            pictureBox13.TabStop = false;
+            maisButtonPaodeQueijo.Cursor = Cursors.Hand;
+            maisButtonPaodeQueijo.Image = (Image)resources.GetObject("maisButtonPaodeQueijo.Image");
+            maisButtonPaodeQueijo.Location = new Point(91, 379);
+            maisButtonPaodeQueijo.Name = "maisButtonPaodeQueijo";
+            maisButtonPaodeQueijo.Size = new Size(30, 30);
+            maisButtonPaodeQueijo.SizeMode = PictureBoxSizeMode.Zoom;
+            maisButtonPaodeQueijo.TabIndex = 18;
+            maisButtonPaodeQueijo.TabStop = false;
+            maisButtonPaodeQueijo.Click += maisButtonPaodeQueijo_Click;
             // 
             // pictureBox15
             // 
@@ -362,6 +359,7 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.FromArgb(124, 122, 106);
+            label5.Cursor = Cursors.Hand;
             label5.Font = new Font("Segoe UI", 6.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
             label5.Location = new Point(142, 381);
@@ -370,6 +368,8 @@
             label5.TabIndex = 24;
             label5.Text = "Adicionar ao\r\ncarrinho";
             label5.TextAlign = ContentAlignment.MiddleCenter;
+            label5.CursorChanged += label5_CursorChanged;
+            label5.Click += label5_Click;
             // 
             // label6
             // 
@@ -405,15 +405,17 @@
             label8.TabIndex = 27;
             label8.Text = resources.GetString("label8.Text");
             // 
-            // pictureBox16
+            // menosButtonCoxinha
             // 
-            pictureBox16.Image = (Image)resources.GetObject("pictureBox16.Image");
-            pictureBox16.Location = new Point(308, 379);
-            pictureBox16.Name = "pictureBox16";
-            pictureBox16.Size = new Size(30, 30);
-            pictureBox16.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox16.TabIndex = 28;
-            pictureBox16.TabStop = false;
+            menosButtonCoxinha.Cursor = Cursors.Hand;
+            menosButtonCoxinha.Image = (Image)resources.GetObject("menosButtonCoxinha.Image");
+            menosButtonCoxinha.Location = new Point(308, 379);
+            menosButtonCoxinha.Name = "menosButtonCoxinha";
+            menosButtonCoxinha.Size = new Size(30, 30);
+            menosButtonCoxinha.SizeMode = PictureBoxSizeMode.Zoom;
+            menosButtonCoxinha.TabIndex = 28;
+            menosButtonCoxinha.TabStop = false;
+            menosButtonCoxinha.Click += menosButtonCoxinha_Click;
             // 
             // quantidadeCoxinhaLabel
             // 
@@ -426,16 +428,17 @@
             quantidadeCoxinhaLabel.TabIndex = 29;
             quantidadeCoxinhaLabel.Text = "1";
             // 
-            // pictureBox17
+            // maisButtonCoxinha
             // 
-            pictureBox17.Image = (Image)resources.GetObject("pictureBox17.Image");
-            pictureBox17.Location = new Point(359, 379);
-            pictureBox17.Name = "pictureBox17";
-            pictureBox17.Size = new Size(30, 30);
-            pictureBox17.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox17.TabIndex = 30;
-            pictureBox17.TabStop = false;
-            pictureBox17.Click += pictureBox17_Click;
+            maisButtonCoxinha.Cursor = Cursors.Hand;
+            maisButtonCoxinha.Image = (Image)resources.GetObject("maisButtonCoxinha.Image");
+            maisButtonCoxinha.Location = new Point(359, 379);
+            maisButtonCoxinha.Name = "maisButtonCoxinha";
+            maisButtonCoxinha.Size = new Size(30, 30);
+            maisButtonCoxinha.SizeMode = PictureBoxSizeMode.Zoom;
+            maisButtonCoxinha.TabIndex = 30;
+            maisButtonCoxinha.TabStop = false;
+            maisButtonCoxinha.Click += maisButtonCoxinha_Click;
             // 
             // pictureBox18
             // 
@@ -446,19 +449,22 @@
             pictureBox18.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox18.TabIndex = 31;
             pictureBox18.TabStop = false;
+            pictureBox18.Click += pictureBox18_Click;
             // 
-            // label9
+            // adicionarCoxinha
             // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.FromArgb(124, 122, 106);
-            label9.Font = new Font("Segoe UI", 6.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.Black;
-            label9.Location = new Point(413, 381);
-            label9.Name = "label9";
-            label9.Size = new Size(60, 24);
-            label9.TabIndex = 32;
-            label9.Text = "Adicionar ao\r\ncarrinho";
-            label9.TextAlign = ContentAlignment.MiddleCenter;
+            adicionarCoxinha.AutoSize = true;
+            adicionarCoxinha.BackColor = Color.FromArgb(124, 122, 106);
+            adicionarCoxinha.Cursor = Cursors.Hand;
+            adicionarCoxinha.Font = new Font("Segoe UI", 6.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            adicionarCoxinha.ForeColor = Color.Black;
+            adicionarCoxinha.Location = new Point(413, 381);
+            adicionarCoxinha.Name = "adicionarCoxinha";
+            adicionarCoxinha.Size = new Size(60, 24);
+            adicionarCoxinha.TabIndex = 32;
+            adicionarCoxinha.Text = "Adicionar ao\r\ncarrinho";
+            adicionarCoxinha.TextAlign = ContentAlignment.MiddleCenter;
+            adicionarCoxinha.Click += adicionarCoxinha_Click;
             // 
             // label10
             // 
@@ -494,36 +500,41 @@
             label12.TabIndex = 35;
             label12.Text = resources.GetString("label12.Text");
             // 
-            // pictureBox19
+            // menosButtonPastelCarne
             // 
-            pictureBox19.Image = (Image)resources.GetObject("pictureBox19.Image");
-            pictureBox19.Location = new Point(577, 379);
-            pictureBox19.Name = "pictureBox19";
-            pictureBox19.Size = new Size(30, 30);
-            pictureBox19.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox19.TabIndex = 36;
-            pictureBox19.TabStop = false;
+            menosButtonPastelCarne.Cursor = Cursors.Hand;
+            menosButtonPastelCarne.Image = (Image)resources.GetObject("menosButtonPastelCarne.Image");
+            menosButtonPastelCarne.Location = new Point(577, 379);
+            menosButtonPastelCarne.Name = "menosButtonPastelCarne";
+            menosButtonPastelCarne.Size = new Size(30, 30);
+            menosButtonPastelCarne.SizeMode = PictureBoxSizeMode.Zoom;
+            menosButtonPastelCarne.TabIndex = 36;
+            menosButtonPastelCarne.TabStop = false;
+            menosButtonPastelCarne.Click += menosButtonPastelCarne_Click;
             // 
-            // label13
+            // quantidadePastelCarneLabel
             // 
-            label13.AutoSize = true;
-            label13.BackColor = Color.FromArgb(202, 196, 183);
-            label13.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.Location = new Point(610, 386);
-            label13.Name = "label13";
-            label13.Size = new Size(15, 17);
-            label13.TabIndex = 37;
-            label13.Text = "1";
+            quantidadePastelCarneLabel.AutoSize = true;
+            quantidadePastelCarneLabel.BackColor = Color.FromArgb(202, 196, 183);
+            quantidadePastelCarneLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            quantidadePastelCarneLabel.Location = new Point(610, 386);
+            quantidadePastelCarneLabel.Name = "quantidadePastelCarneLabel";
+            quantidadePastelCarneLabel.Size = new Size(15, 17);
+            quantidadePastelCarneLabel.TabIndex = 37;
+            quantidadePastelCarneLabel.Text = "1";
+            quantidadePastelCarneLabel.Click += quantidadePastelCarneLabel_Click;
             // 
-            // pictureBox20
+            // maisButtonPastelCarne
             // 
-            pictureBox20.Image = (Image)resources.GetObject("pictureBox20.Image");
-            pictureBox20.Location = new Point(628, 379);
-            pictureBox20.Name = "pictureBox20";
-            pictureBox20.Size = new Size(30, 30);
-            pictureBox20.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox20.TabIndex = 38;
-            pictureBox20.TabStop = false;
+            maisButtonPastelCarne.Cursor = Cursors.Hand;
+            maisButtonPastelCarne.Image = (Image)resources.GetObject("maisButtonPastelCarne.Image");
+            maisButtonPastelCarne.Location = new Point(628, 379);
+            maisButtonPastelCarne.Name = "maisButtonPastelCarne";
+            maisButtonPastelCarne.Size = new Size(30, 30);
+            maisButtonPastelCarne.SizeMode = PictureBoxSizeMode.Zoom;
+            maisButtonPastelCarne.TabIndex = 38;
+            maisButtonPastelCarne.TabStop = false;
+            maisButtonPastelCarne.Click += maisButtonPastelCarne_Click;
             // 
             // pictureBox21
             // 
@@ -535,18 +546,20 @@
             pictureBox21.TabIndex = 39;
             pictureBox21.TabStop = false;
             // 
-            // label14
+            // adicionarPastelCarne
             // 
-            label14.AutoSize = true;
-            label14.BackColor = Color.FromArgb(124, 122, 106);
-            label14.Font = new Font("Segoe UI", 6.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.ForeColor = Color.Black;
-            label14.Location = new Point(677, 381);
-            label14.Name = "label14";
-            label14.Size = new Size(60, 24);
-            label14.TabIndex = 40;
-            label14.Text = "Adicionar ao\r\ncarrinho";
-            label14.TextAlign = ContentAlignment.MiddleCenter;
+            adicionarPastelCarne.AutoSize = true;
+            adicionarPastelCarne.BackColor = Color.FromArgb(124, 122, 106);
+            adicionarPastelCarne.Cursor = Cursors.Hand;
+            adicionarPastelCarne.Font = new Font("Segoe UI", 6.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            adicionarPastelCarne.ForeColor = Color.Black;
+            adicionarPastelCarne.Location = new Point(677, 381);
+            adicionarPastelCarne.Name = "adicionarPastelCarne";
+            adicionarPastelCarne.Size = new Size(60, 24);
+            adicionarPastelCarne.TabIndex = 40;
+            adicionarPastelCarne.Text = "Adicionar ao\r\ncarrinho";
+            adicionarPastelCarne.TextAlign = ContentAlignment.MiddleCenter;
+            adicionarPastelCarne.Click += adicionarPastelCarne_Click;
             // 
             // label15
             // 
@@ -597,42 +610,72 @@
             pictureBox22.TabStop = false;
             pictureBox22.Click += pictureBox22_Click;
             // 
+            // totalCarrinhoLabel
+            // 
+            totalCarrinhoLabel.AutoSize = true;
+            totalCarrinhoLabel.BackColor = Color.FromArgb(202, 196, 183);
+            totalCarrinhoLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            totalCarrinhoLabel.ForeColor = Color.Black;
+            totalCarrinhoLabel.Location = new Point(697, 390);
+            totalCarrinhoLabel.Name = "totalCarrinhoLabel";
+            totalCarrinhoLabel.Size = new Size(41, 17);
+            totalCarrinhoLabel.TabIndex = 45;
+            totalCarrinhoLabel.Text = "Total:";
+            totalCarrinhoLabel.Visible = false;
+            totalCarrinhoLabel.Click += totalCarrinhoLabel_Click;
+            // 
+            // carrinhoListBox1
+            // 
+            carrinhoListBox1.BackColor = Color.FromArgb(202, 196, 183);
+            carrinhoListBox1.FormattingEnabled = true;
+            carrinhoListBox1.ItemHeight = 15;
+            carrinhoListBox1.Location = new Point(637, 45);
+            carrinhoListBox1.Name = "carrinhoListBox1";
+            carrinhoListBox1.Size = new Size(151, 319);
+            carrinhoListBox1.TabIndex = 56;
+            carrinhoListBox1.Visible = false;
+            // 
+            // preçoTotalCarrinhoLabel
+            // 
+            preçoTotalCarrinhoLabel.AutoSize = true;
+            preçoTotalCarrinhoLabel.BackColor = Color.FromArgb(202, 196, 183);
+            preçoTotalCarrinhoLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            preçoTotalCarrinhoLabel.ForeColor = Color.Black;
+            preçoTotalCarrinhoLabel.Location = new Point(734, 390);
+            preçoTotalCarrinhoLabel.Name = "preçoTotalCarrinhoLabel";
+            preçoTotalCarrinhoLabel.Size = new Size(54, 17);
+            preçoTotalCarrinhoLabel.TabIndex = 57;
+            preçoTotalCarrinhoLabel.Text = "R$00,00";
+            preçoTotalCarrinhoLabel.Visible = false;
+            // 
             // ProdutosPág1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
+            Controls.Add(preçoTotalCarrinhoLabel);
+            Controls.Add(carrinhoListBox1);
+            Controls.Add(totalCarrinhoLabel);
             Controls.Add(pictureBox22);
-            Controls.Add(label17);
             Controls.Add(label16);
             Controls.Add(label15);
-            Controls.Add(label14);
-            Controls.Add(pictureBox21);
-            Controls.Add(pictureBox20);
-            Controls.Add(label13);
-            Controls.Add(pictureBox19);
-            Controls.Add(label12);
-            Controls.Add(label11);
-            Controls.Add(label10);
-            Controls.Add(label9);
+            Controls.Add(adicionarCoxinha);
             Controls.Add(pictureBox18);
-            Controls.Add(pictureBox17);
+            Controls.Add(maisButtonCoxinha);
             Controls.Add(quantidadeCoxinhaLabel);
-            Controls.Add(pictureBox16);
+            Controls.Add(menosButtonCoxinha);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(pictureBox15);
-            Controls.Add(pictureBox14);
+            Controls.Add(menosButtonPaodeQueijo);
             Controls.Add(quantidadePaoQueijoLabel);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(pictureBox13);
+            Controls.Add(maisButtonPaodeQueijo);
             Controls.Add(label2);
-            Controls.Add(pictureBox12);
-            Controls.Add(pictureBox11);
             Controls.Add(pictureBox10);
             Controls.Add(label1);
             Controls.Add(pictureBox9);
@@ -640,13 +683,23 @@
             Controls.Add(pictureBox8);
             Controls.Add(excluirItemButton);
             Controls.Add(finalizarButton);
-            Controls.Add(carrinhoListBox);
-            Controls.Add(pictureBox6);
-            Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox5);
+            Controls.Add(menosButtonPastelCarne);
+            Controls.Add(maisButtonPastelCarne);
+            Controls.Add(quantidadePastelCarneLabel);
+            Controls.Add(label12);
+            Controls.Add(label17);
+            Controls.Add(label11);
+            Controls.Add(label10);
+            Controls.Add(pictureBox12);
+            Controls.Add(pictureBox4);
+            Controls.Add(pictureBox6);
             Controls.Add(pictureBox1);
+            Controls.Add(adicionarPastelCarne);
+            Controls.Add(pictureBox21);
+            Controls.Add(pictureBox11);
             Name = "ProdutosPág1";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
@@ -666,14 +719,14 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
+            ((System.ComponentModel.ISupportInitialize)menosButtonPaodeQueijo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)maisButtonPaodeQueijo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
+            ((System.ComponentModel.ISupportInitialize)menosButtonCoxinha).EndInit();
+            ((System.ComponentModel.ISupportInitialize)maisButtonCoxinha).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox20).EndInit();
+            ((System.ComponentModel.ISupportInitialize)menosButtonPastelCarne).EndInit();
+            ((System.ComponentModel.ISupportInitialize)maisButtonPastelCarne).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox22).EndInit();
             ResumeLayout(false);
@@ -689,7 +742,6 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox7;
-        private ListBox carrinhoListBox;
         private PictureBox finalizarButton;
         private PictureBox excluirItemButton;
         private PictureBox pictureBox8;
@@ -702,29 +754,32 @@
         private Label label3;
         private Label label4;
         private Label quantidadePaoQueijoLabel;
-        private PictureBox pictureBox14;
-        private PictureBox pictureBox13;
+        private PictureBox menosButtonPaodeQueijo;
+        private PictureBox maisButtonPaodeQueijo;
         private PictureBox pictureBox15;
         private Label label5;
         private Label label6;
         private Label label7;
         private Label label8;
-        private PictureBox pictureBox16;
+        private PictureBox menosButtonCoxinha;
         private Label quantidadeCoxinhaLabel;
-        private PictureBox pictureBox17;
+        private PictureBox maisButtonCoxinha;
         private PictureBox pictureBox18;
-        private Label label9;
+        private Label adicionarCoxinha;
         private Label label10;
         private Label label11;
         private Label label12;
-        private PictureBox pictureBox19;
-        private Label label13;
-        private PictureBox pictureBox20;
+        private PictureBox menosButtonPastelCarne;
+        private Label quantidadePastelCarneLabel;
+        private PictureBox maisButtonPastelCarne;
         private PictureBox pictureBox21;
-        private Label label14;
+        private Label adicionarPastelCarne;
         private Label label15;
         private Label label16;
         private Label label17;
         private PictureBox pictureBox22;
+        private Label totalCarrinhoLabel;
+        private Label preçoTotalCarrinhoLabel;
+        public ListBox carrinhoListBox1;
     }
 }

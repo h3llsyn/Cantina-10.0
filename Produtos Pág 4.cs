@@ -36,14 +36,14 @@ namespace Cantina_10._0_Projeto_Final
         {
             pictureBox5.Visible = true;
             pictureBox7.Visible = true;
-            carrinhoListBox.Visible = true;
+            carrinhoListBox4.Visible = true;
             finalizarButton.Visible = true;
             excluirItemButton.Visible = true;
             pictureBox5.BringToFront();
             pictureBox7.BringToFront();
             finalizarButton.BringToFront();
             excluirItemButton.BringToFront();
-            carrinhoListBox.BringToFront();
+            carrinhoListBox4.BringToFront();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace Cantina_10._0_Projeto_Final
             pictureBox7.Visible = false;
             finalizarButton.Visible = false;
             excluirItemButton.Visible = false;
-            carrinhoListBox.Visible = false;
+            carrinhoListBox4.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
