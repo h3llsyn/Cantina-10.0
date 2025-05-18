@@ -1,25 +1,20 @@
 namespace Cantina_10._0_Projeto_Final
 {
-    public partial class ProdutosPág1 : Form
+    public partial class ProdutosPág2 : Form
     {
-        private ProdutosPág2 produtosPág2;
-        private ProdutosPág4 produtosPág4;
+        private ProdutosPág1 produtosPág1;
+        private ProdutosPág3 produtosPág3;
 
-        public ProdutosPág1()
+        public ProdutosPág2(ProdutosPág1 produtosPág1)
         {
             InitializeComponent();
+            this.produtosPág1 = produtosPág1;
         }
 
-        public ProdutosPág1(ProdutosPág2 produtosPág2)
+        public ProdutosPág2(ProdutosPág3 produtosPág3)
         {
             InitializeComponent();
-            this.produtosPág2 = produtosPág2;
-        }
-
-        public ProdutosPág1(ProdutosPág4 produtosPág4)
-        {
-            InitializeComponent();
-            this.produtosPág4 = produtosPág4;
+            this.produtosPág3 = produtosPág3;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -95,23 +90,33 @@ namespace Cantina_10._0_Projeto_Final
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox12_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
-            ProdutosPág2 produtosPág2 = new ProdutosPág2(this);
-            this.Hide();
-            produtosPág2.ShowDialog();
+
+        }
+
+        private void ProdutosPág2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void pictureBox22_Click(object sender, EventArgs e)
         {
-            ProdutosPág4 produtosPág4 = new ProdutosPág4(this);
+            ProdutosPág1 produtosPág1 = new ProdutosPág1(this);
             this.Hide();
-            produtosPág4.ShowDialog();
+            produtosPág1.ShowDialog();
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            ProdutosPág3 produtosPág3 = new ProdutosPág3(this);
+            this.Hide();
+            produtosPág3.ShowDialog();
         }
     }
 }

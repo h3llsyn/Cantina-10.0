@@ -3,7 +3,6 @@ C:\Users\lavin\OneDrive\Documentos\c#\Cantina 10.0 Projeto Final\bin\Debug\net8.
 C:\Users\lavin\OneDrive\Documentos\c#\Cantina 10.0 Projeto Final\bin\Debug\net8.0-windows\Cantina 10.0 Projeto Final.runtimeconfig.json
 C:\Users\lavin\OneDrive\Documentos\c#\Cantina 10.0 Projeto Final\bin\Debug\net8.0-windows\Cantina 10.0 Projeto Final.dll
 C:\Users\lavin\OneDrive\Documentos\c#\Cantina 10.0 Projeto Final\bin\Debug\net8.0-windows\Cantina 10.0 Projeto Final.pdb
-C:\Users\lavin\OneDrive\Documentos\c#\Cantina 10.0 Projeto Final\obj\Debug\net8.0-windows\Cantina_10._0_Projeto_Final.Form1.resources
 C:\Users\lavin\OneDrive\Documentos\c#\Cantina 10.0 Projeto Final\obj\Debug\net8.0-windows\Cantina_10._0_Projeto_Final.Properties.Resources.resources
 C:\Users\lavin\OneDrive\Documentos\c#\Cantina 10.0 Projeto Final\obj\Debug\net8.0-windows\Cantina 10.0 Projeto Final.csproj.GenerateResource.cache
 C:\Users\lavin\OneDrive\Documentos\c#\Cantina 10.0 Projeto Final\obj\Debug\net8.0-windows\Cantina 10.0 Projeto Final.GeneratedMSBuildEditorConfig.editorconfig
@@ -16,3 +15,7 @@ C:\Users\lavin\OneDrive\Documentos\c#\Cantina 10.0 Projeto Final\obj\Debug\net8.
 C:\Users\lavin\OneDrive\Documentos\c#\Cantina 10.0 Projeto Final\obj\Debug\net8.0-windows\Cantina 10.0 Projeto Final.genruntimeconfig.cache
 C:\Users\lavin\OneDrive\Documentos\c#\Cantina 10.0 Projeto Final\obj\Debug\net8.0-windows\ref\Cantina 10.0 Projeto Final.dll
 C:\Users\lavin\OneDrive\Documentos\c#\Cantina 10.0 Projeto Final\obj\Debug\net8.0-windows\Cantina 10.0 Projeto Final.sourcelink.json
+C:\Users\lavin\OneDrive\Documentos\c#\Cantina 10.0 Projeto Final\obj\Debug\net8.0-windows\Cantina_10._0_Projeto_Final.ProdutosPág1.resources
+C:\Users\lavin\OneDrive\Documentos\c#\Cantina 10.0 Projeto Final\obj\Debug\net8.0-windows\Cantina_10._0_Projeto_Final.ProdutosPág2.resources
+C:\Users\lavin\OneDrive\Documentos\c#\Cantina 10.0 Projeto Final\obj\Debug\net8.0-windows\Cantina_10._0_Projeto_Final.ProdutosPág3.resources
+C:\Users\lavin\OneDrive\Documentos\c#\Cantina 10.0 Projeto Final\obj\Debug\net8.0-windows\Cantina_10._0_Projeto_Final.ProdutosPág4.resources

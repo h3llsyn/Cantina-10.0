@@ -1,22 +1,17 @@
 namespace Cantina_10._0_Projeto_Final
 {
-    public partial class ProdutosPág1 : Form
+    public partial class ProdutosPág3 : Form
     {
         private ProdutosPág2 produtosPág2;
         private ProdutosPág4 produtosPág4;
 
-        public ProdutosPág1()
-        {
-            InitializeComponent();
-        }
-
-        public ProdutosPág1(ProdutosPág2 produtosPág2)
+        public ProdutosPág3(ProdutosPág2 produtosPág2)
         {
             InitializeComponent();
             this.produtosPág2 = produtosPág2;
         }
 
-        public ProdutosPág1(ProdutosPág4 produtosPág4)
+        public ProdutosPág3(ProdutosPág4 produtosPág4)
         {
             InitializeComponent();
             this.produtosPág4 = produtosPág4;
@@ -95,19 +90,39 @@ namespace Cantina_10._0_Projeto_Final
 
         }
 
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox12_Click(object sender, EventArgs e)
+        private void ProdutosPág3_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox22_Click(object sender, EventArgs e)
         {
             ProdutosPág2 produtosPág2 = new ProdutosPág2(this);
             this.Hide();
             produtosPág2.ShowDialog();
         }
 
-        private void pictureBox22_Click(object sender, EventArgs e)
+        private void pictureBox12_Click(object sender, EventArgs e)
         {
             ProdutosPág4 produtosPág4 = new ProdutosPág4(this);
             this.Hide();
