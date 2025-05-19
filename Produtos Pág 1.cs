@@ -270,5 +270,10 @@ namespace Cantina_10._0_Projeto_Final
             AdicionarAoCarrinho(2, quantidade);
             AtualizarTotal();
         }
+
+        private void excluirItemButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

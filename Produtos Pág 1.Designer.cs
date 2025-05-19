@@ -198,6 +198,7 @@
             // 
             // excluirItemButton
             // 
+            excluirItemButton.Cursor = Cursors.Hand;
             excluirItemButton.Image = (Image)resources.GetObject("excluirItemButton.Image");
             excluirItemButton.Location = new Point(634, 394);
             excluirItemButton.Name = "excluirItemButton";
@@ -206,6 +207,7 @@
             excluirItemButton.TabIndex = 10;
             excluirItemButton.TabStop = false;
             excluirItemButton.Visible = false;
+            excluirItemButton.Click += excluirItemButton_Click;
             // 
             // pictureBox8
             // 

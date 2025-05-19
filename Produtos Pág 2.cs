@@ -129,7 +129,9 @@ namespace Cantina_10._0_Projeto_Final
 
         private void pictureBox17_Click(object sender, EventArgs e)
         {
-
+            int quantidade = int.Parse(quantidadeSucoLabel.Text);
+            quantidade++;
+            quantidadeSucoLabel.Text = quantidade.ToString();
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -187,6 +189,54 @@ namespace Cantina_10._0_Projeto_Final
         }
 
         private void carrinhoListBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menosButtonSuco_Click(object sender, EventArgs e)
+        {
+            int quantidade = int.Parse(quantidadeSucoLabel.Text);
+
+            if (quantidade > 1)
+            {
+                quantidade--;
+                quantidadeSucoLabel.Text = quantidade.ToString();
+            }
+        }
+
+        private void adicionarSuco_Click(object sender, EventArgs e)
+        {
+            int quantidade = int.Parse(quantidadeSucoLabel.Text);
+            AdicionarAoCarrinho(4, quantidade);
+            AtualizarTotal();
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            int quantidade = int.Parse(quantidadeRefriLabel.Text);
+
+            if (quantidade > 1)
+            {
+                quantidade--;
+                quantidadeRefriLabel.Text = quantidade.ToString();
+            }
+        }
+
+        private void maisButtonRefri_Click(object sender, EventArgs e)
+        {
+            int quantidade = int.Parse(quantidadeRefriLabel.Text);
+            quantidade++;
+            quantidadeRefriLabel.Text = quantidade.ToString();
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+            int quantidade = int.Parse(quantidadeRefriLabel.Text);
+            AdicionarAoCarrinho(5, quantidade);
+            AtualizarTotal();
+        }
+
+        private void excluirItemButton_Click(object sender, EventArgs e)
         {
 
         }

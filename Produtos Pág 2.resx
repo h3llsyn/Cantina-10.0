@@ -2660,7 +2660,7 @@ mantendo o frescor e os
 nutrientes. Uma bebida gostosa
 e saudável de muita qualidade!</value>
   </data>
-  <data name="pictureBox16.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="menosButtonSuco.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAABphJREFUeF7tm2tPFGcUx8EX1cbUtql93aZpTamxb9r6aRoprUqaguLCLiiVm1wE
@@ -2694,7 +2694,7 @@ e saudável de muita qualidade!</value>
         BA5ZpwhzL6SXLRaKSkapY5OMJB7I/5HZ/A7asqEzAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox17.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="maisButtonSuco.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAB4ZJREFUeF7tm1lTFFcUx4lPEfV7+JSYqhjfYip5SEpjJWVFxJVgVCRqZJsBJGwq
@@ -3053,7 +3053,7 @@ com muito sabor e praticidade!</value>
         BA5ZpwhzL6SXLRaKSkapY5OMJB7I/5HZ/A7asqEzAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox14.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="maisButtonRefri.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAB4ZJREFUeF7tm1lTFFcUx4lPEfV7+JSYqhjfYip5SEpjJWVFxJVgVCRqZJsBJGwq

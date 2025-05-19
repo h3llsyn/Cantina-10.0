@@ -2582,7 +2582,7 @@
         xnfHd8RXxq9rvx4A1/KxT/s1wKXLVJUxjlQAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox16.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="menosButtonHamburguerQueijo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAABphJREFUeF7tm2tPFGcUx8EX1cbUtql93aZpTamxb9r6aRoprUqaguLCLiiVm1wE
@@ -2616,7 +2616,7 @@
         BA5ZpwhzL6SXLRaKSkapY5OMJB7I/5HZ/A7asqEzAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox17.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="maisButtonHamburguerQueijo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAB4ZJREFUeF7tm1lTFFcUx4lPEfV7+JSYqhjfYip5SEpjJWVFxJVgVCRqZJsBJGwq
@@ -2687,7 +2687,7 @@
         HJ4ahhAcokYKBecQhXWPKKx7RGHdIwrrnOzBv9fUmWiFEpLjAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox19.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="menosButtonHamburguerSimp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAABphJREFUeF7tm2tPFGcUx8EX1cbUtql93aZpTamxb9r6aRoprUqaguLCLiiVm1wE
@@ -2721,7 +2721,7 @@
         BA5ZpwhzL6SXLRaKSkapY5OMJB7I/5HZ/A7asqEzAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox20.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="maisButtonHamburguerSimp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAB4ZJREFUeF7tm1lTFFcUx4lPEfV7+JSYqhjfYip5SEpjJWVFxJVgVCRqZJsBJGwq
@@ -2972,7 +2972,7 @@ completo, perfeito pra quem
 não dispensa um bom reforço
 no intervalo!</value>
   </data>
-  <data name="pictureBox13.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="maisButtonXTudo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAABphJREFUeF7tm2tPFGcUx8EX1cbUtql93aZpTamxb9r6aRoprUqaguLCLiiVm1wE
@@ -3006,7 +3006,7 @@ no intervalo!</value>
         BA5ZpwhzL6SXLRaKSkapY5OMJB7I/5HZ/A7asqEzAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox14.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="menosButtonXTudo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAB4ZJREFUeF7tm1lTFFcUx4lPEfV7+JSYqhjfYip5SEpjJWVFxJVgVCRqZJsBJGwq

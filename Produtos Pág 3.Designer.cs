@@ -46,30 +46,30 @@
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
-            pictureBox16 = new PictureBox();
-            quantidadeCoxinhaLabel = new Label();
-            pictureBox17 = new PictureBox();
+            menosButtonHamburguerQueijo = new PictureBox();
+            quantidadeHamburguerQueijoLabel = new Label();
+            maisButtonHamburguerQueijo = new PictureBox();
             pictureBox18 = new PictureBox();
-            label9 = new Label();
+            adicionarHamburguerQueijo = new Label();
             label10 = new Label();
             label11 = new Label();
             label12 = new Label();
-            pictureBox19 = new PictureBox();
-            label13 = new Label();
-            pictureBox20 = new PictureBox();
+            menosButtonHamburguerSimp = new PictureBox();
+            quantidadeHamburguerSimpLabel = new Label();
+            maisButtonHamburguerSimp = new PictureBox();
             pictureBox21 = new PictureBox();
-            label14 = new Label();
+            adicionarHamburguerSimp = new Label();
             label15 = new Label();
             label2 = new Label();
             pictureBox8 = new PictureBox();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            pictureBox13 = new PictureBox();
-            label16 = new Label();
-            pictureBox14 = new PictureBox();
+            maisButtonXTudo = new PictureBox();
+            quantidadeXTudoLabel = new Label();
+            menosButtonXTudo = new PictureBox();
             pictureBox15 = new PictureBox();
-            label17 = new Label();
+            adicionarXTudo = new Label();
             label18 = new Label();
             pictureBox22 = new PictureBox();
             totalCarrinhoLabel = new Label();
@@ -88,15 +88,15 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)menosButtonHamburguerQueijo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)maisButtonHamburguerQueijo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox20).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)menosButtonHamburguerSimp).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)maisButtonHamburguerSimp).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)maisButtonXTudo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)menosButtonXTudo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox22).BeginInit();
             SuspendLayout();
@@ -299,37 +299,40 @@
             label8.TabIndex = 27;
             label8.Text = "O clássico que nunca falha: pão\r\nfofinho, carne suculenta e uma\r\nfatia generosa de queijo\r\nderretido. É a combinação\r\nperfeita de sabor e simplicidade\r\npra matar a fome com aquele\r\ntoque especial!\r\n";
             // 
-            // pictureBox16
+            // menosButtonHamburguerQueijo
             // 
-            pictureBox16.Image = (Image)resources.GetObject("pictureBox16.Image");
-            pictureBox16.Location = new Point(308, 379);
-            pictureBox16.Name = "pictureBox16";
-            pictureBox16.Size = new Size(30, 30);
-            pictureBox16.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox16.TabIndex = 28;
-            pictureBox16.TabStop = false;
+            menosButtonHamburguerQueijo.Cursor = Cursors.Hand;
+            menosButtonHamburguerQueijo.Image = (Image)resources.GetObject("menosButtonHamburguerQueijo.Image");
+            menosButtonHamburguerQueijo.Location = new Point(308, 379);
+            menosButtonHamburguerQueijo.Name = "menosButtonHamburguerQueijo";
+            menosButtonHamburguerQueijo.Size = new Size(30, 30);
+            menosButtonHamburguerQueijo.SizeMode = PictureBoxSizeMode.Zoom;
+            menosButtonHamburguerQueijo.TabIndex = 28;
+            menosButtonHamburguerQueijo.TabStop = false;
+            menosButtonHamburguerQueijo.Click += menosButtonHamburguerQueijo_Click;
             // 
-            // quantidadeCoxinhaLabel
+            // quantidadeHamburguerQueijoLabel
             // 
-            quantidadeCoxinhaLabel.AutoSize = true;
-            quantidadeCoxinhaLabel.BackColor = Color.FromArgb(202, 196, 183);
-            quantidadeCoxinhaLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            quantidadeCoxinhaLabel.Location = new Point(341, 386);
-            quantidadeCoxinhaLabel.Name = "quantidadeCoxinhaLabel";
-            quantidadeCoxinhaLabel.Size = new Size(15, 17);
-            quantidadeCoxinhaLabel.TabIndex = 29;
-            quantidadeCoxinhaLabel.Text = "1";
+            quantidadeHamburguerQueijoLabel.AutoSize = true;
+            quantidadeHamburguerQueijoLabel.BackColor = Color.FromArgb(202, 196, 183);
+            quantidadeHamburguerQueijoLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            quantidadeHamburguerQueijoLabel.Location = new Point(341, 386);
+            quantidadeHamburguerQueijoLabel.Name = "quantidadeHamburguerQueijoLabel";
+            quantidadeHamburguerQueijoLabel.Size = new Size(15, 17);
+            quantidadeHamburguerQueijoLabel.TabIndex = 29;
+            quantidadeHamburguerQueijoLabel.Text = "1";
             // 
-            // pictureBox17
+            // maisButtonHamburguerQueijo
             // 
-            pictureBox17.Image = (Image)resources.GetObject("pictureBox17.Image");
-            pictureBox17.Location = new Point(359, 379);
-            pictureBox17.Name = "pictureBox17";
-            pictureBox17.Size = new Size(30, 30);
-            pictureBox17.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox17.TabIndex = 30;
-            pictureBox17.TabStop = false;
-            pictureBox17.Click += pictureBox17_Click;
+            maisButtonHamburguerQueijo.Cursor = Cursors.Hand;
+            maisButtonHamburguerQueijo.Image = (Image)resources.GetObject("maisButtonHamburguerQueijo.Image");
+            maisButtonHamburguerQueijo.Location = new Point(359, 379);
+            maisButtonHamburguerQueijo.Name = "maisButtonHamburguerQueijo";
+            maisButtonHamburguerQueijo.Size = new Size(30, 30);
+            maisButtonHamburguerQueijo.SizeMode = PictureBoxSizeMode.Zoom;
+            maisButtonHamburguerQueijo.TabIndex = 30;
+            maisButtonHamburguerQueijo.TabStop = false;
+            maisButtonHamburguerQueijo.Click += pictureBox17_Click;
             // 
             // pictureBox18
             // 
@@ -341,18 +344,20 @@
             pictureBox18.TabIndex = 31;
             pictureBox18.TabStop = false;
             // 
-            // label9
+            // adicionarHamburguerQueijo
             // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.FromArgb(124, 122, 106);
-            label9.Font = new Font("Segoe UI", 6.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.Black;
-            label9.Location = new Point(413, 381);
-            label9.Name = "label9";
-            label9.Size = new Size(60, 24);
-            label9.TabIndex = 32;
-            label9.Text = "Adicionar ao\r\ncarrinho";
-            label9.TextAlign = ContentAlignment.MiddleCenter;
+            adicionarHamburguerQueijo.AutoSize = true;
+            adicionarHamburguerQueijo.BackColor = Color.FromArgb(124, 122, 106);
+            adicionarHamburguerQueijo.Cursor = Cursors.Hand;
+            adicionarHamburguerQueijo.Font = new Font("Segoe UI", 6.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            adicionarHamburguerQueijo.ForeColor = Color.Black;
+            adicionarHamburguerQueijo.Location = new Point(413, 381);
+            adicionarHamburguerQueijo.Name = "adicionarHamburguerQueijo";
+            adicionarHamburguerQueijo.Size = new Size(60, 24);
+            adicionarHamburguerQueijo.TabIndex = 32;
+            adicionarHamburguerQueijo.Text = "Adicionar ao\r\ncarrinho";
+            adicionarHamburguerQueijo.TextAlign = ContentAlignment.MiddleCenter;
+            adicionarHamburguerQueijo.Click += adicionarHamburguerQueijo_Click;
             // 
             // label10
             // 
@@ -389,36 +394,40 @@
             label12.TabIndex = 35;
             label12.Text = "Pão macio, carne grelhada na\r\nhora e muito sabor em cada\r\nmordida. Nosso hambúrguer\r\nsimples é uma opção clássica,\r\nperfeita pra quem curte um\r\nlanche direto ao ponto, sem\r\nperder o gostinho caseiro.";
             // 
-            // pictureBox19
+            // menosButtonHamburguerSimp
             // 
-            pictureBox19.Image = (Image)resources.GetObject("pictureBox19.Image");
-            pictureBox19.Location = new Point(40, 379);
-            pictureBox19.Name = "pictureBox19";
-            pictureBox19.Size = new Size(30, 30);
-            pictureBox19.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox19.TabIndex = 36;
-            pictureBox19.TabStop = false;
+            menosButtonHamburguerSimp.Cursor = Cursors.Hand;
+            menosButtonHamburguerSimp.Image = (Image)resources.GetObject("menosButtonHamburguerSimp.Image");
+            menosButtonHamburguerSimp.Location = new Point(40, 379);
+            menosButtonHamburguerSimp.Name = "menosButtonHamburguerSimp";
+            menosButtonHamburguerSimp.Size = new Size(30, 30);
+            menosButtonHamburguerSimp.SizeMode = PictureBoxSizeMode.Zoom;
+            menosButtonHamburguerSimp.TabIndex = 36;
+            menosButtonHamburguerSimp.TabStop = false;
+            menosButtonHamburguerSimp.Click += menosButtonHamburguerSimp_Click;
             // 
-            // label13
+            // quantidadeHamburguerSimpLabel
             // 
-            label13.AutoSize = true;
-            label13.BackColor = Color.FromArgb(202, 196, 183);
-            label13.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.Location = new Point(73, 386);
-            label13.Name = "label13";
-            label13.Size = new Size(15, 17);
-            label13.TabIndex = 37;
-            label13.Text = "1";
+            quantidadeHamburguerSimpLabel.AutoSize = true;
+            quantidadeHamburguerSimpLabel.BackColor = Color.FromArgb(202, 196, 183);
+            quantidadeHamburguerSimpLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            quantidadeHamburguerSimpLabel.Location = new Point(73, 386);
+            quantidadeHamburguerSimpLabel.Name = "quantidadeHamburguerSimpLabel";
+            quantidadeHamburguerSimpLabel.Size = new Size(15, 17);
+            quantidadeHamburguerSimpLabel.TabIndex = 37;
+            quantidadeHamburguerSimpLabel.Text = "1";
             // 
-            // pictureBox20
+            // maisButtonHamburguerSimp
             // 
-            pictureBox20.Image = (Image)resources.GetObject("pictureBox20.Image");
-            pictureBox20.Location = new Point(91, 379);
-            pictureBox20.Name = "pictureBox20";
-            pictureBox20.Size = new Size(30, 30);
-            pictureBox20.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox20.TabIndex = 38;
-            pictureBox20.TabStop = false;
+            maisButtonHamburguerSimp.Cursor = Cursors.Hand;
+            maisButtonHamburguerSimp.Image = (Image)resources.GetObject("maisButtonHamburguerSimp.Image");
+            maisButtonHamburguerSimp.Location = new Point(91, 379);
+            maisButtonHamburguerSimp.Name = "maisButtonHamburguerSimp";
+            maisButtonHamburguerSimp.Size = new Size(30, 30);
+            maisButtonHamburguerSimp.SizeMode = PictureBoxSizeMode.Zoom;
+            maisButtonHamburguerSimp.TabIndex = 38;
+            maisButtonHamburguerSimp.TabStop = false;
+            maisButtonHamburguerSimp.Click += maisButtonHamburguerSimp_Click;
             // 
             // pictureBox21
             // 
@@ -430,18 +439,20 @@
             pictureBox21.TabIndex = 39;
             pictureBox21.TabStop = false;
             // 
-            // label14
+            // adicionarHamburguerSimp
             // 
-            label14.AutoSize = true;
-            label14.BackColor = Color.FromArgb(124, 122, 106);
-            label14.Font = new Font("Segoe UI", 6.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.ForeColor = Color.Black;
-            label14.Location = new Point(142, 381);
-            label14.Name = "label14";
-            label14.Size = new Size(60, 24);
-            label14.TabIndex = 40;
-            label14.Text = "Adicionar ao\r\ncarrinho";
-            label14.TextAlign = ContentAlignment.MiddleCenter;
+            adicionarHamburguerSimp.AutoSize = true;
+            adicionarHamburguerSimp.BackColor = Color.FromArgb(124, 122, 106);
+            adicionarHamburguerSimp.Cursor = Cursors.Hand;
+            adicionarHamburguerSimp.Font = new Font("Segoe UI", 6.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            adicionarHamburguerSimp.ForeColor = Color.Black;
+            adicionarHamburguerSimp.Location = new Point(142, 381);
+            adicionarHamburguerSimp.Name = "adicionarHamburguerSimp";
+            adicionarHamburguerSimp.Size = new Size(60, 24);
+            adicionarHamburguerSimp.TabIndex = 40;
+            adicionarHamburguerSimp.Text = "Adicionar ao\r\ncarrinho";
+            adicionarHamburguerSimp.TextAlign = ContentAlignment.MiddleCenter;
+            adicionarHamburguerSimp.Click += adicionarHamburguerSimp_Click;
             // 
             // label15
             // 
@@ -513,36 +524,40 @@
             label5.TabIndex = 47;
             label5.Text = resources.GetString("label5.Text");
             // 
-            // pictureBox13
+            // maisButtonXTudo
             // 
-            pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(577, 379);
-            pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(30, 30);
-            pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox13.TabIndex = 48;
-            pictureBox13.TabStop = false;
+            maisButtonXTudo.Cursor = Cursors.Hand;
+            maisButtonXTudo.Image = (Image)resources.GetObject("maisButtonXTudo.Image");
+            maisButtonXTudo.Location = new Point(577, 379);
+            maisButtonXTudo.Name = "maisButtonXTudo";
+            maisButtonXTudo.Size = new Size(30, 30);
+            maisButtonXTudo.SizeMode = PictureBoxSizeMode.Zoom;
+            maisButtonXTudo.TabIndex = 48;
+            maisButtonXTudo.TabStop = false;
+            maisButtonXTudo.Click += maisButtonXTudo_Click;
             // 
-            // label16
+            // quantidadeXTudoLabel
             // 
-            label16.AutoSize = true;
-            label16.BackColor = Color.FromArgb(202, 196, 183);
-            label16.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.Location = new Point(610, 386);
-            label16.Name = "label16";
-            label16.Size = new Size(15, 17);
-            label16.TabIndex = 49;
-            label16.Text = "1";
+            quantidadeXTudoLabel.AutoSize = true;
+            quantidadeXTudoLabel.BackColor = Color.FromArgb(202, 196, 183);
+            quantidadeXTudoLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            quantidadeXTudoLabel.Location = new Point(610, 386);
+            quantidadeXTudoLabel.Name = "quantidadeXTudoLabel";
+            quantidadeXTudoLabel.Size = new Size(15, 17);
+            quantidadeXTudoLabel.TabIndex = 49;
+            quantidadeXTudoLabel.Text = "1";
             // 
-            // pictureBox14
+            // menosButtonXTudo
             // 
-            pictureBox14.Image = (Image)resources.GetObject("pictureBox14.Image");
-            pictureBox14.Location = new Point(628, 379);
-            pictureBox14.Name = "pictureBox14";
-            pictureBox14.Size = new Size(30, 30);
-            pictureBox14.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox14.TabIndex = 50;
-            pictureBox14.TabStop = false;
+            menosButtonXTudo.Cursor = Cursors.Hand;
+            menosButtonXTudo.Image = (Image)resources.GetObject("menosButtonXTudo.Image");
+            menosButtonXTudo.Location = new Point(628, 379);
+            menosButtonXTudo.Name = "menosButtonXTudo";
+            menosButtonXTudo.Size = new Size(30, 30);
+            menosButtonXTudo.SizeMode = PictureBoxSizeMode.Zoom;
+            menosButtonXTudo.TabIndex = 50;
+            menosButtonXTudo.TabStop = false;
+            menosButtonXTudo.Click += menosButtonXTudo_Click;
             // 
             // pictureBox15
             // 
@@ -554,18 +569,20 @@
             pictureBox15.TabIndex = 51;
             pictureBox15.TabStop = false;
             // 
-            // label17
+            // adicionarXTudo
             // 
-            label17.AutoSize = true;
-            label17.BackColor = Color.FromArgb(124, 122, 106);
-            label17.Font = new Font("Segoe UI", 6.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label17.ForeColor = Color.Black;
-            label17.Location = new Point(677, 381);
-            label17.Name = "label17";
-            label17.Size = new Size(60, 24);
-            label17.TabIndex = 52;
-            label17.Text = "Adicionar ao\r\ncarrinho";
-            label17.TextAlign = ContentAlignment.MiddleCenter;
+            adicionarXTudo.AutoSize = true;
+            adicionarXTudo.BackColor = Color.FromArgb(124, 122, 106);
+            adicionarXTudo.Cursor = Cursors.Hand;
+            adicionarXTudo.Font = new Font("Segoe UI", 6.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            adicionarXTudo.ForeColor = Color.Black;
+            adicionarXTudo.Location = new Point(677, 381);
+            adicionarXTudo.Name = "adicionarXTudo";
+            adicionarXTudo.Size = new Size(60, 24);
+            adicionarXTudo.TabIndex = 52;
+            adicionarXTudo.Text = "Adicionar ao\r\ncarrinho";
+            adicionarXTudo.TextAlign = ContentAlignment.MiddleCenter;
+            adicionarXTudo.Click += adicionarXTudo_Click;
             // 
             // label18
             // 
@@ -603,6 +620,7 @@
             totalCarrinhoLabel.Size = new Size(41, 17);
             totalCarrinhoLabel.TabIndex = 58;
             totalCarrinhoLabel.Text = "Total:";
+            totalCarrinhoLabel.Visible = false;
             // 
             // preçoTotalCarrinhoLabel
             // 
@@ -615,6 +633,7 @@
             preçoTotalCarrinhoLabel.Size = new Size(54, 17);
             preçoTotalCarrinhoLabel.TabIndex = 59;
             preçoTotalCarrinhoLabel.Text = "R$00,00";
+            preçoTotalCarrinhoLabel.Visible = false;
             // 
             // carrinhoListBox3
             // 
@@ -640,19 +659,19 @@
             Controls.Add(label18);
             Controls.Add(label2);
             Controls.Add(label15);
-            Controls.Add(label14);
+            Controls.Add(adicionarHamburguerSimp);
             Controls.Add(pictureBox21);
-            Controls.Add(pictureBox20);
-            Controls.Add(label13);
-            Controls.Add(pictureBox19);
+            Controls.Add(maisButtonHamburguerSimp);
+            Controls.Add(quantidadeHamburguerSimpLabel);
+            Controls.Add(menosButtonHamburguerSimp);
             Controls.Add(label12);
             Controls.Add(label11);
             Controls.Add(label10);
-            Controls.Add(label9);
+            Controls.Add(adicionarHamburguerQueijo);
             Controls.Add(pictureBox18);
-            Controls.Add(pictureBox17);
-            Controls.Add(quantidadeCoxinhaLabel);
-            Controls.Add(pictureBox16);
+            Controls.Add(maisButtonHamburguerQueijo);
+            Controls.Add(quantidadeHamburguerQueijoLabel);
+            Controls.Add(menosButtonHamburguerQueijo);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -673,10 +692,10 @@
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(pictureBox13);
-            Controls.Add(pictureBox14);
-            Controls.Add(label16);
-            Controls.Add(label17);
+            Controls.Add(maisButtonXTudo);
+            Controls.Add(menosButtonXTudo);
+            Controls.Add(quantidadeXTudoLabel);
+            Controls.Add(adicionarXTudo);
             Controls.Add(pictureBox15);
             Controls.Add(pictureBox8);
             Name = "ProdutosPág3";
@@ -698,15 +717,15 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
+            ((System.ComponentModel.ISupportInitialize)menosButtonHamburguerQueijo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)maisButtonHamburguerQueijo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox20).EndInit();
+            ((System.ComponentModel.ISupportInitialize)menosButtonHamburguerSimp).EndInit();
+            ((System.ComponentModel.ISupportInitialize)maisButtonHamburguerSimp).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
+            ((System.ComponentModel.ISupportInitialize)maisButtonXTudo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)menosButtonXTudo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox22).EndInit();
             ResumeLayout(false);
@@ -732,30 +751,30 @@
         private Label label6;
         private Label label7;
         private Label label8;
-        private PictureBox pictureBox16;
-        private Label quantidadeCoxinhaLabel;
-        private PictureBox pictureBox17;
+        private PictureBox menosButtonHamburguerQueijo;
+        private Label quantidadeHamburguerQueijoLabel;
+        private PictureBox maisButtonHamburguerQueijo;
         private PictureBox pictureBox18;
-        private Label label9;
+        private Label adicionarHamburguerQueijo;
         private Label label10;
         private Label label11;
         private Label label12;
-        private PictureBox pictureBox19;
-        private Label label13;
-        private PictureBox pictureBox20;
+        private PictureBox menosButtonHamburguerSimp;
+        private Label quantidadeHamburguerSimpLabel;
+        private PictureBox maisButtonHamburguerSimp;
         private PictureBox pictureBox21;
-        private Label label14;
+        private Label adicionarHamburguerSimp;
         private Label label15;
         private Label label2;
         private PictureBox pictureBox8;
         private Label label3;
         private Label label4;
         private Label label5;
-        private PictureBox pictureBox13;
-        private Label label16;
-        private PictureBox pictureBox14;
+        private PictureBox maisButtonXTudo;
+        private Label quantidadeXTudoLabel;
+        private PictureBox menosButtonXTudo;
         private PictureBox pictureBox15;
-        private Label label17;
+        private Label adicionarXTudo;
         private Label label18;
         private PictureBox pictureBox22;
         private Label totalCarrinhoLabel;

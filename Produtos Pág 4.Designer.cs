@@ -46,11 +46,11 @@
             label10 = new Label();
             label11 = new Label();
             label12 = new Label();
-            pictureBox19 = new PictureBox();
-            label13 = new Label();
-            pictureBox20 = new PictureBox();
+            menosButtonAgua = new PictureBox();
+            quantidadeAguaLabel = new Label();
+            maisButtonAgua = new PictureBox();
             pictureBox21 = new PictureBox();
-            label14 = new Label();
+            adicionarAgua = new Label();
             label15 = new Label();
             pictureBox22 = new PictureBox();
             pictureBox11 = new PictureBox();
@@ -69,8 +69,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox20).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)menosButtonAgua).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)maisButtonAgua).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox22).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
@@ -276,36 +276,40 @@
             label12.TabIndex = 35;
             label12.Text = "Pura, leve e sempre geladinha,\r\nnossa água mineral é ideal pra\r\nse manter hidratado durante o\r\ndia. Perfeita pra acompanhar\r\nqualquer lanche ou matar a\r\nsede com qualidade e frescor!";
             // 
-            // pictureBox19
+            // menosButtonAgua
             // 
-            pictureBox19.Image = (Image)resources.GetObject("pictureBox19.Image");
-            pictureBox19.Location = new Point(40, 379);
-            pictureBox19.Name = "pictureBox19";
-            pictureBox19.Size = new Size(30, 30);
-            pictureBox19.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox19.TabIndex = 36;
-            pictureBox19.TabStop = false;
+            menosButtonAgua.Cursor = Cursors.Hand;
+            menosButtonAgua.Image = (Image)resources.GetObject("menosButtonAgua.Image");
+            menosButtonAgua.Location = new Point(40, 379);
+            menosButtonAgua.Name = "menosButtonAgua";
+            menosButtonAgua.Size = new Size(30, 30);
+            menosButtonAgua.SizeMode = PictureBoxSizeMode.Zoom;
+            menosButtonAgua.TabIndex = 36;
+            menosButtonAgua.TabStop = false;
+            menosButtonAgua.Click += menosButtonAgua_Click;
             // 
-            // label13
+            // quantidadeAguaLabel
             // 
-            label13.AutoSize = true;
-            label13.BackColor = Color.FromArgb(202, 196, 183);
-            label13.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.Location = new Point(73, 386);
-            label13.Name = "label13";
-            label13.Size = new Size(15, 17);
-            label13.TabIndex = 37;
-            label13.Text = "1";
+            quantidadeAguaLabel.AutoSize = true;
+            quantidadeAguaLabel.BackColor = Color.FromArgb(202, 196, 183);
+            quantidadeAguaLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            quantidadeAguaLabel.Location = new Point(73, 386);
+            quantidadeAguaLabel.Name = "quantidadeAguaLabel";
+            quantidadeAguaLabel.Size = new Size(15, 17);
+            quantidadeAguaLabel.TabIndex = 37;
+            quantidadeAguaLabel.Text = "1";
             // 
-            // pictureBox20
+            // maisButtonAgua
             // 
-            pictureBox20.Image = (Image)resources.GetObject("pictureBox20.Image");
-            pictureBox20.Location = new Point(91, 379);
-            pictureBox20.Name = "pictureBox20";
-            pictureBox20.Size = new Size(30, 30);
-            pictureBox20.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox20.TabIndex = 38;
-            pictureBox20.TabStop = false;
+            maisButtonAgua.Cursor = Cursors.Hand;
+            maisButtonAgua.Image = (Image)resources.GetObject("maisButtonAgua.Image");
+            maisButtonAgua.Location = new Point(91, 379);
+            maisButtonAgua.Name = "maisButtonAgua";
+            maisButtonAgua.Size = new Size(30, 30);
+            maisButtonAgua.SizeMode = PictureBoxSizeMode.Zoom;
+            maisButtonAgua.TabIndex = 38;
+            maisButtonAgua.TabStop = false;
+            maisButtonAgua.Click += maisButtonAgua_Click;
             // 
             // pictureBox21
             // 
@@ -317,18 +321,20 @@
             pictureBox21.TabIndex = 39;
             pictureBox21.TabStop = false;
             // 
-            // label14
+            // adicionarAgua
             // 
-            label14.AutoSize = true;
-            label14.BackColor = Color.FromArgb(124, 122, 106);
-            label14.Font = new Font("Segoe UI", 6.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.ForeColor = Color.Black;
-            label14.Location = new Point(142, 381);
-            label14.Name = "label14";
-            label14.Size = new Size(60, 24);
-            label14.TabIndex = 40;
-            label14.Text = "Adicionar ao\r\ncarrinho";
-            label14.TextAlign = ContentAlignment.MiddleCenter;
+            adicionarAgua.AutoSize = true;
+            adicionarAgua.BackColor = Color.FromArgb(124, 122, 106);
+            adicionarAgua.Cursor = Cursors.Hand;
+            adicionarAgua.Font = new Font("Segoe UI", 6.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            adicionarAgua.ForeColor = Color.Black;
+            adicionarAgua.Location = new Point(142, 381);
+            adicionarAgua.Name = "adicionarAgua";
+            adicionarAgua.Size = new Size(60, 24);
+            adicionarAgua.TabIndex = 40;
+            adicionarAgua.Text = "Adicionar ao\r\ncarrinho";
+            adicionarAgua.TextAlign = ContentAlignment.MiddleCenter;
+            adicionarAgua.Click += adicionarAgua_Click;
             // 
             // label15
             // 
@@ -376,6 +382,7 @@
             totalCarrinhoLabel.Size = new Size(41, 17);
             totalCarrinhoLabel.TabIndex = 58;
             totalCarrinhoLabel.Text = "Total:";
+            totalCarrinhoLabel.Visible = false;
             // 
             // preçoTotalCarrinhoLabel
             // 
@@ -388,6 +395,7 @@
             preçoTotalCarrinhoLabel.Size = new Size(54, 17);
             preçoTotalCarrinhoLabel.TabIndex = 59;
             preçoTotalCarrinhoLabel.Text = "R$00,00";
+            preçoTotalCarrinhoLabel.Visible = false;
             // 
             // carrinhoListBox4
             // 
@@ -412,11 +420,11 @@
             Controls.Add(pictureBox12);
             Controls.Add(pictureBox22);
             Controls.Add(label15);
-            Controls.Add(label14);
+            Controls.Add(adicionarAgua);
             Controls.Add(pictureBox21);
-            Controls.Add(pictureBox20);
-            Controls.Add(label13);
-            Controls.Add(pictureBox19);
+            Controls.Add(maisButtonAgua);
+            Controls.Add(quantidadeAguaLabel);
+            Controls.Add(menosButtonAgua);
             Controls.Add(label12);
             Controls.Add(label11);
             Controls.Add(label10);
@@ -452,8 +460,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox20).EndInit();
+            ((System.ComponentModel.ISupportInitialize)menosButtonAgua).EndInit();
+            ((System.ComponentModel.ISupportInitialize)maisButtonAgua).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox22).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
@@ -480,11 +488,11 @@
         private Label label10;
         private Label label11;
         private Label label12;
-        private PictureBox pictureBox19;
-        private Label label13;
-        private PictureBox pictureBox20;
+        private PictureBox menosButtonAgua;
+        private Label quantidadeAguaLabel;
+        private PictureBox maisButtonAgua;
         private PictureBox pictureBox21;
-        private Label label14;
+        private Label adicionarAgua;
         private Label label15;
         private PictureBox pictureBox22;
         private PictureBox pictureBox11;

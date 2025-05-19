@@ -2271,7 +2271,7 @@
         xnfHd8RXxq9rvx4A1/KxT/s1wKXLVJUxjlQAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox19.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="menosButtonAgua.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAABphJREFUeF7tm2tPFGcUx8EX1cbUtql93aZpTamxb9r6aRoprUqaguLCLiiVm1wE
@@ -2305,7 +2305,7 @@
         BA5ZpwhzL6SXLRaKSkapY5OMJB7I/5HZ/A7asqEzAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox20.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="maisButtonAgua.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAB4ZJREFUeF7tm1lTFFcUx4lPEfV7+JSYqhjfYip5SEpjJWVFxJVgVCRqZJsBJGwq

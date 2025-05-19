@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace Cantina_10._0_Projeto_Final
 {
     public partial class ProdutosPág4 : Form
@@ -15,6 +17,40 @@ namespace Cantina_10._0_Projeto_Final
         {
             InitializeComponent();
             this.produtosPág3 = produtosPág3;
+        }
+        private void AdicionarAoCarrinho(int index, int quantidade)
+        {
+            Produtos produto = Produtos.ListaProdutos[index];
+            double total = produto.Preço * quantidade;
+            carrinhoListBox4.Items.Add($"{produto.Descriçao} - R${total.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} x{quantidade}");
+        }
+        public void AtualizarTotal()
+        {
+            double total = 0;
+
+            foreach (var item in carrinhoListBox4.Items)
+            {
+                string texto = item.ToString();
+
+                int indiceX = texto.LastIndexOf('x');
+                if (indiceX == -1) continue;
+
+                if (!int.TryParse(texto.Substring(indiceX + 1).Trim(), out int quantidade))
+                    quantidade = 1;
+
+                int indiceR = texto.IndexOf("R$");
+                if (indiceR == -1) continue;
+
+                string precoStr = texto.Substring(indiceR + 2, indiceX - (indiceR + 2)).Trim();
+                precoStr = precoStr.Replace(',', '.');
+
+                if (double.TryParse(precoStr, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out double preco))
+                {
+                    total += preco;
+                }
+            }
+
+            preçoTotalCarrinhoLabel.Text = "R$" + total.ToString("F2").Replace('.', ',');
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -39,11 +75,15 @@ namespace Cantina_10._0_Projeto_Final
             carrinhoListBox4.Visible = true;
             finalizarButton.Visible = true;
             excluirItemButton.Visible = true;
+            totalCarrinhoLabel.Visible = true;
+            preçoTotalCarrinhoLabel.Visible = true;
             pictureBox5.BringToFront();
             pictureBox7.BringToFront();
             finalizarButton.BringToFront();
             excluirItemButton.BringToFront();
             carrinhoListBox4.BringToFront();
+            totalCarrinhoLabel.BringToFront();
+            preçoTotalCarrinhoLabel.BringToFront();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -58,6 +98,8 @@ namespace Cantina_10._0_Projeto_Final
             finalizarButton.Visible = false;
             excluirItemButton.Visible = false;
             carrinhoListBox4.Visible = false;
+            totalCarrinhoLabel.Visible = false;
+            preçoTotalCarrinhoLabel.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -127,6 +169,31 @@ namespace Cantina_10._0_Projeto_Final
             ProdutosPág1 produtosPág1 = new ProdutosPág1(this);
             this.Hide();
             produtosPág1.ShowDialog();
+        }
+
+        private void menosButtonAgua_Click(object sender, EventArgs e)
+        {
+            int quantidade = int.Parse(quantidadeAguaLabel.Text);
+
+            if (quantidade > 1)
+            {
+                quantidade--;
+                quantidadeAguaLabel.Text = quantidade.ToString();
+            }
+        }
+
+        private void maisButtonAgua_Click(object sender, EventArgs e)
+        {
+            int quantidade = int.Parse(quantidadeAguaLabel.Text);
+            quantidade++;
+            quantidadeAguaLabel.Text = quantidade.ToString();
+        }
+
+        private void adicionarAgua_Click(object sender, EventArgs e)
+        {
+            int quantidade = int.Parse(quantidadeAguaLabel.Text);
+            AdicionarAoCarrinho(9, quantidade);
+            AtualizarTotal();
         }
     }
 }

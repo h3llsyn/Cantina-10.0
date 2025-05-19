@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace Cantina_10._0_Projeto_Final
 {
     public partial class ProdutosPág3 : Form
@@ -15,6 +17,40 @@ namespace Cantina_10._0_Projeto_Final
         {
             InitializeComponent();
             this.produtosPág4 = produtosPág4;
+        }
+        private void AdicionarAoCarrinho(int index, int quantidade)
+        {
+            Produtos produto = Produtos.ListaProdutos[index];
+            double total = produto.Preço * quantidade;
+            carrinhoListBox3.Items.Add($"{produto.Descriçao} - R${total.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} x{quantidade}");
+        }
+        public void AtualizarTotal()
+        {
+            double total = 0;
+
+            foreach (var item in carrinhoListBox3.Items)
+            {
+                string texto = item.ToString();
+
+                int indiceX = texto.LastIndexOf('x');
+                if (indiceX == -1) continue;
+
+                if (!int.TryParse(texto.Substring(indiceX + 1).Trim(), out int quantidade))
+                    quantidade = 1;
+
+                int indiceR = texto.IndexOf("R$");
+                if (indiceR == -1) continue;
+
+                string precoStr = texto.Substring(indiceR + 2, indiceX - (indiceR + 2)).Trim();
+                precoStr = precoStr.Replace(',', '.');
+
+                if (double.TryParse(precoStr, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out double preco))
+                {
+                    total += preco;
+                }
+            }
+
+            preçoTotalCarrinhoLabel.Text = "R$" + total.ToString("F2").Replace('.', ',');
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -39,11 +75,15 @@ namespace Cantina_10._0_Projeto_Final
             carrinhoListBox3.Visible = true;
             finalizarButton.Visible = true;
             excluirItemButton.Visible = true;
+            totalCarrinhoLabel.Visible = true;
+            preçoTotalCarrinhoLabel.Visible = true;
             pictureBox5.BringToFront();
             pictureBox7.BringToFront();
             finalizarButton.BringToFront();
             excluirItemButton.BringToFront();
             carrinhoListBox3.BringToFront();
+            totalCarrinhoLabel.BringToFront();
+            preçoTotalCarrinhoLabel.BringToFront();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -58,6 +98,8 @@ namespace Cantina_10._0_Projeto_Final
             finalizarButton.Visible = false;
             excluirItemButton.Visible = false;
             carrinhoListBox3.Visible = false;
+            totalCarrinhoLabel.Visible = false;
+            preçoTotalCarrinhoLabel.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -87,7 +129,9 @@ namespace Cantina_10._0_Projeto_Final
 
         private void pictureBox17_Click(object sender, EventArgs e)
         {
-
+            int quantidade = int.Parse(quantidadeHamburguerQueijoLabel.Text);
+            quantidade++;
+            quantidadeHamburguerQueijoLabel.Text = quantidade.ToString();
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -127,6 +171,74 @@ namespace Cantina_10._0_Projeto_Final
             ProdutosPág4 produtosPág4 = new ProdutosPág4(this);
             this.Hide();
             produtosPág4.ShowDialog();
+        }
+
+        private void menosButtonHamburguerSimp_Click(object sender, EventArgs e)
+        {
+            int quantidade = int.Parse(quantidadeHamburguerSimpLabel.Text);
+
+            if (quantidade > 1)
+            {
+                quantidade--;
+                quantidadeHamburguerSimpLabel.Text = quantidade.ToString();
+            }
+        }
+
+        private void maisButtonHamburguerSimp_Click(object sender, EventArgs e)
+        {
+            int quantidade = int.Parse(quantidadeHamburguerSimpLabel.Text);
+            quantidade++;
+            quantidadeHamburguerSimpLabel.Text = quantidade.ToString();
+        }
+
+        private void adicionarHamburguerSimp_Click(object sender, EventArgs e)
+        {
+            int quantidade = int.Parse(quantidadeHamburguerSimpLabel.Text);
+            AdicionarAoCarrinho(6, quantidade);
+            AtualizarTotal();
+        }
+
+        private void menosButtonHamburguerQueijo_Click(object sender, EventArgs e)
+        {
+            int quantidade = int.Parse(quantidadeHamburguerQueijoLabel.Text);
+
+            if (quantidade > 1)
+            {
+                quantidade--;
+                quantidadeHamburguerQueijoLabel.Text = quantidade.ToString();
+            }
+        }
+
+        private void adicionarHamburguerQueijo_Click(object sender, EventArgs e)
+        {
+            int quantidade = int.Parse(quantidadeHamburguerQueijoLabel.Text);
+            AdicionarAoCarrinho(7, quantidade);
+            AtualizarTotal();
+        }
+
+        private void maisButtonXTudo_Click(object sender, EventArgs e)
+        {
+            int quantidade = int.Parse(quantidadeXTudoLabel.Text);
+            quantidade++;
+            quantidadeXTudoLabel.Text = quantidade.ToString();
+        }
+
+        private void menosButtonXTudo_Click(object sender, EventArgs e)
+        {
+            int quantidade = int.Parse(quantidadeXTudoLabel.Text);
+
+            if (quantidade > 1)
+            {
+                quantidade--;
+                quantidadeXTudoLabel.Text = quantidade.ToString();
+            }
+        }
+
+        private void adicionarXTudo_Click(object sender, EventArgs e)
+        {
+            int quantidade = int.Parse(quantidadeXTudoLabel.Text);
+            AdicionarAoCarrinho(8, quantidade);
+            AtualizarTotal();
         }
     }
 }

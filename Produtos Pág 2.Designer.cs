@@ -46,11 +46,11 @@
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
-            pictureBox16 = new PictureBox();
-            quantidadeCoxinhaLabel = new Label();
-            pictureBox17 = new PictureBox();
+            menosButtonSuco = new PictureBox();
+            quantidadeSucoLabel = new Label();
+            maisButtonSuco = new PictureBox();
             pictureBox18 = new PictureBox();
-            label9 = new Label();
+            adicionarSuco = new Label();
             label10 = new Label();
             label11 = new Label();
             label12 = new Label();
@@ -66,8 +66,8 @@
             label4 = new Label();
             label5 = new Label();
             pictureBox13 = new PictureBox();
-            label16 = new Label();
-            pictureBox14 = new PictureBox();
+            quantidadeRefriLabel = new Label();
+            maisButtonRefri = new PictureBox();
             pictureBox15 = new PictureBox();
             label17 = new Label();
             label18 = new Label();
@@ -88,15 +88,15 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)menosButtonSuco).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)maisButtonSuco).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
             ((System.ComponentModel.ISupportInitialize)menosButtonPastelQueijo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)maisButtonPastelQueijo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)maisButtonRefri).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox22).BeginInit();
             SuspendLayout();
@@ -205,6 +205,7 @@
             excluirItemButton.TabIndex = 10;
             excluirItemButton.TabStop = false;
             excluirItemButton.Visible = false;
+            excluirItemButton.Click += excluirItemButton_Click;
             // 
             // pictureBox9
             // 
@@ -298,37 +299,40 @@
             label8.TabIndex = 27;
             label8.Text = resources.GetString("label8.Text");
             // 
-            // pictureBox16
+            // menosButtonSuco
             // 
-            pictureBox16.Image = (Image)resources.GetObject("pictureBox16.Image");
-            pictureBox16.Location = new Point(308, 379);
-            pictureBox16.Name = "pictureBox16";
-            pictureBox16.Size = new Size(30, 30);
-            pictureBox16.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox16.TabIndex = 28;
-            pictureBox16.TabStop = false;
+            menosButtonSuco.Cursor = Cursors.Hand;
+            menosButtonSuco.Image = (Image)resources.GetObject("menosButtonSuco.Image");
+            menosButtonSuco.Location = new Point(308, 379);
+            menosButtonSuco.Name = "menosButtonSuco";
+            menosButtonSuco.Size = new Size(30, 30);
+            menosButtonSuco.SizeMode = PictureBoxSizeMode.Zoom;
+            menosButtonSuco.TabIndex = 28;
+            menosButtonSuco.TabStop = false;
+            menosButtonSuco.Click += menosButtonSuco_Click;
             // 
-            // quantidadeCoxinhaLabel
+            // quantidadeSucoLabel
             // 
-            quantidadeCoxinhaLabel.AutoSize = true;
-            quantidadeCoxinhaLabel.BackColor = Color.FromArgb(202, 196, 183);
-            quantidadeCoxinhaLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            quantidadeCoxinhaLabel.Location = new Point(341, 386);
-            quantidadeCoxinhaLabel.Name = "quantidadeCoxinhaLabel";
-            quantidadeCoxinhaLabel.Size = new Size(15, 17);
-            quantidadeCoxinhaLabel.TabIndex = 29;
-            quantidadeCoxinhaLabel.Text = "1";
+            quantidadeSucoLabel.AutoSize = true;
+            quantidadeSucoLabel.BackColor = Color.FromArgb(202, 196, 183);
+            quantidadeSucoLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            quantidadeSucoLabel.Location = new Point(341, 386);
+            quantidadeSucoLabel.Name = "quantidadeSucoLabel";
+            quantidadeSucoLabel.Size = new Size(15, 17);
+            quantidadeSucoLabel.TabIndex = 29;
+            quantidadeSucoLabel.Text = "1";
             // 
-            // pictureBox17
+            // maisButtonSuco
             // 
-            pictureBox17.Image = (Image)resources.GetObject("pictureBox17.Image");
-            pictureBox17.Location = new Point(359, 379);
-            pictureBox17.Name = "pictureBox17";
-            pictureBox17.Size = new Size(30, 30);
-            pictureBox17.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox17.TabIndex = 30;
-            pictureBox17.TabStop = false;
-            pictureBox17.Click += pictureBox17_Click;
+            maisButtonSuco.Cursor = Cursors.Hand;
+            maisButtonSuco.Image = (Image)resources.GetObject("maisButtonSuco.Image");
+            maisButtonSuco.Location = new Point(359, 379);
+            maisButtonSuco.Name = "maisButtonSuco";
+            maisButtonSuco.Size = new Size(30, 30);
+            maisButtonSuco.SizeMode = PictureBoxSizeMode.Zoom;
+            maisButtonSuco.TabIndex = 30;
+            maisButtonSuco.TabStop = false;
+            maisButtonSuco.Click += pictureBox17_Click;
             // 
             // pictureBox18
             // 
@@ -340,18 +344,20 @@
             pictureBox18.TabIndex = 31;
             pictureBox18.TabStop = false;
             // 
-            // label9
+            // adicionarSuco
             // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.FromArgb(124, 122, 106);
-            label9.Font = new Font("Segoe UI", 6.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.Black;
-            label9.Location = new Point(413, 381);
-            label9.Name = "label9";
-            label9.Size = new Size(60, 24);
-            label9.TabIndex = 32;
-            label9.Text = "Adicionar ao\r\ncarrinho";
-            label9.TextAlign = ContentAlignment.MiddleCenter;
+            adicionarSuco.AutoSize = true;
+            adicionarSuco.BackColor = Color.FromArgb(124, 122, 106);
+            adicionarSuco.Cursor = Cursors.Hand;
+            adicionarSuco.Font = new Font("Segoe UI", 6.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            adicionarSuco.ForeColor = Color.Black;
+            adicionarSuco.Location = new Point(413, 381);
+            adicionarSuco.Name = "adicionarSuco";
+            adicionarSuco.Size = new Size(60, 24);
+            adicionarSuco.TabIndex = 32;
+            adicionarSuco.Text = "Adicionar ao\r\ncarrinho";
+            adicionarSuco.TextAlign = ContentAlignment.MiddleCenter;
+            adicionarSuco.Click += adicionarSuco_Click;
             // 
             // label10
             // 
@@ -518,6 +524,7 @@
             // 
             // pictureBox13
             // 
+            pictureBox13.Cursor = Cursors.Hand;
             pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
             pictureBox13.Location = new Point(577, 379);
             pictureBox13.Name = "pictureBox13";
@@ -525,27 +532,30 @@
             pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox13.TabIndex = 48;
             pictureBox13.TabStop = false;
+            pictureBox13.Click += pictureBox13_Click;
             // 
-            // label16
+            // quantidadeRefriLabel
             // 
-            label16.AutoSize = true;
-            label16.BackColor = Color.FromArgb(202, 196, 183);
-            label16.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.Location = new Point(610, 386);
-            label16.Name = "label16";
-            label16.Size = new Size(15, 17);
-            label16.TabIndex = 49;
-            label16.Text = "1";
+            quantidadeRefriLabel.AutoSize = true;
+            quantidadeRefriLabel.BackColor = Color.FromArgb(202, 196, 183);
+            quantidadeRefriLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            quantidadeRefriLabel.Location = new Point(610, 386);
+            quantidadeRefriLabel.Name = "quantidadeRefriLabel";
+            quantidadeRefriLabel.Size = new Size(15, 17);
+            quantidadeRefriLabel.TabIndex = 49;
+            quantidadeRefriLabel.Text = "1";
             // 
-            // pictureBox14
+            // maisButtonRefri
             // 
-            pictureBox14.Image = (Image)resources.GetObject("pictureBox14.Image");
-            pictureBox14.Location = new Point(628, 379);
-            pictureBox14.Name = "pictureBox14";
-            pictureBox14.Size = new Size(30, 30);
-            pictureBox14.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox14.TabIndex = 50;
-            pictureBox14.TabStop = false;
+            maisButtonRefri.Cursor = Cursors.Hand;
+            maisButtonRefri.Image = (Image)resources.GetObject("maisButtonRefri.Image");
+            maisButtonRefri.Location = new Point(628, 379);
+            maisButtonRefri.Name = "maisButtonRefri";
+            maisButtonRefri.Size = new Size(30, 30);
+            maisButtonRefri.SizeMode = PictureBoxSizeMode.Zoom;
+            maisButtonRefri.TabIndex = 50;
+            maisButtonRefri.TabStop = false;
+            maisButtonRefri.Click += maisButtonRefri_Click;
             // 
             // pictureBox15
             // 
@@ -561,6 +571,7 @@
             // 
             label17.AutoSize = true;
             label17.BackColor = Color.FromArgb(124, 122, 106);
+            label17.Cursor = Cursors.Hand;
             label17.Font = new Font("Segoe UI", 6.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label17.ForeColor = Color.Black;
             label17.Location = new Point(677, 381);
@@ -569,6 +580,7 @@
             label17.TabIndex = 52;
             label17.Text = "Adicionar ao\r\ncarrinho";
             label17.TextAlign = ContentAlignment.MiddleCenter;
+            label17.Click += label17_Click;
             // 
             // label18
             // 
@@ -606,6 +618,7 @@
             totalCarrinhoLabel.Size = new Size(41, 17);
             totalCarrinhoLabel.TabIndex = 58;
             totalCarrinhoLabel.Text = "Total:";
+            totalCarrinhoLabel.Visible = false;
             // 
             // preçoTotalCarrinhoLabel
             // 
@@ -618,6 +631,7 @@
             preçoTotalCarrinhoLabel.Size = new Size(54, 17);
             preçoTotalCarrinhoLabel.TabIndex = 59;
             preçoTotalCarrinhoLabel.Text = "R$00,00";
+            preçoTotalCarrinhoLabel.Visible = false;
             // 
             // carrinhoListBox2
             // 
@@ -651,11 +665,11 @@
             Controls.Add(label12);
             Controls.Add(label11);
             Controls.Add(label10);
-            Controls.Add(label9);
+            Controls.Add(adicionarSuco);
             Controls.Add(pictureBox18);
-            Controls.Add(pictureBox17);
-            Controls.Add(quantidadeCoxinhaLabel);
-            Controls.Add(pictureBox16);
+            Controls.Add(maisButtonSuco);
+            Controls.Add(quantidadeSucoLabel);
+            Controls.Add(menosButtonSuco);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -675,9 +689,9 @@
             Controls.Add(pictureBox12);
             Controls.Add(label17);
             Controls.Add(pictureBox15);
-            Controls.Add(pictureBox14);
+            Controls.Add(maisButtonRefri);
             Controls.Add(pictureBox13);
-            Controls.Add(label16);
+            Controls.Add(quantidadeRefriLabel);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -701,15 +715,15 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
+            ((System.ComponentModel.ISupportInitialize)menosButtonSuco).EndInit();
+            ((System.ComponentModel.ISupportInitialize)maisButtonSuco).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
             ((System.ComponentModel.ISupportInitialize)menosButtonPastelQueijo).EndInit();
             ((System.ComponentModel.ISupportInitialize)maisButtonPastelQueijo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
+            ((System.ComponentModel.ISupportInitialize)maisButtonRefri).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox22).EndInit();
             ResumeLayout(false);
@@ -735,11 +749,11 @@
         private Label label6;
         private Label label7;
         private Label label8;
-        private PictureBox pictureBox16;
-        private Label quantidadeCoxinhaLabel;
-        private PictureBox pictureBox17;
+        private PictureBox menosButtonSuco;
+        private Label quantidadeSucoLabel;
+        private PictureBox maisButtonSuco;
         private PictureBox pictureBox18;
-        private Label label9;
+        private Label adicionarSuco;
         private Label label10;
         private Label label11;
         private Label label12;
@@ -755,8 +769,8 @@
         private Label label4;
         private Label label5;
         private PictureBox pictureBox13;
-        private Label label16;
-        private PictureBox pictureBox14;
+        private Label quantidadeRefriLabel;
+        private PictureBox maisButtonRefri;
         private PictureBox pictureBox15;
         private Label label17;
         private Label label18;
