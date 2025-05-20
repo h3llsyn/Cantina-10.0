@@ -636,6 +636,7 @@
             carrinhoListBox1.Size = new Size(151, 319);
             carrinhoListBox1.TabIndex = 56;
             carrinhoListBox1.Visible = false;
+            carrinhoListBox1.SelectedIndexChanged += carrinhoListBox1_SelectedIndexChanged;
             // 
             // preçoTotalCarrinhoLabel
             // 

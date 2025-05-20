@@ -273,7 +273,21 @@ namespace Cantina_10._0_Projeto_Final
 
         private void excluirItemButton_Click(object sender, EventArgs e)
         {
+            if (carrinhoListBox1.SelectedIndex != -1)
+            {
+                carrinhoListBox1.Items.Remove(carrinhoListBox1.SelectedItem);
+                AtualizarTotal();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um produto para remover", "Erro");
+            }
+        }
+
+        private void carrinhoListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
+
     }
 }

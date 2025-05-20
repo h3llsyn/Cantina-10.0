@@ -22,13 +22,13 @@ namespace Cantina_10._0_Projeto_Final
         {
             Produtos produto = Produtos.ListaProdutos[index];
             double total = produto.Preço * quantidade;
-            carrinhoListBox2.Items.Add($"{produto.Descriçao} - R${total.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} x{quantidade}");
+            produtosPág1.carrinhoListBox1.Items.Add($"{produto.Descriçao} - R${total.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} x{quantidade}");
         }
         public void AtualizarTotal()
         {
             double total = 0;
 
-            foreach (var item in carrinhoListBox2.Items)
+            foreach (var item in produtosPág1.carrinhoListBox1.Items)
             {
                 string texto = item.ToString();
 
@@ -72,7 +72,7 @@ namespace Cantina_10._0_Projeto_Final
         {
             pictureBox5.Visible = true;
             pictureBox7.Visible = true;
-            carrinhoListBox2.Visible = true;
+            produtosPág1.carrinhoListBox1.Visible = true;
             finalizarButton.Visible = true;
             excluirItemButton.Visible = true;
             totalCarrinhoLabel.Visible = true;
@@ -81,7 +81,7 @@ namespace Cantina_10._0_Projeto_Final
             pictureBox7.BringToFront();
             finalizarButton.BringToFront();
             excluirItemButton.BringToFront();
-            carrinhoListBox2.BringToFront();
+            produtosPág1.carrinhoListBox1.BringToFront();
             totalCarrinhoLabel.BringToFront();
             preçoTotalCarrinhoLabel.BringToFront();
         }
@@ -97,7 +97,7 @@ namespace Cantina_10._0_Projeto_Final
             pictureBox7.Visible = false;
             finalizarButton.Visible = false;
             excluirItemButton.Visible = false;
-            carrinhoListBox2.Visible = false;
+            produtosPág1.carrinhoListBox1.Visible = false;
             totalCarrinhoLabel.Visible = false;
             preçoTotalCarrinhoLabel.Visible = false;
         }
