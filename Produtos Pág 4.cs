@@ -1,4 +1,8 @@
+using System;
 using System.Globalization;
+using System.Reflection.Emit;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Cantina_10._0_Projeto_Final
 {
@@ -22,13 +26,15 @@ namespace Cantina_10._0_Projeto_Final
         {
             Produtos produto = Produtos.ListaProdutos[index];
             double total = produto.Preço * quantidade;
-            produtosPág1.carrinhoListBox1.Items.Add($"{produto.Descriçao} - R${total.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} x{quantidade}");
+            Produtos produtos = Produtos.ListaProdutos[index];
+            Carrinho.Itens.Add((produto, quantidade));
+            carrinhoListBox4.Items.Add($"{produto.Descriçao} - R${total.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} x{quantidade}");
         }
         public void AtualizarTotal()
         {
             double total = 0;
 
-            foreach (var item in produtosPág1.carrinhoListBox1.Items)
+            foreach (var item in carrinhoListBox4.Items)
             {
                 string texto = item.ToString();
 
@@ -70,20 +76,7 @@ namespace Cantina_10._0_Projeto_Final
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            pictureBox5.Visible = true;
-            pictureBox7.Visible = true;
-            produtosPág1.carrinhoListBox1.Visible = true;
-            finalizarButton.Visible = true;
-            excluirItemButton.Visible = true;
-            totalCarrinhoLabel.Visible = true;
-            preçoTotalCarrinhoLabel.Visible = true;
-            pictureBox5.BringToFront();
-            pictureBox7.BringToFront();
-            finalizarButton.BringToFront();
-            excluirItemButton.BringToFront();
-            produtosPág1.carrinhoListBox1.BringToFront();
-            totalCarrinhoLabel.BringToFront();
-            preçoTotalCarrinhoLabel.BringToFront();
+
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -97,14 +90,17 @@ namespace Cantina_10._0_Projeto_Final
             pictureBox7.Visible = false;
             finalizarButton.Visible = false;
             excluirItemButton.Visible = false;
-            produtosPág1.carrinhoListBox1.Visible = false;
+            carrinhoListBox4.Visible = false;
             totalCarrinhoLabel.Visible = false;
             preçoTotalCarrinhoLabel.Visible = false;
+            comboBox1.Visible = false;
+            label9.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            AtualizarCarrinho();
+            AtualizarTotal();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -194,6 +190,63 @@ namespace Cantina_10._0_Projeto_Final
             int quantidade = int.Parse(quantidadeAguaLabel.Text);
             AdicionarAoCarrinho(9, quantidade);
             AtualizarTotal();
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            pictureBox5.Visible = true;
+            pictureBox7.Visible = true;
+            carrinhoListBox4.Visible = true;
+            finalizarButton.Visible = true;
+            excluirItemButton.Visible = true;
+            totalCarrinhoLabel.Visible = true;
+            preçoTotalCarrinhoLabel.Visible = true;
+            comboBox1.Visible = true;
+            label9.Visible = true;
+            pictureBox5.BringToFront();
+            pictureBox7.BringToFront();
+            finalizarButton.BringToFront();
+            excluirItemButton.BringToFront();
+            carrinhoListBox4.BringToFront();
+            totalCarrinhoLabel.BringToFront();
+            preçoTotalCarrinhoLabel.BringToFront();
+            comboBox1.BringToFront();
+            label9.BringToFront();
+        }
+        private void AtualizarCarrinho()
+        {
+            carrinhoListBox4.Items.Clear();
+
+            foreach (var item in Carrinho.Itens)
+            {
+                double total = item.produto.Preço * item.quantidade;
+                carrinhoListBox4.Items.Add($"{item.produto.Descriçao} - R${total.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} x{item.quantidade}");
+            }
+        }
+
+        private void excluirItemButton_Click(object sender, EventArgs e)
+        {
+            if (carrinhoListBox4.SelectedIndex != -1)
+            {
+                carrinhoListBox4.Items.Remove(carrinhoListBox4.SelectedItem);
+                AtualizarTotal();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um produto para remover", "Erro");
+            }
+        }
+
+        private void finalizarButton_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem != null)
+            {
+                MessageBox.Show($"\n Agradecemos pela sua compra _Nome de Usuário_! \n O seu pedido está sendo preparado, por favor aguarde no balcão.", "Pedido Finalizado");
+            }
+            else
+            {
+                MessageBox.Show("Adicione uma forma de pagamento", "Erro");
+            }
         }
     }
 }

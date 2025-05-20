@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cantina_10._0_Projeto_Final
 {
-    internal class Produtos
+    public class Produtos
     {
         private string descriçao;
         private double preço;

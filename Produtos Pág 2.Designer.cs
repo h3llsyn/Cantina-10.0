@@ -74,6 +74,9 @@
             totalCarrinhoLabel = new Label();
             preçoTotalCarrinhoLabel = new Label();
             carrinhoListBox2 = new ListBox();
+            pictureBox4 = new PictureBox();
+            label9 = new Label();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -97,6 +100,7 @@
             ((System.ComponentModel.ISupportInitialize)maisButtonRefri).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox22).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -171,6 +175,7 @@
             // 
             // finalizarButton
             // 
+            finalizarButton.Cursor = Cursors.Hand;
             finalizarButton.Image = (Image)resources.GetObject("finalizarButton.Image");
             finalizarButton.Location = new Point(712, 394);
             finalizarButton.Name = "finalizarButton";
@@ -179,9 +184,11 @@
             finalizarButton.TabIndex = 9;
             finalizarButton.TabStop = false;
             finalizarButton.Visible = false;
+            finalizarButton.Click += finalizarButton_Click;
             // 
             // excluirItemButton
             // 
+            excluirItemButton.Cursor = Cursors.Hand;
             excluirItemButton.Image = (Image)resources.GetObject("excluirItemButton.Image");
             excluirItemButton.Location = new Point(634, 394);
             excluirItemButton.Name = "excluirItemButton";
@@ -598,7 +605,7 @@
             totalCarrinhoLabel.BackColor = Color.FromArgb(202, 196, 183);
             totalCarrinhoLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             totalCarrinhoLabel.ForeColor = Color.Black;
-            totalCarrinhoLabel.Location = new Point(697, 390);
+            totalCarrinhoLabel.Location = new Point(697, 394);
             totalCarrinhoLabel.Name = "totalCarrinhoLabel";
             totalCarrinhoLabel.Size = new Size(41, 17);
             totalCarrinhoLabel.TabIndex = 58;
@@ -611,7 +618,7 @@
             preçoTotalCarrinhoLabel.BackColor = Color.FromArgb(202, 196, 183);
             preçoTotalCarrinhoLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             preçoTotalCarrinhoLabel.ForeColor = Color.Black;
-            preçoTotalCarrinhoLabel.Location = new Point(734, 390);
+            preçoTotalCarrinhoLabel.Location = new Point(734, 394);
             preçoTotalCarrinhoLabel.Name = "preçoTotalCarrinhoLabel";
             preçoTotalCarrinhoLabel.Size = new Size(54, 17);
             preçoTotalCarrinhoLabel.TabIndex = 59;
@@ -623,11 +630,49 @@
             carrinhoListBox2.BackColor = Color.FromArgb(202, 196, 183);
             carrinhoListBox2.FormattingEnabled = true;
             carrinhoListBox2.ItemHeight = 15;
-            carrinhoListBox2.Location = new Point(637, 45);
+            carrinhoListBox2.Location = new Point(637, 35);
             carrinhoListBox2.Name = "carrinhoListBox2";
             carrinhoListBox2.Size = new Size(151, 319);
             carrinhoListBox2.TabIndex = 60;
             carrinhoListBox2.Visible = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = Color.FromArgb(230, 255, 0);
+            pictureBox4.Cursor = Cursors.Hand;
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(725, 10);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(25, 25);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 61;
+            pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click_1;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.FromArgb(202, 196, 183);
+            label9.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.Black;
+            label9.Location = new Point(642, 354);
+            label9.Name = "label9";
+            label9.Size = new Size(142, 17);
+            label9.TabIndex = 62;
+            label9.Text = "Formas de Pagamento:";
+            label9.Visible = false;
+            // 
+            // comboBox1
+            // 
+            comboBox1.BackColor = Color.FromArgb(243, 241, 238);
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Pix", "Débito", "Crédito", "Dinheiro" });
+            comboBox1.Location = new Point(642, 373);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(142, 23);
+            comboBox1.TabIndex = 63;
+            comboBox1.Visible = false;
             // 
             // ProdutosPág2
             // 
@@ -635,6 +680,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
+            Controls.Add(comboBox1);
+            Controls.Add(label9);
+            Controls.Add(pictureBox4);
             Controls.Add(carrinhoListBox2);
             Controls.Add(preçoTotalCarrinhoLabel);
             Controls.Add(totalCarrinhoLabel);
@@ -709,6 +757,7 @@
             ((System.ComponentModel.ISupportInitialize)maisButtonRefri).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox22).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -761,5 +810,8 @@
         private Label totalCarrinhoLabel;
         private Label preçoTotalCarrinhoLabel;
         public ListBox carrinhoListBox2;
+        private PictureBox pictureBox4;
+        private Label label9;
+        private ComboBox comboBox1;
     }
 }

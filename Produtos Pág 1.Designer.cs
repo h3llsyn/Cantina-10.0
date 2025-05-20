@@ -75,6 +75,8 @@
             totalCarrinhoLabel = new Label();
             carrinhoListBox1 = new ListBox();
             preçoTotalCarrinhoLabel = new Label();
+            label9 = new Label();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -187,6 +189,7 @@
             // 
             // finalizarButton
             // 
+            finalizarButton.Cursor = Cursors.Hand;
             finalizarButton.Image = (Image)resources.GetObject("finalizarButton.Image");
             finalizarButton.Location = new Point(712, 394);
             finalizarButton.Name = "finalizarButton";
@@ -195,6 +198,7 @@
             finalizarButton.TabIndex = 9;
             finalizarButton.TabStop = false;
             finalizarButton.Visible = false;
+            finalizarButton.Click += finalizarButton_Click;
             // 
             // excluirItemButton
             // 
@@ -618,7 +622,7 @@
             totalCarrinhoLabel.BackColor = Color.FromArgb(202, 196, 183);
             totalCarrinhoLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             totalCarrinhoLabel.ForeColor = Color.Black;
-            totalCarrinhoLabel.Location = new Point(697, 390);
+            totalCarrinhoLabel.Location = new Point(697, 394);
             totalCarrinhoLabel.Name = "totalCarrinhoLabel";
             totalCarrinhoLabel.Size = new Size(41, 17);
             totalCarrinhoLabel.TabIndex = 45;
@@ -631,7 +635,7 @@
             carrinhoListBox1.BackColor = Color.FromArgb(202, 196, 183);
             carrinhoListBox1.FormattingEnabled = true;
             carrinhoListBox1.ItemHeight = 15;
-            carrinhoListBox1.Location = new Point(637, 45);
+            carrinhoListBox1.Location = new Point(637, 35);
             carrinhoListBox1.Name = "carrinhoListBox1";
             carrinhoListBox1.Size = new Size(151, 319);
             carrinhoListBox1.TabIndex = 56;
@@ -644,12 +648,38 @@
             preçoTotalCarrinhoLabel.BackColor = Color.FromArgb(202, 196, 183);
             preçoTotalCarrinhoLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             preçoTotalCarrinhoLabel.ForeColor = Color.Black;
-            preçoTotalCarrinhoLabel.Location = new Point(734, 390);
+            preçoTotalCarrinhoLabel.Location = new Point(734, 394);
             preçoTotalCarrinhoLabel.Name = "preçoTotalCarrinhoLabel";
             preçoTotalCarrinhoLabel.Size = new Size(54, 17);
             preçoTotalCarrinhoLabel.TabIndex = 57;
             preçoTotalCarrinhoLabel.Text = "R$00,00";
             preçoTotalCarrinhoLabel.Visible = false;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.FromArgb(202, 196, 183);
+            label9.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.Black;
+            label9.Location = new Point(642, 354);
+            label9.Name = "label9";
+            label9.Size = new Size(142, 17);
+            label9.TabIndex = 58;
+            label9.Text = "Formas de Pagamento:";
+            label9.Visible = false;
+            // 
+            // comboBox1
+            // 
+            comboBox1.BackColor = Color.FromArgb(243, 241, 238);
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Pix", "Débito", "Crédito", "Dinheiro" });
+            comboBox1.Location = new Point(642, 373);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(142, 23);
+            comboBox1.TabIndex = 59;
+            comboBox1.Visible = false;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // ProdutosPág1
             // 
@@ -657,6 +687,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
+            Controls.Add(comboBox1);
+            Controls.Add(label9);
             Controls.Add(preçoTotalCarrinhoLabel);
             Controls.Add(carrinhoListBox1);
             Controls.Add(totalCarrinhoLabel);
@@ -784,5 +816,7 @@
         private Label totalCarrinhoLabel;
         private Label preçoTotalCarrinhoLabel;
         public ListBox carrinhoListBox1;
+        private Label label9;
+        private ComboBox comboBox1;
     }
 }
