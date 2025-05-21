@@ -75,8 +75,17 @@
             totalCarrinhoLabel = new Label();
             carrinhoListBox1 = new ListBox();
             preçoTotalCarrinhoLabel = new Label();
-            label9 = new Label();
+            formasPagamentoLabel = new Label();
             comboBox1 = new ComboBox();
+            fundoPagamentoPictureBox = new PictureBox();
+            PagamentoLabel = new Label();
+            precoPagarLabel = new Label();
+            totalLabell = new Label();
+            extratoListBox = new ListBox();
+            pagarAgoraPicture = new PictureBox();
+            voltarPicture = new PictureBox();
+            pagarAgoraLabel = new Label();
+            voltarLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -101,6 +110,9 @@
             ((System.ComponentModel.ISupportInitialize)maisButtonPastelCarne).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox22).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)fundoPagamentoPictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pagarAgoraPicture).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)voltarPicture).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -655,18 +667,18 @@
             preçoTotalCarrinhoLabel.Text = "R$00,00";
             preçoTotalCarrinhoLabel.Visible = false;
             // 
-            // label9
+            // formasPagamentoLabel
             // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.FromArgb(202, 196, 183);
-            label9.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.Black;
-            label9.Location = new Point(642, 354);
-            label9.Name = "label9";
-            label9.Size = new Size(142, 17);
-            label9.TabIndex = 58;
-            label9.Text = "Formas de Pagamento:";
-            label9.Visible = false;
+            formasPagamentoLabel.AutoSize = true;
+            formasPagamentoLabel.BackColor = Color.FromArgb(124, 122, 106);
+            formasPagamentoLabel.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            formasPagamentoLabel.ForeColor = Color.White;
+            formasPagamentoLabel.Location = new Point(244, 100);
+            formasPagamentoLabel.Name = "formasPagamentoLabel";
+            formasPagamentoLabel.Size = new Size(295, 37);
+            formasPagamentoLabel.TabIndex = 58;
+            formasPagamentoLabel.Text = "Formas de Pagamento:";
+            formasPagamentoLabel.Visible = false;
             // 
             // comboBox1
             // 
@@ -674,12 +686,126 @@
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Pix", "Débito", "Crédito", "Dinheiro" });
-            comboBox1.Location = new Point(642, 373);
+            comboBox1.Location = new Point(244, 321);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(142, 23);
+            comboBox1.Size = new Size(295, 23);
             comboBox1.TabIndex = 59;
             comboBox1.Visible = false;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // fundoPagamentoPictureBox
+            // 
+            fundoPagamentoPictureBox.Image = (Image)resources.GetObject("fundoPagamentoPictureBox.Image");
+            fundoPagamentoPictureBox.Location = new Point(53, 53);
+            fundoPagamentoPictureBox.Name = "fundoPagamentoPictureBox";
+            fundoPagamentoPictureBox.Size = new Size(700, 350);
+            fundoPagamentoPictureBox.TabIndex = 60;
+            fundoPagamentoPictureBox.TabStop = false;
+            fundoPagamentoPictureBox.Visible = false;
+            // 
+            // PagamentoLabel
+            // 
+            PagamentoLabel.AutoSize = true;
+            PagamentoLabel.BackColor = Color.FromArgb(124, 122, 106);
+            PagamentoLabel.Font = new Font("Segoe UI Semibold", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            PagamentoLabel.ForeColor = Color.White;
+            PagamentoLabel.Location = new Point(55, 55);
+            PagamentoLabel.Name = "PagamentoLabel";
+            PagamentoLabel.Size = new Size(185, 45);
+            PagamentoLabel.TabIndex = 61;
+            PagamentoLabel.Text = "Pagamento";
+            PagamentoLabel.Visible = false;
+            // 
+            // precoPagarLabel
+            // 
+            precoPagarLabel.AutoSize = true;
+            precoPagarLabel.BackColor = Color.FromArgb(124, 122, 106);
+            precoPagarLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            precoPagarLabel.ForeColor = Color.White;
+            precoPagarLabel.Location = new Point(470, 297);
+            precoPagarLabel.Name = "precoPagarLabel";
+            precoPagarLabel.Size = new Size(69, 21);
+            precoPagarLabel.TabIndex = 62;
+            precoPagarLabel.Text = "R$00,00";
+            precoPagarLabel.Visible = false;
+            // 
+            // totalLabell
+            // 
+            totalLabell.AutoSize = true;
+            totalLabell.BackColor = Color.FromArgb(124, 122, 106);
+            totalLabell.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            totalLabell.ForeColor = Color.White;
+            totalLabell.Location = new Point(421, 297);
+            totalLabell.Name = "totalLabell";
+            totalLabell.Size = new Size(52, 21);
+            totalLabell.TabIndex = 63;
+            totalLabell.Text = "Total:";
+            totalLabell.Visible = false;
+            // 
+            // extratoListBox
+            // 
+            extratoListBox.FormattingEnabled = true;
+            extratoListBox.ItemHeight = 15;
+            extratoListBox.Location = new Point(244, 140);
+            extratoListBox.Name = "extratoListBox";
+            extratoListBox.Size = new Size(295, 154);
+            extratoListBox.TabIndex = 64;
+            extratoListBox.Visible = false;
+            extratoListBox.SelectedIndexChanged += extratoListBox_SelectedIndexChanged;
+            // 
+            // pagarAgoraPicture
+            // 
+            pagarAgoraPicture.Cursor = Cursors.Hand;
+            pagarAgoraPicture.Image = (Image)resources.GetObject("pagarAgoraPicture.Image");
+            pagarAgoraPicture.Location = new Point(395, 347);
+            pagarAgoraPicture.Name = "pagarAgoraPicture";
+            pagarAgoraPicture.Size = new Size(157, 52);
+            pagarAgoraPicture.SizeMode = PictureBoxSizeMode.CenterImage;
+            pagarAgoraPicture.TabIndex = 65;
+            pagarAgoraPicture.TabStop = false;
+            pagarAgoraPicture.Visible = false;
+            // 
+            // voltarPicture
+            // 
+            voltarPicture.Cursor = Cursors.Hand;
+            voltarPicture.Image = (Image)resources.GetObject("voltarPicture.Image");
+            voltarPicture.Location = new Point(232, 347);
+            voltarPicture.Name = "voltarPicture";
+            voltarPicture.Size = new Size(157, 52);
+            voltarPicture.SizeMode = PictureBoxSizeMode.CenterImage;
+            voltarPicture.TabIndex = 66;
+            voltarPicture.TabStop = false;
+            voltarPicture.Visible = false;
+            voltarPicture.Click += voltarPicture_Click;
+            // 
+            // pagarAgoraLabel
+            // 
+            pagarAgoraLabel.AutoSize = true;
+            pagarAgoraLabel.BackColor = Color.FromArgb(17, 25, 12);
+            pagarAgoraLabel.Cursor = Cursors.Hand;
+            pagarAgoraLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            pagarAgoraLabel.ForeColor = Color.White;
+            pagarAgoraLabel.Location = new Point(425, 362);
+            pagarAgoraLabel.Name = "pagarAgoraLabel";
+            pagarAgoraLabel.Size = new Size(97, 21);
+            pagarAgoraLabel.TabIndex = 67;
+            pagarAgoraLabel.Text = "Pagar agora";
+            pagarAgoraLabel.Visible = false;
+            // 
+            // voltarLabel
+            // 
+            voltarLabel.AutoSize = true;
+            voltarLabel.BackColor = Color.FromArgb(243, 241, 238);
+            voltarLabel.Cursor = Cursors.Hand;
+            voltarLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            voltarLabel.ForeColor = Color.Black;
+            voltarLabel.Location = new Point(284, 362);
+            voltarLabel.Name = "voltarLabel";
+            voltarLabel.Size = new Size(53, 21);
+            voltarLabel.TabIndex = 68;
+            voltarLabel.Text = "Voltar";
+            voltarLabel.Visible = false;
+            voltarLabel.Click += voltarLabel_Click;
             // 
             // ProdutosPág1
             // 
@@ -687,8 +813,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
+            Controls.Add(voltarLabel);
+            Controls.Add(pagarAgoraLabel);
+            Controls.Add(voltarPicture);
+            Controls.Add(pagarAgoraPicture);
+            Controls.Add(extratoListBox);
+            Controls.Add(totalLabell);
+            Controls.Add(precoPagarLabel);
             Controls.Add(comboBox1);
-            Controls.Add(label9);
+            Controls.Add(formasPagamentoLabel);
+            Controls.Add(PagamentoLabel);
+            Controls.Add(fundoPagamentoPictureBox);
             Controls.Add(preçoTotalCarrinhoLabel);
             Controls.Add(carrinhoListBox1);
             Controls.Add(totalCarrinhoLabel);
@@ -764,6 +899,9 @@
             ((System.ComponentModel.ISupportInitialize)maisButtonPastelCarne).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox22).EndInit();
+            ((System.ComponentModel.ISupportInitialize)fundoPagamentoPictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pagarAgoraPicture).EndInit();
+            ((System.ComponentModel.ISupportInitialize)voltarPicture).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -816,7 +954,16 @@
         private Label totalCarrinhoLabel;
         private Label preçoTotalCarrinhoLabel;
         public ListBox carrinhoListBox1;
-        private Label label9;
+        private Label formasPagamentoLabel;
         private ComboBox comboBox1;
+        private PictureBox fundoPagamentoPictureBox;
+        private Label PagamentoLabel;
+        private Label precoPagarLabel;
+        private Label totalLabell;
+        private ListBox extratoListBox;
+        private PictureBox pagarAgoraPicture;
+        private PictureBox voltarPicture;
+        private Label pagarAgoraLabel;
+        private Label voltarLabel;
     }
 }

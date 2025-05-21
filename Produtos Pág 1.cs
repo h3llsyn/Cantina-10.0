@@ -54,8 +54,6 @@ namespace Cantina_10._0_Projeto_Final
             excluirItemButton.Visible = true;
             totalCarrinhoLabel.Visible = true;
             preçoTotalCarrinhoLabel.Visible = true;
-            comboBox1.Visible = true;
-            label9.Visible = true;
             pictureBox5.BringToFront();
             pictureBox7.BringToFront();
             finalizarButton.BringToFront();
@@ -63,8 +61,7 @@ namespace Cantina_10._0_Projeto_Final
             carrinhoListBox1.BringToFront();
             totalCarrinhoLabel.BringToFront();
             preçoTotalCarrinhoLabel.BringToFront();
-            comboBox1.BringToFront();
-            label9.BringToFront();
+            formasPagamentoLabel.BringToFront();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -81,8 +78,6 @@ namespace Cantina_10._0_Projeto_Final
             carrinhoListBox1.Visible = false;
             totalCarrinhoLabel.Visible = false;
             preçoTotalCarrinhoLabel.Visible = false;
-            comboBox1.Visible = false;
-            label9.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -150,6 +145,7 @@ namespace Cantina_10._0_Projeto_Final
             int quantidade = int.Parse(quantidadePaoQueijoLabel.Text);
             AdicionarAoCarrinho(0, quantidade);
             AtualizarTotal();
+            quantidadePaoQueijoLabel.Text = "1";
         }
 
         private void label5_CursorChanged(object sender, EventArgs e)
@@ -223,6 +219,7 @@ namespace Cantina_10._0_Projeto_Final
             int quantidade = int.Parse(quantidadeCoxinhaLabel.Text);
             AdicionarAoCarrinho(1, quantidade);
             AtualizarTotal();
+            quantidadeCoxinhaLabel.Text = "1";
         }
 
         private void maisButtonCoxinha_Click(object sender, EventArgs e)
@@ -281,6 +278,7 @@ namespace Cantina_10._0_Projeto_Final
             int quantidade = int.Parse(quantidadePastelCarneLabel.Text);
             AdicionarAoCarrinho(2, quantidade);
             AtualizarTotal();
+            quantidadePastelCarneLabel.Text = "1";
         }
 
         private void excluirItemButton_Click(object sender, EventArgs e)
@@ -314,19 +312,73 @@ namespace Cantina_10._0_Projeto_Final
 
         private void finalizarButton_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem != null)
-            {
-                MessageBox.Show($"\n Agradecemos pela sua compra _Nome de Usuário_! \n O seu pedido está sendo preparado, por favor aguarde no balcão.", "Pedido Finalizado");
-            }
-            else
-            {
-                MessageBox.Show("Adicione uma forma de pagamento", "Erro");
-            }
+            fundoPagamentoPictureBox.Visible = true;
+            PagamentoLabel.Visible = true;
+            formasPagamentoLabel.Visible = true;
+            extratoListBox.Visible = true;
+            totalLabell.Visible = true;
+            precoPagarLabel.Visible = true;
+            comboBox1.Visible = true;
+            voltarPicture.Visible = true;
+            voltarLabel.Visible = true;
+            pagarAgoraPicture.Visible = true;
+            pagarAgoraLabel.Visible = true;
+            fundoPagamentoPictureBox.BringToFront();
+            PagamentoLabel.BringToFront();
+            formasPagamentoLabel.BringToFront();
+            extratoListBox.BringToFront();
+            totalLabell.BringToFront();
+            precoPagarLabel.BringToFront();
+            comboBox1.BringToFront();
+            voltarPicture.BringToFront();
+            voltarLabel.BringToFront();
+            pagarAgoraPicture.BringToFront();
+            pagarAgoraLabel.BringToFront();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void voltarLabel_Click(object sender, EventArgs e)
+        {
+            fundoPagamentoPictureBox.Visible = false;
+            PagamentoLabel.Visible = false;
+            formasPagamentoLabel.Visible = false;
+            extratoListBox.Visible = false;
+            totalLabell.Visible = false;
+            precoPagarLabel.Visible = false;
+            comboBox1.Visible = false;
+            voltarPicture.Visible = false;
+            voltarLabel.Visible = false;
+            pagarAgoraPicture.Visible = false;
+            pagarAgoraLabel.Visible = false;
+        }
+
+        private void voltarPicture_Click(object sender, EventArgs e)
+        {
+            fundoPagamentoPictureBox.Visible = false;
+            PagamentoLabel.Visible = false;
+            formasPagamentoLabel.Visible = false;
+            extratoListBox.Visible = false;
+            totalLabell.Visible = false;
+            precoPagarLabel.Visible = false;
+            comboBox1.Visible = false;
+            voltarPicture.Visible = false;
+            voltarLabel.Visible = false;
+            pagarAgoraPicture.Visible = false;
+            pagarAgoraLabel.Visible = false;
+        }
+
+        private void extratoListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AtualizarCarrinho();
         }
     }
 }

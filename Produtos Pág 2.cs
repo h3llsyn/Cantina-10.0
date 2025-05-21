@@ -181,6 +181,7 @@ namespace Cantina_10._0_Projeto_Final
             int quantidade = int.Parse(quantidadePastelQueijoLabel.Text);
             AdicionarAoCarrinho(3, quantidade);
             AtualizarTotal();
+            quantidadePastelQueijoLabel.Text = "1";
         }
 
         private void carrinhoListBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -204,6 +205,7 @@ namespace Cantina_10._0_Projeto_Final
             int quantidade = int.Parse(quantidadeSucoLabel.Text);
             AdicionarAoCarrinho(4, quantidade);
             AtualizarTotal();
+            quantidadeSucoLabel.Text = "1";
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
@@ -229,6 +231,7 @@ namespace Cantina_10._0_Projeto_Final
             int quantidade = int.Parse(quantidadeRefriLabel.Text);
             AdicionarAoCarrinho(5, quantidade);
             AtualizarTotal();
+            quantidadeRefriLabel.Text = "1";
         }
 
         private void excluirItemButton_Click(object sender, EventArgs e)

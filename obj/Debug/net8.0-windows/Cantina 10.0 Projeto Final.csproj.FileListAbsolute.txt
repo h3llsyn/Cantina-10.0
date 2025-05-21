@@ -40,3 +40,24 @@ C:\Users\25162917\source\repos\Cantina 10.0 PC\Cantina-10.0\obj\Debug\net8.0-win
 C:\Users\25162917\source\repos\Cantina 10.0 PC\Cantina-10.0\obj\Debug\net8.0-windows\Cantina 10.0 Projeto Final.pdb
 C:\Users\25162917\source\repos\Cantina 10.0 PC\Cantina-10.0\obj\Debug\net8.0-windows\Cantina 10.0 Projeto Final.genruntimeconfig.cache
 C:\Users\25162917\source\repos\Cantina 10.0 PC\Cantina-10.0\obj\Debug\net8.0-windows\ref\Cantina 10.0 Projeto Final.dll
+C:\Users\25162917\Downloads\Cantina-10.0\bin\Debug\net8.0-windows\Cantina 10.0 Projeto Final.exe
+C:\Users\25162917\Downloads\Cantina-10.0\bin\Debug\net8.0-windows\Cantina 10.0 Projeto Final.deps.json
+C:\Users\25162917\Downloads\Cantina-10.0\bin\Debug\net8.0-windows\Cantina 10.0 Projeto Final.runtimeconfig.json
+C:\Users\25162917\Downloads\Cantina-10.0\bin\Debug\net8.0-windows\Cantina 10.0 Projeto Final.dll
+C:\Users\25162917\Downloads\Cantina-10.0\bin\Debug\net8.0-windows\Cantina 10.0 Projeto Final.pdb
+C:\Users\25162917\Downloads\Cantina-10.0\obj\Debug\net8.0-windows\Cantina_10._0_Projeto_Final.ProdutosPág1.resources
+C:\Users\25162917\Downloads\Cantina-10.0\obj\Debug\net8.0-windows\Cantina_10._0_Projeto_Final.ProdutosPág2.resources
+C:\Users\25162917\Downloads\Cantina-10.0\obj\Debug\net8.0-windows\Cantina_10._0_Projeto_Final.ProdutosPág3.resources
+C:\Users\25162917\Downloads\Cantina-10.0\obj\Debug\net8.0-windows\Cantina_10._0_Projeto_Final.ProdutosPág4.resources
+C:\Users\25162917\Downloads\Cantina-10.0\obj\Debug\net8.0-windows\Cantina_10._0_Projeto_Final.Properties.Resources.resources
+C:\Users\25162917\Downloads\Cantina-10.0\obj\Debug\net8.0-windows\Cantina 10.0 Projeto Final.csproj.GenerateResource.cache
+C:\Users\25162917\Downloads\Cantina-10.0\obj\Debug\net8.0-windows\Cantina 10.0 Projeto Final.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\25162917\Downloads\Cantina-10.0\obj\Debug\net8.0-windows\Cantina 10.0 Projeto Final.AssemblyInfoInputs.cache
+C:\Users\25162917\Downloads\Cantina-10.0\obj\Debug\net8.0-windows\Cantina 10.0 Projeto Final.AssemblyInfo.cs
+C:\Users\25162917\Downloads\Cantina-10.0\obj\Debug\net8.0-windows\Cantina 10.0 Projeto Final.csproj.CoreCompileInputs.cache
+C:\Users\25162917\Downloads\Cantina-10.0\obj\Debug\net8.0-windows\Cantina 10.0 Projeto Final.sourcelink.json
+C:\Users\25162917\Downloads\Cantina-10.0\obj\Debug\net8.0-windows\Cantina 10.0 Projeto Final.dll
+C:\Users\25162917\Downloads\Cantina-10.0\obj\Debug\net8.0-windows\refint\Cantina 10.0 Projeto Final.dll
+C:\Users\25162917\Downloads\Cantina-10.0\obj\Debug\net8.0-windows\Cantina 10.0 Projeto Final.pdb
+C:\Users\25162917\Downloads\Cantina-10.0\obj\Debug\net8.0-windows\Cantina 10.0 Projeto Final.genruntimeconfig.cache
+C:\Users\25162917\Downloads\Cantina-10.0\obj\Debug\net8.0-windows\ref\Cantina 10.0 Projeto Final.dll

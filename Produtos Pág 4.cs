@@ -190,6 +190,7 @@ namespace Cantina_10._0_Projeto_Final
             int quantidade = int.Parse(quantidadeAguaLabel.Text);
             AdicionarAoCarrinho(9, quantidade);
             AtualizarTotal();
+            quantidadeAguaLabel.Text = "1";
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)

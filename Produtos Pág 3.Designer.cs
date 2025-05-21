@@ -690,6 +690,7 @@
             comboBox1.Size = new Size(142, 23);
             comboBox1.TabIndex = 64;
             comboBox1.Visible = false;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // ProdutosPág3
             // 
@@ -698,11 +699,17 @@
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
             Controls.Add(comboBox1);
-            Controls.Add(label9);
-            Controls.Add(pictureBox13);
-            Controls.Add(carrinhoListBox3);
             Controls.Add(preçoTotalCarrinhoLabel);
             Controls.Add(totalCarrinhoLabel);
+            Controls.Add(finalizarButton);
+            Controls.Add(pictureBox6);
+            Controls.Add(pictureBox13);
+            Controls.Add(pictureBox7);
+            Controls.Add(label9);
+            Controls.Add(carrinhoListBox3);
+            Controls.Add(excluirItemButton);
+            Controls.Add(pictureBox5);
+            Controls.Add(adicionarXTudo);
             Controls.Add(pictureBox22);
             Controls.Add(label18);
             Controls.Add(label2);
@@ -727,14 +734,9 @@
             Controls.Add(pictureBox10);
             Controls.Add(label1);
             Controls.Add(pictureBox9);
-            Controls.Add(pictureBox7);
-            Controls.Add(excluirItemButton);
-            Controls.Add(finalizarButton);
-            Controls.Add(pictureBox6);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
-            Controls.Add(pictureBox5);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox12);
             Controls.Add(label5);
@@ -743,7 +745,6 @@
             Controls.Add(maisButtonXTudo);
             Controls.Add(menosButtonXTudo);
             Controls.Add(quantidadeXTudoLabel);
-            Controls.Add(adicionarXTudo);
             Controls.Add(pictureBox15);
             Controls.Add(pictureBox8);
             Name = "ProdutosPág3";

@@ -100,6 +100,7 @@ namespace Cantina_10._0_Projeto_Final
             totalCarrinhoLabel.Visible = false;
             preçoTotalCarrinhoLabel.Visible = false;
             label9.Visible = false;
+            comboBox1.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -197,6 +198,7 @@ namespace Cantina_10._0_Projeto_Final
             int quantidade = int.Parse(quantidadeHamburguerSimpLabel.Text);
             AdicionarAoCarrinho(6, quantidade);
             AtualizarTotal();
+            quantidadeHamburguerSimpLabel.Text = "1";
         }
 
         private void menosButtonHamburguerQueijo_Click(object sender, EventArgs e)
@@ -215,16 +217,10 @@ namespace Cantina_10._0_Projeto_Final
             int quantidade = int.Parse(quantidadeHamburguerQueijoLabel.Text);
             AdicionarAoCarrinho(7, quantidade);
             AtualizarTotal();
+            quantidadeHamburguerQueijoLabel.Text = "1";
         }
 
         private void maisButtonXTudo_Click(object sender, EventArgs e)
-        {
-            int quantidade = int.Parse(quantidadeXTudoLabel.Text);
-            quantidade++;
-            quantidadeXTudoLabel.Text = quantidade.ToString();
-        }
-
-        private void menosButtonXTudo_Click(object sender, EventArgs e)
         {
             int quantidade = int.Parse(quantidadeXTudoLabel.Text);
 
@@ -235,11 +231,19 @@ namespace Cantina_10._0_Projeto_Final
             }
         }
 
+        private void menosButtonXTudo_Click(object sender, EventArgs e)
+        {
+            int quantidade = int.Parse(quantidadeXTudoLabel.Text);
+            quantidade++;
+            quantidadeXTudoLabel.Text = quantidade.ToString();
+        }
+
         private void adicionarXTudo_Click(object sender, EventArgs e)
         {
             int quantidade = int.Parse(quantidadeXTudoLabel.Text);
             AdicionarAoCarrinho(8, quantidade);
             AtualizarTotal();
+            quantidadeXTudoLabel.Text = "1";
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
@@ -297,6 +301,11 @@ namespace Cantina_10._0_Projeto_Final
             {
                 MessageBox.Show("Adicione uma forma de pagamento", "Erro");
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
