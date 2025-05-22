@@ -78,14 +78,21 @@
             formasPagamentoLabel = new Label();
             comboBox1 = new ComboBox();
             fundoPagamentoPictureBox = new PictureBox();
-            PagamentoLabel = new Label();
             precoPagarLabel = new Label();
             totalLabell = new Label();
-            extratoListBox = new ListBox();
             pagarAgoraPicture = new PictureBox();
             voltarPicture = new PictureBox();
             pagarAgoraLabel = new Label();
             voltarLabel = new Label();
+            nomeTextBox = new TextBox();
+            nomeLabel = new Label();
+            viagemCheckBox = new CheckBox();
+            formasLabel = new Label();
+            extratoListBox = new ListBox();
+            textBox1 = new TextBox();
+            trocoTextBox = new TextBox();
+            valorLabel = new Label();
+            trocoLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -372,6 +379,7 @@
             pictureBox15.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox15.TabIndex = 23;
             pictureBox15.TabStop = false;
+            pictureBox15.Click += pictureBox15_Click;
             // 
             // label5
             // 
@@ -666,6 +674,7 @@
             preçoTotalCarrinhoLabel.TabIndex = 57;
             preçoTotalCarrinhoLabel.Text = "R$00,00";
             preçoTotalCarrinhoLabel.Visible = false;
+            preçoTotalCarrinhoLabel.Click += preçoTotalCarrinhoLabel_Click;
             // 
             // formasPagamentoLabel
             // 
@@ -673,7 +682,7 @@
             formasPagamentoLabel.BackColor = Color.FromArgb(124, 122, 106);
             formasPagamentoLabel.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             formasPagamentoLabel.ForeColor = Color.White;
-            formasPagamentoLabel.Location = new Point(244, 100);
+            formasPagamentoLabel.Location = new Point(244, 60);
             formasPagamentoLabel.Name = "formasPagamentoLabel";
             formasPagamentoLabel.Size = new Size(295, 37);
             formasPagamentoLabel.TabIndex = 58;
@@ -686,9 +695,9 @@
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Pix", "Débito", "Crédito", "Dinheiro" });
-            comboBox1.Location = new Point(244, 321);
+            comboBox1.Location = new Point(403, 285);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(295, 23);
+            comboBox1.Size = new Size(136, 23);
             comboBox1.TabIndex = 59;
             comboBox1.Visible = false;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
@@ -703,31 +712,19 @@
             fundoPagamentoPictureBox.TabStop = false;
             fundoPagamentoPictureBox.Visible = false;
             // 
-            // PagamentoLabel
-            // 
-            PagamentoLabel.AutoSize = true;
-            PagamentoLabel.BackColor = Color.FromArgb(124, 122, 106);
-            PagamentoLabel.Font = new Font("Segoe UI Semibold", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            PagamentoLabel.ForeColor = Color.White;
-            PagamentoLabel.Location = new Point(55, 55);
-            PagamentoLabel.Name = "PagamentoLabel";
-            PagamentoLabel.Size = new Size(185, 45);
-            PagamentoLabel.TabIndex = 61;
-            PagamentoLabel.Text = "Pagamento";
-            PagamentoLabel.Visible = false;
-            // 
             // precoPagarLabel
             // 
             precoPagarLabel.AutoSize = true;
             precoPagarLabel.BackColor = Color.FromArgb(124, 122, 106);
             precoPagarLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             precoPagarLabel.ForeColor = Color.White;
-            precoPagarLabel.Location = new Point(470, 297);
+            precoPagarLabel.Location = new Point(470, 261);
             precoPagarLabel.Name = "precoPagarLabel";
             precoPagarLabel.Size = new Size(69, 21);
             precoPagarLabel.TabIndex = 62;
             precoPagarLabel.Text = "R$00,00";
             precoPagarLabel.Visible = false;
+            precoPagarLabel.Click += precoPagarLabel_Click;
             // 
             // totalLabell
             // 
@@ -735,23 +732,12 @@
             totalLabell.BackColor = Color.FromArgb(124, 122, 106);
             totalLabell.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             totalLabell.ForeColor = Color.White;
-            totalLabell.Location = new Point(421, 297);
+            totalLabell.Location = new Point(421, 261);
             totalLabell.Name = "totalLabell";
             totalLabell.Size = new Size(52, 21);
             totalLabell.TabIndex = 63;
             totalLabell.Text = "Total:";
             totalLabell.Visible = false;
-            // 
-            // extratoListBox
-            // 
-            extratoListBox.FormattingEnabled = true;
-            extratoListBox.ItemHeight = 15;
-            extratoListBox.Location = new Point(244, 140);
-            extratoListBox.Name = "extratoListBox";
-            extratoListBox.Size = new Size(295, 154);
-            extratoListBox.TabIndex = 64;
-            extratoListBox.Visible = false;
-            extratoListBox.SelectedIndexChanged += extratoListBox_SelectedIndexChanged;
             // 
             // pagarAgoraPicture
             // 
@@ -764,6 +750,7 @@
             pagarAgoraPicture.TabIndex = 65;
             pagarAgoraPicture.TabStop = false;
             pagarAgoraPicture.Visible = false;
+            pagarAgoraPicture.Click += pagarAgoraPicture_Click;
             // 
             // voltarPicture
             // 
@@ -791,6 +778,7 @@
             pagarAgoraLabel.TabIndex = 67;
             pagarAgoraLabel.Text = "Pagar agora";
             pagarAgoraLabel.Visible = false;
+            pagarAgoraLabel.Click += pagarAgoraLabel_Click;
             // 
             // voltarLabel
             // 
@@ -807,12 +795,127 @@
             voltarLabel.Visible = false;
             voltarLabel.Click += voltarLabel_Click;
             // 
+            // nomeTextBox
+            // 
+            nomeTextBox.Location = new Point(295, 318);
+            nomeTextBox.Name = "nomeTextBox";
+            nomeTextBox.Size = new Size(123, 23);
+            nomeTextBox.TabIndex = 69;
+            nomeTextBox.Visible = false;
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.AutoSize = true;
+            nomeLabel.BackColor = Color.FromArgb(124, 122, 106);
+            nomeLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            nomeLabel.ForeColor = Color.White;
+            nomeLabel.Location = new Point(244, 319);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new Size(48, 17);
+            nomeLabel.TabIndex = 70;
+            nomeLabel.Text = "Nome:";
+            nomeLabel.Visible = false;
+            // 
+            // viagemCheckBox
+            // 
+            viagemCheckBox.AutoSize = true;
+            viagemCheckBox.BackColor = Color.FromArgb(124, 122, 106);
+            viagemCheckBox.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            viagemCheckBox.ForeColor = Color.White;
+            viagemCheckBox.Location = new Point(437, 318);
+            viagemCheckBox.Name = "viagemCheckBox";
+            viagemCheckBox.Size = new Size(102, 21);
+            viagemCheckBox.TabIndex = 72;
+            viagemCheckBox.Text = "Para viagem";
+            viagemCheckBox.UseVisualStyleBackColor = false;
+            viagemCheckBox.Visible = false;
+            // 
+            // formasLabel
+            // 
+            formasLabel.AutoSize = true;
+            formasLabel.BackColor = Color.FromArgb(124, 122, 106);
+            formasLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            formasLabel.ForeColor = Color.White;
+            formasLabel.Location = new Point(244, 286);
+            formasLabel.Name = "formasLabel";
+            formasLabel.Size = new Size(150, 17);
+            formasLabel.TabIndex = 73;
+            formasLabel.Text = "Formas De Pagamento:";
+            formasLabel.TextAlign = ContentAlignment.TopCenter;
+            formasLabel.Visible = false;
+            // 
+            // extratoListBox
+            // 
+            extratoListBox.BackColor = Color.FromArgb(124, 122, 106);
+            extratoListBox.ForeColor = Color.White;
+            extratoListBox.FormattingEnabled = true;
+            extratoListBox.ItemHeight = 15;
+            extratoListBox.Location = new Point(244, 104);
+            extratoListBox.Name = "extratoListBox";
+            extratoListBox.Size = new Size(295, 154);
+            extratoListBox.TabIndex = 64;
+            extratoListBox.Visible = false;
+            extratoListBox.SelectedIndexChanged += extratoListBox_SelectedIndexChanged;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(554, 294);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(89, 23);
+            textBox1.TabIndex = 74;
+            textBox1.Visible = false;
+            textBox1.TextChanged += textBox1_TextChanged_1;
+            // 
+            // trocoTextBox
+            // 
+            trocoTextBox.Location = new Point(552, 336);
+            trocoTextBox.Name = "trocoTextBox";
+            trocoTextBox.Size = new Size(91, 23);
+            trocoTextBox.TabIndex = 75;
+            trocoTextBox.Visible = false;
+            // 
+            // valorLabel
+            // 
+            valorLabel.AutoSize = true;
+            valorLabel.BackColor = Color.FromArgb(124, 122, 106);
+            valorLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            valorLabel.ForeColor = Color.White;
+            valorLabel.Location = new Point(554, 274);
+            valorLabel.Name = "valorLabel";
+            valorLabel.Size = new Size(42, 17);
+            valorLabel.TabIndex = 76;
+            valorLabel.Text = "Valor:";
+            valorLabel.TextAlign = ContentAlignment.TopCenter;
+            valorLabel.Visible = false;
+            // 
+            // trocoLabel
+            // 
+            trocoLabel.AutoSize = true;
+            trocoLabel.BackColor = Color.FromArgb(124, 122, 106);
+            trocoLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            trocoLabel.ForeColor = Color.White;
+            trocoLabel.Location = new Point(552, 316);
+            trocoLabel.Name = "trocoLabel";
+            trocoLabel.Size = new Size(44, 17);
+            trocoLabel.TabIndex = 77;
+            trocoLabel.Text = "Troco:";
+            trocoLabel.TextAlign = ContentAlignment.TopCenter;
+            trocoLabel.Visible = false;
+            // 
             // ProdutosPág1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
+            Controls.Add(trocoLabel);
+            Controls.Add(valorLabel);
+            Controls.Add(trocoTextBox);
+            Controls.Add(textBox1);
+            Controls.Add(formasLabel);
+            Controls.Add(viagemCheckBox);
+            Controls.Add(nomeLabel);
+            Controls.Add(nomeTextBox);
             Controls.Add(voltarLabel);
             Controls.Add(pagarAgoraLabel);
             Controls.Add(voltarPicture);
@@ -822,7 +925,6 @@
             Controls.Add(precoPagarLabel);
             Controls.Add(comboBox1);
             Controls.Add(formasPagamentoLabel);
-            Controls.Add(PagamentoLabel);
             Controls.Add(fundoPagamentoPictureBox);
             Controls.Add(preçoTotalCarrinhoLabel);
             Controls.Add(carrinhoListBox1);
@@ -957,13 +1059,20 @@
         private Label formasPagamentoLabel;
         private ComboBox comboBox1;
         private PictureBox fundoPagamentoPictureBox;
-        private Label PagamentoLabel;
         private Label precoPagarLabel;
         private Label totalLabell;
-        private ListBox extratoListBox;
         private PictureBox pagarAgoraPicture;
         private PictureBox voltarPicture;
         private Label pagarAgoraLabel;
         private Label voltarLabel;
+        private TextBox nomeTextBox;
+        private Label nomeLabel;
+        private CheckBox viagemCheckBox;
+        private Label formasLabel;
+        private ListBox extratoListBox;
+        private TextBox textBox1;
+        private TextBox trocoTextBox;
+        private Label valorLabel;
+        private Label trocoLabel;
     }
 }
