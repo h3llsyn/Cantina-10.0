@@ -90,9 +90,9 @@
             formasLabel = new Label();
             extratoListBox = new ListBox();
             textBox1 = new TextBox();
-            trocoTextBox = new TextBox();
             valorLabel = new Label();
             trocoLabel = new Label();
+            trocoTextBox = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -829,6 +829,7 @@
             viagemCheckBox.Text = "Para viagem";
             viagemCheckBox.UseVisualStyleBackColor = false;
             viagemCheckBox.Visible = false;
+            viagemCheckBox.CheckedChanged += viagemCheckBox_CheckedChanged;
             // 
             // formasLabel
             // 
@@ -866,14 +867,6 @@
             textBox1.Visible = false;
             textBox1.TextChanged += textBox1_TextChanged_1;
             // 
-            // trocoTextBox
-            // 
-            trocoTextBox.Location = new Point(552, 336);
-            trocoTextBox.Name = "trocoTextBox";
-            trocoTextBox.Size = new Size(91, 23);
-            trocoTextBox.TabIndex = 75;
-            trocoTextBox.Visible = false;
-            // 
             // valorLabel
             // 
             valorLabel.AutoSize = true;
@@ -901,6 +894,16 @@
             trocoLabel.Text = "Troco:";
             trocoLabel.TextAlign = ContentAlignment.TopCenter;
             trocoLabel.Visible = false;
+            // 
+            // trocoTextBox
+            // 
+            trocoTextBox.Location = new Point(552, 336);
+            trocoTextBox.Name = "trocoTextBox";
+            trocoTextBox.ReadOnly = true;
+            trocoTextBox.Size = new Size(91, 23);
+            trocoTextBox.TabIndex = 75;
+            trocoTextBox.Visible = false;
+            trocoTextBox.TextChanged += trocoTextBox_TextChanged;
             // 
             // ProdutosPág1
             // 
@@ -1071,8 +1074,8 @@
         private Label formasLabel;
         private ListBox extratoListBox;
         private TextBox textBox1;
-        private TextBox trocoTextBox;
         private Label valorLabel;
         private Label trocoLabel;
+        private TextBox trocoTextBox;
     }
 }

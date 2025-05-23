@@ -63,7 +63,6 @@ namespace Cantina_10._0_Projeto_Final
             carrinhoListBox1.BringToFront();
             totalCarrinhoLabel.BringToFront();
             preçoTotalCarrinhoLabel.BringToFront();
-            formasPagamentoLabel.BringToFront();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -188,26 +187,9 @@ namespace Cantina_10._0_Projeto_Final
         {
             double total = 0;
 
-            foreach (var item in carrinhoListBox1.Items)
+            foreach (var item in Carrinho.Itens)
             {
-                string texto = item.ToString();
-
-                int indiceX = texto.LastIndexOf('x');
-                if (indiceX == -1) continue;
-
-                if (!int.TryParse(texto.Substring(indiceX + 1).Trim(), out int quantidade))
-                    quantidade = 1;
-
-                int indiceR = texto.IndexOf("R$");
-                if (indiceR == -1) continue;
-
-                string precoStr = texto.Substring(indiceR + 2, indiceX - (indiceR + 2)).Trim();
-                precoStr = precoStr.Replace(',', '.');
-
-                if (double.TryParse(precoStr, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out double preco))
-                {
-                    total += preco;
-                }
+                total += item.produto.Preço * item.quantidade;
             }
 
             preçoTotalCarrinhoLabel.Text = "R$" + total.ToString("F2").Replace('.', ',');
@@ -290,7 +272,8 @@ namespace Cantina_10._0_Projeto_Final
         {
             if (carrinhoListBox1.SelectedIndex != -1)
             {
-                carrinhoListBox1.Items.Remove(carrinhoListBox1.SelectedItem);
+                Carrinho.Itens.RemoveAt(carrinhoListBox1.SelectedIndex);
+                AtualizarCarrinho();
                 AtualizarTotal();
             }
             else
@@ -317,42 +300,43 @@ namespace Cantina_10._0_Projeto_Final
             }
         }
 
-        // private void AtualizarExtrato()
-        //{
-        //   int index = 0;
-        //  extratoListBox.Items.Add(Produtos.ListaProdutos[index]);
-        //}
-
         private void finalizarButton_Click(object sender, EventArgs e)
         {
-            fundoPagamentoPictureBox.Visible = true;
-            formasPagamentoLabel.Visible = true;
-            extratoListBox.Visible = true;
-            totalLabell.Visible = true;
-            precoPagarLabel.Visible = true;
-            comboBox1.Visible = true;
-            voltarPicture.Visible = true;
-            voltarLabel.Visible = true;
-            pagarAgoraPicture.Visible = true;
-            pagarAgoraLabel.Visible = true;
-            formasLabel.Visible = true;
-            nomeTextBox.Visible = true;
-            nomeLabel.Visible = true;
-            viagemCheckBox.Visible = true;
-            fundoPagamentoPictureBox.BringToFront();
-            formasPagamentoLabel.BringToFront();
-            extratoListBox.BringToFront();
-            totalLabell.BringToFront();
-            precoPagarLabel.BringToFront();
-            comboBox1.BringToFront();
-            voltarPicture.BringToFront();
-            voltarLabel.BringToFront();
-            pagarAgoraPicture.BringToFront();
-            pagarAgoraLabel.BringToFront();
-            formasLabel.BringToFront();
-            nomeLabel.BringToFront();
-            nomeTextBox.BringToFront();
-            viagemCheckBox.BringToFront();
+            if (Carrinho.Itens.Count == 0)
+            {
+                MessageBox.Show("Carrinho vazio", "Erro");
+            }
+            else
+            {
+                fundoPagamentoPictureBox.Visible = true;
+                formasPagamentoLabel.Visible = true;
+                extratoListBox.Visible = true;
+                totalLabell.Visible = true;
+                precoPagarLabel.Visible = true;
+                comboBox1.Visible = true;
+                voltarPicture.Visible = true;
+                voltarLabel.Visible = true;
+                pagarAgoraPicture.Visible = true;
+                pagarAgoraLabel.Visible = true;
+                formasLabel.Visible = true;
+                nomeTextBox.Visible = true;
+                nomeLabel.Visible = true;
+                viagemCheckBox.Visible = true;
+                fundoPagamentoPictureBox.BringToFront();
+                formasPagamentoLabel.BringToFront();
+                extratoListBox.BringToFront();
+                totalLabell.BringToFront();
+                precoPagarLabel.BringToFront();
+                comboBox1.BringToFront();
+                voltarPicture.BringToFront();
+                voltarLabel.BringToFront();
+                pagarAgoraPicture.BringToFront();
+                pagarAgoraLabel.BringToFront();
+                formasLabel.BringToFront();
+                nomeLabel.BringToFront();
+                nomeTextBox.BringToFront();
+                viagemCheckBox.BringToFront();
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -368,6 +352,13 @@ namespace Cantina_10._0_Projeto_Final
                 trocoLabel.BringToFront();
                 trocoTextBox.BringToFront();
             }
+            else
+            {
+                valorLabel.Visible = false;
+                textBox1.Visible = false;
+                trocoLabel.Visible = false;
+                trocoTextBox.Visible = false;
+            }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -377,39 +368,12 @@ namespace Cantina_10._0_Projeto_Final
 
         private void voltarLabel_Click(object sender, EventArgs e)
         {
-            fundoPagamentoPictureBox.Visible = false;
-            formasPagamentoLabel.Visible = false;
-            extratoListBox.Visible = false;
-            totalLabell.Visible = false;
-            precoPagarLabel.Visible = false;
-            comboBox1.Visible = false;
-            voltarPicture.Visible = false;
-            voltarLabel.Visible = false;
-            pagarAgoraPicture.Visible = false;
-            pagarAgoraLabel.Visible = false;
-            formasLabel.Visible = false;
-            nomeTextBox.Visible = false;
-            nomeLabel.Visible = false;
-            viagemCheckBox.Visible = false;
+            PagPagamentoInvisivel();
         }
 
         private void voltarPicture_Click(object sender, EventArgs e)
         {
-            comboBox1.SelectedIndex = -1;
-            fundoPagamentoPictureBox.Visible = false;
-            formasLabel.Visible = false;
-            formasPagamentoLabel.Visible = false;
-            extratoListBox.Visible = false;
-            totalLabell.Visible = false;
-            precoPagarLabel.Visible = false;
-            comboBox1.Visible = false;
-            voltarPicture.Visible = false;
-            voltarLabel.Visible = false;
-            pagarAgoraPicture.Visible = false;
-            pagarAgoraLabel.Visible = false;
-            nomeLabel.Visible = false;
-            nomeTextBox.Visible = false;
-            viagemCheckBox.Visible = false;
+            PagPagamentoInvisivel();
         }
 
         private void extratoListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -434,82 +398,189 @@ namespace Cantina_10._0_Projeto_Final
 
         private void pagarAgoraPicture_Click(object sender, EventArgs e)
         {
-            //if (string.IsNullOrWhiteSpace(nomeTextBox.Text))
-            //{
-            //    MessageBox.Show("Por favor digite seu nome", "Erro");
-            //}
-            //else if (comboBox1.SelectedItem == null)
-            //{
-            //    MessageBox.Show("Por favor adicione uma forma de pagamento", "Erro");
-            //}
-            //else if (comboBox1.SelectedIndex == 3)
-            //{
-            //    valorLabel.Visible = true;
-            //    textBox1.Visible = true;
-            //    trocoLabel.Visible = true;
-            //    trocoTextBox.Visible = true;
-            //    valorLabel.BringToFront();
-            //    textBox1.BringToFront();
-            //    trocoLabel.BringToFront();
-            //    trocoTextBox.BringToFront();
-            //}
-            //else
-            //{
-            //    string carrinho = string.Join("\n", Carrinho.Itens.Select(item => $"   - {item.produto.Descriçao} | R${(item.produto.Preço * item.quantidade):F2} x{item.quantidade}"));
-            //    string dataHora = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
 
-            //    MessageBox.Show(
-            //        $"Data: {dataHora}\n" +
-            //        "------------------------------\n" +
-            //        $"\n               Extrato          \n" +
-            //        "------------------------------\n" +
-            //        $"{carrinho}\n" +
-            //        "------------------------------\n" +
-            //        $"Agradecemos pelo pedido, {nomeTextBox.Text}!\n" +
-            //        "Por favor aguarde o seu pedido no balcão.",
-            //        "Pedido Finalizado"
-            //    );
-            //}
         }
 
         private void pagarAgoraLabel_Click(object sender, EventArgs e)
         {
-            double valor = double.Parse(textBox1.Text);
-            double troco = double.Parse(trocoTextBox.Text);
             if (string.IsNullOrWhiteSpace(nomeTextBox.Text))
             {
                 MessageBox.Show("Por favor digite seu nome", "Erro");
+                return;
             }
             else if (comboBox1.SelectedItem == null)
             {
                 MessageBox.Show("Por favor adicione uma forma de pagamento", "Erro");
+                return;
             }
-            else if(troco > valor || valor < total)
+
+            string formaPagamento = comboBox1.SelectedItem.ToString();
+            string totalStr = precoPagarLabel.Text.Replace("R$", "").Trim().Replace(',', '.');
+            double total = double.Parse(totalStr, System.Globalization.CultureInfo.InvariantCulture);
+            if (formaPagamento == "Dinheiro")
             {
-                MessageBox.Show("Por favor digite um valor válido", "Erro");
+                if (!double.TryParse(textBox1.Text.Replace(',', '.'), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out double valorPago))
+                {
+                    MessageBox.Show("Por favor digite um valor válido", "Erro");
+                    return;
+                }
+
+                if (valorPago < total)
+                {
+                    MessageBox.Show("Valor pago insuficiente", "Erro");
+                    return;
+                }
+
+                else if (viagemCheckBox.Checked && valorPago >= total)
+                {
+                    string carrinho = string.Join("\n", Carrinho.Itens.Select(item => $"   - {item.produto.Descriçao} | R${(item.produto.Preço * item.quantidade):F2} x{item.quantidade}"));
+                    string dataHora = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+
+                    MessageBox.Show(
+                        $"Data: {dataHora}\n" +
+                        "----------------------------------------------------------------\n" +
+                        $"                 Extrato          \n" +
+                        "----------------------------------------------------------------\n" +
+                        $"{carrinho}\n" +
+                        "----------------------------------------------------------------\n" +
+                        $"Pedido para viagem\n" +
+                        "----------------------------------------------------------------\n" +
+                        $"Agradecemos pelo pedido, {nomeTextBox.Text}!\n" +
+                        "Por favor aguarde o seu pedido no balcão.",
+                        "Pedido Finalizado"
+                        );
+                    Carrinho.Itens.Clear();
+                    AtualizarCarrinho();
+                    AtualizarTotal();
+                    nomeTextBox.Text = "";
+                    comboBox1.SelectedIndex = -1;
+                    textBox1.Text = "";
+                    trocoTextBox.Text = "";
+                    PagPagamentoInvisivel();
+                }
+
+                else if(valorPago >= total)
+                {
+                    PedidoFinalizado();
+                    PagPagamentoInvisivel();
+                }
             }
-            else
+
+            else if (viagemCheckBox.Checked)
             {
                 string carrinho = string.Join("\n", Carrinho.Itens.Select(item => $"   - {item.produto.Descriçao} | R${(item.produto.Preço * item.quantidade):F2} x{item.quantidade}"));
                 string dataHora = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
 
                 MessageBox.Show(
                     $"Data: {dataHora}\n" +
-                    "------------------------------\n" +
-                    $"\n               Extrato          \n" +
-                    "------------------------------\n" +
+                    "----------------------------------------------------------------\n" +
+                    $"                 Extrato          \n" +
+                    "----------------------------------------------------------------\n" +
                     $"{carrinho}\n" +
-                    "------------------------------\n" +
+                    "----------------------------------------------------------------\n" +
+                    $"Pedido para viagem\n" +
+                    "----------------------------------------------------------------\n" +
                     $"Agradecemos pelo pedido, {nomeTextBox.Text}!\n" +
                     "Por favor aguarde o seu pedido no balcão.",
                     "Pedido Finalizado"
                 );
+                Carrinho.Itens.Clear();
+                AtualizarCarrinho();
+                AtualizarTotal();
+                nomeTextBox.Text = "";
+                comboBox1.SelectedIndex = -1;
+                textBox1.Text = "";
+                trocoTextBox.Text = "";
+                PagPagamentoInvisivel();
+            }
+            else
+            {
+                PedidoFinalizado();
+                PagPagamentoInvisivel();
             }
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
+            if (double.TryParse(textBox1.Text.Replace(',', '.'), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out double valorPago))
+            {
+                string totalStr = precoPagarLabel.Text.Replace("R$", "").Trim().Replace(',', '.');
+                double total = double.Parse(totalStr, System.Globalization.CultureInfo.InvariantCulture);
 
+                if (valorPago >= total)
+                {
+                    double troco = valorPago - total;
+                    trocoTextBox.Text = troco.ToString("F2").Replace('.', ',');
+                }
+                else
+                {
+                    trocoTextBox.Text = "";
+                }
+            }
+            else
+            {
+                trocoTextBox.Text = "";
+            }
+        }
+
+        private void trocoTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viagemCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void PedidoFinalizado()
+        {
+            string carrinho = string.Join("\n", Carrinho.Itens.Select(item => $"   - {item.produto.Descriçao} | R${(item.produto.Preço * item.quantidade):F2} x{item.quantidade}"));
+            string dataHora = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+
+            MessageBox.Show(
+                $"Data: {dataHora}\n" +
+                "------------------------------\n" +
+                $"\n               Extrato          \n" +
+                "------------------------------\n" +
+                $"{carrinho}\n" +
+                "------------------------------\n" +
+                $"Agradecemos pelo pedido, {nomeTextBox.Text}!\n" +
+                "Por favor aguarde o seu pedido no balcão.",
+                "Pedido Finalizado"
+            );
+            Carrinho.Itens.Clear();
+            AtualizarCarrinho();
+            AtualizarTotal();
+            nomeTextBox.Text = "";
+            comboBox1.SelectedIndex = -1;
+            textBox1.Text = "";
+            trocoTextBox.Text = "";
+            PagPagamentoInvisivel();
+        }
+
+        public void PagPagamentoInvisivel()
+        {
+
+            viagemCheckBox.Checked = false;
+            fundoPagamentoPictureBox.Visible = false;
+            formasPagamentoLabel.Visible = false;
+            extratoListBox.Visible = false;
+            totalLabell.Visible = false;
+            precoPagarLabel.Visible = false;
+            formasLabel.Visible = false;
+            viagemCheckBox.Visible = false;
+            nomeLabel.Visible = false;
+            comboBox1.Visible = false;
+            nomeTextBox.Visible = false;
+            valorLabel.Visible = false;
+            textBox1.Visible = false;
+            trocoLabel.Visible = false;
+            trocoTextBox.Visible = false;
+            voltarLabel.Visible = false;
+            voltarPicture.Visible = false;
+            pagarAgoraLabel.Visible = false;
+            pagarAgoraPicture.Visible = false;
         }
     }
 }
