@@ -39,7 +39,7 @@
             finalizarButton = new PictureBox();
             excluirItemButton = new PictureBox();
             pictureBox8 = new PictureBox();
-            pictureBox9 = new PictureBox();
+            menuPicture = new PictureBox();
             label1 = new Label();
             pictureBox10 = new PictureBox();
             pictureBox11 = new PictureBox();
@@ -93,6 +93,11 @@
             valorLabel = new Label();
             trocoLabel = new Label();
             trocoTextBox = new TextBox();
+            menuOpcoes = new PictureBox();
+            produtosLabel = new Label();
+            linha1 = new Label();
+            balcaoLabel = new Label();
+            linha2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -103,7 +108,7 @@
             ((System.ComponentModel.ISupportInitialize)finalizarButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)excluirItemButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)menuPicture).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
@@ -120,6 +125,7 @@
             ((System.ComponentModel.ISupportInitialize)fundoPagamentoPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pagarAgoraPicture).BeginInit();
             ((System.ComponentModel.ISupportInitialize)voltarPicture).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)menuOpcoes).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -243,17 +249,18 @@
             pictureBox8.TabStop = false;
             pictureBox8.Click += pictureBox8_Click;
             // 
-            // pictureBox9
+            // menuPicture
             // 
-            pictureBox9.BackColor = Color.FromArgb(230, 255, 0);
-            pictureBox9.Cursor = Cursors.Hand;
-            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(8, 13);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(20, 20);
-            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox9.TabIndex = 12;
-            pictureBox9.TabStop = false;
+            menuPicture.BackColor = Color.FromArgb(230, 255, 0);
+            menuPicture.Cursor = Cursors.Hand;
+            menuPicture.Image = (Image)resources.GetObject("menuPicture.Image");
+            menuPicture.Location = new Point(8, 13);
+            menuPicture.Name = "menuPicture";
+            menuPicture.Size = new Size(20, 20);
+            menuPicture.SizeMode = PictureBoxSizeMode.Zoom;
+            menuPicture.TabIndex = 12;
+            menuPicture.TabStop = false;
+            menuPicture.Click += menuPicture_Click;
             // 
             // label1
             // 
@@ -905,12 +912,81 @@
             trocoTextBox.Visible = false;
             trocoTextBox.TextChanged += trocoTextBox_TextChanged;
             // 
+            // menuOpcoes
+            // 
+            menuOpcoes.Image = (Image)resources.GetObject("menuOpcoes.Image");
+            menuOpcoes.Location = new Point(8, 35);
+            menuOpcoes.Name = "menuOpcoes";
+            menuOpcoes.Size = new Size(218, 92);
+            menuOpcoes.SizeMode = PictureBoxSizeMode.Zoom;
+            menuOpcoes.TabIndex = 78;
+            menuOpcoes.TabStop = false;
+            menuOpcoes.Visible = false;
+            // 
+            // produtosLabel
+            // 
+            produtosLabel.AutoSize = true;
+            produtosLabel.BackColor = Color.FromArgb(202, 196, 183);
+            produtosLabel.Cursor = Cursors.Hand;
+            produtosLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            produtosLabel.Location = new Point(12, 39);
+            produtosLabel.Name = "produtosLabel";
+            produtosLabel.Size = new Size(208, 17);
+            produtosLabel.TabIndex = 79;
+            produtosLabel.Text = "Produtos                                    ";
+            produtosLabel.Visible = false;
+            produtosLabel.Click += produtosLabel_Click;
+            // 
+            // linha1
+            // 
+            linha1.AutoSize = true;
+            linha1.BackColor = Color.FromArgb(202, 196, 183);
+            linha1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            linha1.Location = new Point(12, 45);
+            linha1.Name = "linha1";
+            linha1.Size = new Size(208, 17);
+            linha1.TabIndex = 80;
+            linha1.Text = "________________________________________";
+            linha1.Visible = false;
+            linha1.Click += linha1_Click;
+            // 
+            // balcaoLabel
+            // 
+            balcaoLabel.AutoSize = true;
+            balcaoLabel.BackColor = Color.FromArgb(202, 196, 183);
+            balcaoLabel.Cursor = Cursors.Hand;
+            balcaoLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            balcaoLabel.Location = new Point(12, 64);
+            balcaoLabel.Name = "balcaoLabel";
+            balcaoLabel.Size = new Size(207, 17);
+            balcaoLabel.TabIndex = 81;
+            balcaoLabel.Text = "Balcão                                        ";
+            balcaoLabel.Visible = false;
+            balcaoLabel.Click += balcaoLabel_Click;
+            // 
+            // linha2
+            // 
+            linha2.AutoSize = true;
+            linha2.BackColor = Color.FromArgb(202, 196, 183);
+            linha2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            linha2.Location = new Point(12, 70);
+            linha2.Name = "linha2";
+            linha2.Size = new Size(208, 17);
+            linha2.TabIndex = 82;
+            linha2.Text = "________________________________________";
+            linha2.Visible = false;
+            // 
             // ProdutosPág1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
+            Controls.Add(balcaoLabel);
+            Controls.Add(linha2);
+            Controls.Add(produtosLabel);
+            Controls.Add(linha1);
+            Controls.Add(menuOpcoes);
             Controls.Add(trocoLabel);
             Controls.Add(valorLabel);
             Controls.Add(trocoTextBox);
@@ -953,7 +1029,7 @@
             Controls.Add(label2);
             Controls.Add(pictureBox10);
             Controls.Add(label1);
-            Controls.Add(pictureBox9);
+            Controls.Add(menuPicture);
             Controls.Add(pictureBox7);
             Controls.Add(pictureBox8);
             Controls.Add(excluirItemButton);
@@ -990,7 +1066,7 @@
             ((System.ComponentModel.ISupportInitialize)finalizarButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)excluirItemButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)menuPicture).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
@@ -1007,6 +1083,7 @@
             ((System.ComponentModel.ISupportInitialize)fundoPagamentoPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)pagarAgoraPicture).EndInit();
             ((System.ComponentModel.ISupportInitialize)voltarPicture).EndInit();
+            ((System.ComponentModel.ISupportInitialize)menuOpcoes).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1023,7 +1100,7 @@
         private PictureBox finalizarButton;
         private PictureBox excluirItemButton;
         private PictureBox pictureBox8;
-        private PictureBox pictureBox9;
+        private PictureBox menuPicture;
         private Label label1;
         private PictureBox pictureBox10;
         private PictureBox pictureBox11;
@@ -1077,5 +1154,10 @@
         private Label valorLabel;
         private Label trocoLabel;
         private TextBox trocoTextBox;
+        private PictureBox menuOpcoes;
+        private Label produtosLabel;
+        private Label linha1;
+        private Label balcaoLabel;
+        private Label linha2;
     }
 }

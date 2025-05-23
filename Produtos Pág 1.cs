@@ -14,6 +14,7 @@ namespace Cantina_10._0_Projeto_Final
         double total = 00.00;
         private ProdutosPág2 produtosPág2;
         private ProdutosPág4 produtosPág4;
+        private Balcão balcão;
 
         public ProdutosPág1()
         {
@@ -30,6 +31,11 @@ namespace Cantina_10._0_Projeto_Final
         {
             InitializeComponent();
             this.produtosPág4 = produtosPág4;
+        }
+        public ProdutosPág1(Balcão balcão)
+        {
+            InitializeComponent();
+            this.balcão = balcão;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -459,7 +465,7 @@ namespace Cantina_10._0_Projeto_Final
                     PagPagamentoInvisivel();
                 }
 
-                else if(valorPago >= total)
+                else if (valorPago >= total)
                 {
                     PedidoFinalizado();
                     PagPagamentoInvisivel();
@@ -581,6 +587,41 @@ namespace Cantina_10._0_Projeto_Final
             voltarPicture.Visible = false;
             pagarAgoraLabel.Visible = false;
             pagarAgoraPicture.Visible = false;
+        }
+
+        private void linha1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuPicture_Click(object sender, EventArgs e)
+        {
+            menuOpcoes.Visible = true;
+            produtosLabel.Visible = true;
+            linha1.Visible = true;
+            balcaoLabel.Visible = true;
+            linha2.Visible = true;
+            menuOpcoes.BringToFront();
+            linha1.BringToFront();
+            linha2.BringToFront();
+            produtosLabel.BringToFront();
+            balcaoLabel.BringToFront();
+        }
+
+        private void produtosLabel_Click(object sender, EventArgs e)
+        {
+            menuOpcoes.Visible = false;
+            produtosLabel.Visible = false;
+            linha1.Visible = false;
+            balcaoLabel.Visible = false;
+            linha2.Visible = false;
+        }
+
+        private void balcaoLabel_Click(object sender, EventArgs e)
+        {
+            Balcão balcão = new Balcão(this);
+            this.Hide();
+            balcão.ShowDialog();
         }
     }
 }

@@ -1,0 +1,343 @@
+﻿namespace Cantina_10._0_Projeto_Final
+{
+    partial class Balcão
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Balcão));
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox9 = new PictureBox();
+            label1 = new Label();
+            historicoPicture = new PictureBox();
+            historicoLabel = new Label();
+            balcaoListBox = new ListBox();
+            entregarPicture = new PictureBox();
+            excluirPicture = new PictureBox();
+            historicoButton = new PictureBox();
+            excluirLabel = new Label();
+            entregarLabel = new Label();
+            pictureBox6 = new PictureBox();
+            menuOpcoes = new PictureBox();
+            produtosLabel = new Label();
+            linha1 = new Label();
+            balcaoLabel = new Label();
+            linha2 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)historicoPicture).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)entregarPicture).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)excluirPicture).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)historicoButton).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)menuOpcoes).BeginInit();
+            SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(-435, -20);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(1344, 65);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(36, 7);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(246, 31);
+            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox2.TabIndex = 2;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(95, 7);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(197, 31);
+            pictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox3.TabIndex = 3;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.BackColor = Color.FromArgb(230, 255, 0);
+            pictureBox9.Cursor = Cursors.Hand;
+            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
+            pictureBox9.Location = new Point(8, 13);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(20, 20);
+            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox9.TabIndex = 13;
+            pictureBox9.TabStop = false;
+            pictureBox9.Click += pictureBox9_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.Location = new Point(3, 48);
+            label1.Name = "label1";
+            label1.Size = new Size(117, 45);
+            label1.TabIndex = 14;
+            label1.Text = "Balcão";
+            // 
+            // historicoPicture
+            // 
+            historicoPicture.Image = (Image)resources.GetObject("historicoPicture.Image");
+            historicoPicture.Location = new Point(3, 417);
+            historicoPicture.Name = "historicoPicture";
+            historicoPicture.Size = new Size(30, 30);
+            historicoPicture.SizeMode = PictureBoxSizeMode.Zoom;
+            historicoPicture.TabIndex = 15;
+            historicoPicture.TabStop = false;
+            // 
+            // historicoLabel
+            // 
+            historicoLabel.AutoSize = true;
+            historicoLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            historicoLabel.Location = new Point(32, 424);
+            historicoLabel.Name = "historicoLabel";
+            historicoLabel.Size = new Size(62, 17);
+            historicoLabel.TabIndex = 16;
+            historicoLabel.Text = "Histórico";
+            // 
+            // balcaoListBox
+            // 
+            balcaoListBox.BackColor = Color.FromArgb(243, 241, 238);
+            balcaoListBox.FormattingEnabled = true;
+            balcaoListBox.ItemHeight = 15;
+            balcaoListBox.Location = new Point(200, 119);
+            balcaoListBox.Name = "balcaoListBox";
+            balcaoListBox.Size = new Size(413, 259);
+            balcaoListBox.TabIndex = 17;
+            balcaoListBox.SelectedIndexChanged += balcaoListBox_SelectedIndexChanged;
+            // 
+            // entregarPicture
+            // 
+            entregarPicture.Cursor = Cursors.Hand;
+            entregarPicture.Image = (Image)resources.GetObject("entregarPicture.Image");
+            entregarPicture.Location = new Point(456, 384);
+            entregarPicture.Name = "entregarPicture";
+            entregarPicture.Size = new Size(157, 52);
+            entregarPicture.SizeMode = PictureBoxSizeMode.CenterImage;
+            entregarPicture.TabIndex = 67;
+            entregarPicture.TabStop = false;
+            // 
+            // excluirPicture
+            // 
+            excluirPicture.Cursor = Cursors.Hand;
+            excluirPicture.Image = (Image)resources.GetObject("excluirPicture.Image");
+            excluirPicture.Location = new Point(200, 384);
+            excluirPicture.Name = "excluirPicture";
+            excluirPicture.Size = new Size(157, 52);
+            excluirPicture.SizeMode = PictureBoxSizeMode.CenterImage;
+            excluirPicture.TabIndex = 68;
+            excluirPicture.TabStop = false;
+            // 
+            // historicoButton
+            // 
+            historicoButton.Cursor = Cursors.Hand;
+            historicoButton.Image = (Image)resources.GetObject("historicoButton.Image");
+            historicoButton.Location = new Point(1, 417);
+            historicoButton.Name = "historicoButton";
+            historicoButton.Size = new Size(93, 32);
+            historicoButton.SizeMode = PictureBoxSizeMode.CenterImage;
+            historicoButton.TabIndex = 69;
+            historicoButton.TabStop = false;
+            historicoButton.Visible = false;
+            // 
+            // excluirLabel
+            // 
+            excluirLabel.AutoSize = true;
+            excluirLabel.BackColor = Color.FromArgb(202, 196, 183);
+            excluirLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            excluirLabel.Location = new Point(222, 400);
+            excluirLabel.Name = "excluirLabel";
+            excluirLabel.Size = new Size(114, 21);
+            excluirLabel.TabIndex = 70;
+            excluirLabel.Text = "Excluir pedido";
+            // 
+            // entregarLabel
+            // 
+            entregarLabel.AutoSize = true;
+            entregarLabel.BackColor = Color.FromArgb(124, 122, 106);
+            entregarLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            entregarLabel.ForeColor = Color.White;
+            entregarLabel.Location = new Point(470, 400);
+            entregarLabel.Name = "entregarLabel";
+            entregarLabel.Size = new Size(129, 21);
+            entregarLabel.TabIndex = 71;
+            entregarLabel.Text = "Entregar pedido";
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.BackColor = Color.FromArgb(230, 255, 0);
+            pictureBox6.Cursor = Cursors.Hand;
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(766, 8);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(22, 29);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 72;
+            pictureBox6.TabStop = false;
+            // 
+            // menuOpcoes
+            // 
+            menuOpcoes.Image = (Image)resources.GetObject("menuOpcoes.Image");
+            menuOpcoes.Location = new Point(8, 35);
+            menuOpcoes.Name = "menuOpcoes";
+            menuOpcoes.Size = new Size(218, 92);
+            menuOpcoes.SizeMode = PictureBoxSizeMode.Zoom;
+            menuOpcoes.TabIndex = 79;
+            menuOpcoes.TabStop = false;
+            menuOpcoes.Visible = false;
+            // 
+            // produtosLabel
+            // 
+            produtosLabel.AutoSize = true;
+            produtosLabel.BackColor = Color.FromArgb(202, 196, 183);
+            produtosLabel.Cursor = Cursors.Hand;
+            produtosLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            produtosLabel.Location = new Point(12, 39);
+            produtosLabel.Name = "produtosLabel";
+            produtosLabel.Size = new Size(208, 17);
+            produtosLabel.TabIndex = 80;
+            produtosLabel.Text = "Produtos                                    ";
+            produtosLabel.Visible = false;
+            produtosLabel.Click += produtosLabel_Click;
+            // 
+            // linha1
+            // 
+            linha1.AutoSize = true;
+            linha1.BackColor = Color.FromArgb(202, 196, 183);
+            linha1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            linha1.Location = new Point(12, 45);
+            linha1.Name = "linha1";
+            linha1.Size = new Size(208, 17);
+            linha1.TabIndex = 81;
+            linha1.Text = "________________________________________";
+            linha1.Visible = false;
+            // 
+            // balcaoLabel
+            // 
+            balcaoLabel.AutoSize = true;
+            balcaoLabel.BackColor = Color.FromArgb(202, 196, 183);
+            balcaoLabel.Cursor = Cursors.Hand;
+            balcaoLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            balcaoLabel.Location = new Point(12, 64);
+            balcaoLabel.Name = "balcaoLabel";
+            balcaoLabel.Size = new Size(207, 17);
+            balcaoLabel.TabIndex = 82;
+            balcaoLabel.Text = "Balcão                                        ";
+            balcaoLabel.Visible = false;
+            balcaoLabel.Click += balcaoLabel_Click;
+            // 
+            // linha2
+            // 
+            linha2.AutoSize = true;
+            linha2.BackColor = Color.FromArgb(202, 196, 183);
+            linha2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            linha2.Location = new Point(12, 70);
+            linha2.Name = "linha2";
+            linha2.Size = new Size(208, 17);
+            linha2.TabIndex = 83;
+            linha2.Text = "________________________________________";
+            linha2.Visible = false;
+            // 
+            // Balcão
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(243, 241, 238);
+            ClientSize = new Size(800, 450);
+            Controls.Add(balcaoLabel);
+            Controls.Add(linha2);
+            Controls.Add(produtosLabel);
+            Controls.Add(linha1);
+            Controls.Add(menuOpcoes);
+            Controls.Add(pictureBox6);
+            Controls.Add(entregarLabel);
+            Controls.Add(excluirLabel);
+            Controls.Add(excluirPicture);
+            Controls.Add(entregarPicture);
+            Controls.Add(balcaoListBox);
+            Controls.Add(historicoPicture);
+            Controls.Add(historicoLabel);
+            Controls.Add(label1);
+            Controls.Add(pictureBox9);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
+            Controls.Add(historicoButton);
+            Name = "Balcão";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Balcão";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)historicoPicture).EndInit();
+            ((System.ComponentModel.ISupportInitialize)entregarPicture).EndInit();
+            ((System.ComponentModel.ISupportInitialize)excluirPicture).EndInit();
+            ((System.ComponentModel.ISupportInitialize)historicoButton).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)menuOpcoes).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox9;
+        private Label label1;
+        private PictureBox historicoPicture;
+        private Label historicoLabel;
+        private PictureBox entregarPicture;
+        private PictureBox excluirPicture;
+        private PictureBox historicoButton;
+        private Label excluirLabel;
+        private Label entregarLabel;
+        private PictureBox pictureBox6;
+        private ListBox balcaoListBox;
+        private PictureBox menuOpcoes;
+        private Label produtosLabel;
+        private Label linha1;
+        private Label balcaoLabel;
+        private Label linha2;
+    }
+}
