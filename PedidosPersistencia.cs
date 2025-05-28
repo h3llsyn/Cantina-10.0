@@ -9,6 +9,5 @@ namespace Cantina_10._0_Projeto_Final
     internal class PedidosPersistencia
     {
         public static List<Produtos> pedidos = new List<Produtos>();
-        //?
     }
 }

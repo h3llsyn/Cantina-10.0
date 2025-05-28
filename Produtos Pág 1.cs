@@ -10,7 +10,7 @@ namespace Cantina_10._0_Projeto_Final
 {
     public partial class ProdutosPág1 : Form
     {
-        public List<string> pedido = new List<string>();
+        public static List<Produtos> carrinhoFinal = new List<Produtos>();
         double total = 00.00;
         private ProdutosPág2 produtosPág2;
         private ProdutosPág4 produtosPág4;
@@ -622,6 +622,13 @@ namespace Cantina_10._0_Projeto_Final
             Balcão balcão = new Balcão(this);
             this.Hide();
             balcão.ShowDialog();
+        }
+
+        public void AtualizarBalcao()
+        {
+            var itensPedidos = Carrinho.Itens.Select(item => item.produto).ToList();
+            Pedidos pedidoFeito = new Pedidos(nomeTextBox.Text, comboBox1.SelectedItem.ToString(), viagemCheckBox.Checked, carrinhoFinal.ToList());
+            PedidosPersistencia.pedidos.Add(pedidoFeito);
         }
     }
 }
