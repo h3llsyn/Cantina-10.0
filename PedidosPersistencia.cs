@@ -8,6 +8,7 @@ namespace Cantina_10._0_Projeto_Final
 {
     internal class PedidosPersistencia
     {
-        public static List<Produtos> pedidos = new List<Produtos>();
+        public static List<Pedidos> pedidos = new List<Pedidos>();
+        public static List<Pedidos> historicoPedidos = new List<Pedidos>();
     }
 }

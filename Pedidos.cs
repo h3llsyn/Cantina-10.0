@@ -8,20 +8,20 @@ namespace Cantina_10._0_Projeto_Final
 {
     internal class Pedidos
     {
-        private List<Produtos> ItensPedidos;
+        private List<(Produtos produto, int quantidade)> ItensPedidos;
         private string NomeCliente;
         private string FormaPagamento;
         private bool IsViagem;
 
         public Pedidos()
         {
-            ItensPedidos = new List<Produtos>();
+            ItensPedidos = new List<(Produtos produto, int quantidade)>();
             NomeCliente = "";
             FormaPagamento = "";
             IsViagem = false;
         }
 
-        public Pedidos (string nomeCliente, string formaPagamento, bool isViagem, List<Produtos> itensPedidos)
+        public Pedidos (string nomeCliente, string formaPagamento, bool isViagem, List<(Produtos produto, int quantidade)> itensPedidos)
         {
             this.ItensPedidos = itensPedidos;
             this.NomeCliente = nomeCliente;
@@ -45,6 +45,11 @@ namespace Cantina_10._0_Projeto_Final
         {
             get { return IsViagem; }
             set { IsViagem = value; }
+        }
+        public List<(Produtos produto, int quantidade)> itensPedidos
+        {
+            get { return ItensPedidos; }
+            set { ItensPedidos = value; }
         }
     }
 }

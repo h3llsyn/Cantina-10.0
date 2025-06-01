@@ -75,6 +75,11 @@
             voltarLabel = new Label();
             pagarAgoraPicture = new PictureBox();
             pagarAgoraLabel = new Label();
+            menuOpcoes = new PictureBox();
+            linha1 = new Label();
+            linha2 = new Label();
+            produtosLabel = new Label();
+            balcaoLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -95,6 +100,7 @@
             ((System.ComponentModel.ISupportInitialize)fundoPagamentoPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)voltarPicture).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pagarAgoraPicture).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)menuOpcoes).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -204,6 +210,7 @@
             pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox9.TabIndex = 12;
             pictureBox9.TabStop = false;
+            pictureBox9.Click += pictureBox9_Click;
             // 
             // label1
             // 
@@ -658,12 +665,80 @@
             pagarAgoraLabel.Visible = false;
             pagarAgoraLabel.Click += pagarAgoraLabel_Click;
             // 
+            // menuOpcoes
+            // 
+            menuOpcoes.Image = (Image)resources.GetObject("menuOpcoes.Image");
+            menuOpcoes.Location = new Point(8, 35);
+            menuOpcoes.Name = "menuOpcoes";
+            menuOpcoes.Size = new Size(218, 92);
+            menuOpcoes.SizeMode = PictureBoxSizeMode.Zoom;
+            menuOpcoes.TabIndex = 87;
+            menuOpcoes.TabStop = false;
+            menuOpcoes.Visible = false;
+            // 
+            // linha1
+            // 
+            linha1.AutoSize = true;
+            linha1.BackColor = Color.FromArgb(202, 196, 183);
+            linha1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            linha1.Location = new Point(12, 45);
+            linha1.Name = "linha1";
+            linha1.Size = new Size(208, 17);
+            linha1.TabIndex = 88;
+            linha1.Text = "________________________________________";
+            linha1.Visible = false;
+            // 
+            // linha2
+            // 
+            linha2.AutoSize = true;
+            linha2.BackColor = Color.FromArgb(202, 196, 183);
+            linha2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            linha2.Location = new Point(12, 70);
+            linha2.Name = "linha2";
+            linha2.Size = new Size(208, 17);
+            linha2.TabIndex = 89;
+            linha2.Text = "________________________________________";
+            linha2.Visible = false;
+            // 
+            // produtosLabel
+            // 
+            produtosLabel.AutoSize = true;
+            produtosLabel.BackColor = Color.FromArgb(202, 196, 183);
+            produtosLabel.Cursor = Cursors.Hand;
+            produtosLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            produtosLabel.Location = new Point(12, 39);
+            produtosLabel.Name = "produtosLabel";
+            produtosLabel.Size = new Size(208, 17);
+            produtosLabel.TabIndex = 90;
+            produtosLabel.Text = "Produtos                                    ";
+            produtosLabel.Visible = false;
+            produtosLabel.Click += produtosLabel_Click;
+            // 
+            // balcaoLabel
+            // 
+            balcaoLabel.AutoSize = true;
+            balcaoLabel.BackColor = Color.FromArgb(202, 196, 183);
+            balcaoLabel.Cursor = Cursors.Hand;
+            balcaoLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            balcaoLabel.Location = new Point(12, 64);
+            balcaoLabel.Name = "balcaoLabel";
+            balcaoLabel.Size = new Size(207, 17);
+            balcaoLabel.TabIndex = 91;
+            balcaoLabel.Text = "Balcão                                        ";
+            balcaoLabel.Visible = false;
+            balcaoLabel.Click += balcaoLabel_Click;
+            // 
             // ProdutosPág4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
+            Controls.Add(balcaoLabel);
+            Controls.Add(produtosLabel);
+            Controls.Add(linha2);
+            Controls.Add(linha1);
+            Controls.Add(menuOpcoes);
             Controls.Add(pagarAgoraLabel);
             Controls.Add(pagarAgoraPicture);
             Controls.Add(voltarLabel);
@@ -736,6 +811,7 @@
             ((System.ComponentModel.ISupportInitialize)fundoPagamentoPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)voltarPicture).EndInit();
             ((System.ComponentModel.ISupportInitialize)pagarAgoraPicture).EndInit();
+            ((System.ComponentModel.ISupportInitialize)menuOpcoes).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -788,5 +864,10 @@
         private Label voltarLabel;
         private PictureBox pagarAgoraPicture;
         private Label pagarAgoraLabel;
+        private PictureBox menuOpcoes;
+        private Label linha1;
+        private Label linha2;
+        private Label produtosLabel;
+        private Label balcaoLabel;
     }
 }

@@ -10,7 +10,6 @@ namespace Cantina_10._0_Projeto_Final
 {
     public partial class ProdutosPág1 : Form
     {
-        public static List<Produtos> carrinhoFinal = new List<Produtos>();
         double total = 00.00;
         private ProdutosPág2 produtosPág2;
         private ProdutosPág4 produtosPág4;
@@ -441,6 +440,7 @@ namespace Cantina_10._0_Projeto_Final
                 {
                     string carrinho = string.Join("\n", Carrinho.Itens.Select(item => $"   - {item.produto.Descriçao} | R${(item.produto.Preço * item.quantidade):F2} x{item.quantidade}"));
                     string dataHora = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+                    AtualizarBalcao();
 
                     MessageBox.Show(
                         $"Data: {dataHora}\n" +
@@ -476,6 +476,7 @@ namespace Cantina_10._0_Projeto_Final
             {
                 string carrinho = string.Join("\n", Carrinho.Itens.Select(item => $"   - {item.produto.Descriçao} | R${(item.produto.Preço * item.quantidade):F2} x{item.quantidade}"));
                 string dataHora = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+                AtualizarBalcao();
 
                 MessageBox.Show(
                     $"Data: {dataHora}\n" +
@@ -543,6 +544,7 @@ namespace Cantina_10._0_Projeto_Final
         {
             string carrinho = string.Join("\n", Carrinho.Itens.Select(item => $"   - {item.produto.Descriçao} | R${(item.produto.Preço * item.quantidade):F2} x{item.quantidade}"));
             string dataHora = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+            AtualizarBalcao();
 
             MessageBox.Show(
                 $"Data: {dataHora}\n" +
@@ -596,16 +598,28 @@ namespace Cantina_10._0_Projeto_Final
 
         private void menuPicture_Click(object sender, EventArgs e)
         {
-            menuOpcoes.Visible = true;
-            produtosLabel.Visible = true;
-            linha1.Visible = true;
-            balcaoLabel.Visible = true;
-            linha2.Visible = true;
-            menuOpcoes.BringToFront();
-            linha1.BringToFront();
-            linha2.BringToFront();
-            produtosLabel.BringToFront();
-            balcaoLabel.BringToFront();
+            if (menuOpcoes.Visible)
+            {
+                menuOpcoes.Visible = false;
+                produtosLabel.Visible = false;
+                linha1.Visible = false;
+                balcaoLabel.Visible = false;
+                linha2.Visible = false;
+            }
+            else
+            {
+                menuOpcoes.Visible = true;
+                produtosLabel.Visible = true;
+                linha1.Visible = true;
+                balcaoLabel.Visible = true;
+                linha2.Visible = true;
+
+                menuOpcoes.BringToFront();
+                linha1.BringToFront();
+                linha2.BringToFront();
+                produtosLabel.BringToFront();
+                balcaoLabel.BringToFront();
+            }
         }
 
         private void produtosLabel_Click(object sender, EventArgs e)
@@ -626,9 +640,14 @@ namespace Cantina_10._0_Projeto_Final
 
         public void AtualizarBalcao()
         {
-            var itensPedidos = Carrinho.Itens.Select(item => item.produto).ToList();
-            Pedidos pedidoFeito = new Pedidos(nomeTextBox.Text, comboBox1.SelectedItem.ToString(), viagemCheckBox.Checked, carrinhoFinal.ToList());
+            var produtos = Carrinho.Itens.ToList();
+            Pedidos pedidoFeito = new Pedidos(nomeTextBox.Text, comboBox1.SelectedItem.ToString(), viagemCheckBox.Checked, produtos);
             PedidosPersistencia.pedidos.Add(pedidoFeito);
+        }
+
+        private void ProdutosPág1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

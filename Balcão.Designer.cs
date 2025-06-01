@@ -48,6 +48,13 @@
             linha1 = new Label();
             balcaoLabel = new Label();
             linha2 = new Label();
+            pedidosLabel = new Label();
+            detalhesPedidoLabel = new Label();
+            detalhesPedidoListBox = new ListBox();
+            pictureBox4 = new PictureBox();
+            historicoListBox = new ListBox();
+            historiclabel = new Label();
+            pictureBox7 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -58,6 +65,8 @@
             ((System.ComponentModel.ISupportInitialize)historicoButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)menuOpcoes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -115,6 +124,7 @@
             // 
             // historicoPicture
             // 
+            historicoPicture.Cursor = Cursors.Hand;
             historicoPicture.Image = (Image)resources.GetObject("historicoPicture.Image");
             historicoPicture.Location = new Point(3, 417);
             historicoPicture.Name = "historicoPicture";
@@ -122,25 +132,28 @@
             historicoPicture.SizeMode = PictureBoxSizeMode.Zoom;
             historicoPicture.TabIndex = 15;
             historicoPicture.TabStop = false;
+            historicoPicture.Click += historicoPicture_Click;
             // 
             // historicoLabel
             // 
             historicoLabel.AutoSize = true;
+            historicoLabel.Cursor = Cursors.Hand;
             historicoLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             historicoLabel.Location = new Point(32, 424);
             historicoLabel.Name = "historicoLabel";
             historicoLabel.Size = new Size(62, 17);
             historicoLabel.TabIndex = 16;
             historicoLabel.Text = "Histórico";
+            historicoLabel.Click += historicoLabel_Click;
             // 
             // balcaoListBox
             // 
             balcaoListBox.BackColor = Color.FromArgb(243, 241, 238);
             balcaoListBox.FormattingEnabled = true;
             balcaoListBox.ItemHeight = 15;
-            balcaoListBox.Location = new Point(200, 119);
+            balcaoListBox.Location = new Point(12, 119);
             balcaoListBox.Name = "balcaoListBox";
-            balcaoListBox.Size = new Size(413, 259);
+            balcaoListBox.Size = new Size(407, 274);
             balcaoListBox.TabIndex = 17;
             balcaoListBox.SelectedIndexChanged += balcaoListBox_SelectedIndexChanged;
             // 
@@ -148,7 +161,7 @@
             // 
             entregarPicture.Cursor = Cursors.Hand;
             entregarPicture.Image = (Image)resources.GetObject("entregarPicture.Image");
-            entregarPicture.Location = new Point(456, 384);
+            entregarPicture.Location = new Point(631, 354);
             entregarPicture.Name = "entregarPicture";
             entregarPicture.Size = new Size(157, 52);
             entregarPicture.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -159,12 +172,13 @@
             // 
             excluirPicture.Cursor = Cursors.Hand;
             excluirPicture.Image = (Image)resources.GetObject("excluirPicture.Image");
-            excluirPicture.Location = new Point(200, 384);
+            excluirPicture.Location = new Point(468, 354);
             excluirPicture.Name = "excluirPicture";
             excluirPicture.Size = new Size(157, 52);
             excluirPicture.SizeMode = PictureBoxSizeMode.CenterImage;
             excluirPicture.TabIndex = 68;
             excluirPicture.TabStop = false;
+            excluirPicture.Click += excluirPicture_Click;
             // 
             // historicoButton
             // 
@@ -177,29 +191,34 @@
             historicoButton.TabIndex = 69;
             historicoButton.TabStop = false;
             historicoButton.Visible = false;
+            historicoButton.Click += historicoButton_Click;
             // 
             // excluirLabel
             // 
             excluirLabel.AutoSize = true;
             excluirLabel.BackColor = Color.FromArgb(202, 196, 183);
+            excluirLabel.Cursor = Cursors.Hand;
             excluirLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            excluirLabel.Location = new Point(222, 400);
+            excluirLabel.Location = new Point(482, 370);
             excluirLabel.Name = "excluirLabel";
-            excluirLabel.Size = new Size(114, 21);
+            excluirLabel.Size = new Size(129, 21);
             excluirLabel.TabIndex = 70;
-            excluirLabel.Text = "Excluir pedido";
+            excluirLabel.Text = "Cancelar pedido";
+            excluirLabel.Click += excluirLabel_Click;
             // 
             // entregarLabel
             // 
             entregarLabel.AutoSize = true;
             entregarLabel.BackColor = Color.FromArgb(124, 122, 106);
+            entregarLabel.Cursor = Cursors.Hand;
             entregarLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             entregarLabel.ForeColor = Color.White;
-            entregarLabel.Location = new Point(470, 400);
+            entregarLabel.Location = new Point(645, 370);
             entregarLabel.Name = "entregarLabel";
             entregarLabel.Size = new Size(129, 21);
             entregarLabel.TabIndex = 71;
             entregarLabel.Text = "Entregar pedido";
+            entregarLabel.Click += entregarLabel_Click;
             // 
             // pictureBox6
             // 
@@ -223,6 +242,7 @@
             menuOpcoes.TabIndex = 79;
             menuOpcoes.TabStop = false;
             menuOpcoes.Visible = false;
+            menuOpcoes.Click += menuOpcoes_Click;
             // 
             // produtosLabel
             // 
@@ -276,12 +296,97 @@
             linha2.Text = "________________________________________";
             linha2.Visible = false;
             // 
+            // pedidosLabel
+            // 
+            pedidosLabel.AutoSize = true;
+            pedidosLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            pedidosLabel.Location = new Point(12, 99);
+            pedidosLabel.Name = "pedidosLabel";
+            pedidosLabel.Size = new Size(56, 17);
+            pedidosLabel.TabIndex = 84;
+            pedidosLabel.Text = "Pedidos";
+            // 
+            // detalhesPedidoLabel
+            // 
+            detalhesPedidoLabel.AutoSize = true;
+            detalhesPedidoLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            detalhesPedidoLabel.Location = new Point(662, 99);
+            detalhesPedidoLabel.Name = "detalhesPedidoLabel";
+            detalhesPedidoLabel.Size = new Size(126, 17);
+            detalhesPedidoLabel.TabIndex = 85;
+            detalhesPedidoLabel.Text = "Detalhes do Pedido";
+            // 
+            // detalhesPedidoListBox
+            // 
+            detalhesPedidoListBox.BackColor = Color.FromArgb(243, 241, 238);
+            detalhesPedidoListBox.FormattingEnabled = true;
+            detalhesPedidoListBox.ItemHeight = 15;
+            detalhesPedidoListBox.Location = new Point(468, 119);
+            detalhesPedidoListBox.Name = "detalhesPedidoListBox";
+            detalhesPedidoListBox.Size = new Size(320, 229);
+            detalhesPedidoListBox.TabIndex = 86;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(0, 250);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(300, 200);
+            pictureBox4.TabIndex = 87;
+            pictureBox4.TabStop = false;
+            pictureBox4.Visible = false;
+            // 
+            // historicoListBox
+            // 
+            historicoListBox.BackColor = Color.FromArgb(202, 196, 183);
+            historicoListBox.FormattingEnabled = true;
+            historicoListBox.ItemHeight = 15;
+            historicoListBox.Location = new Point(5, 276);
+            historicoListBox.Name = "historicoListBox";
+            historicoListBox.Size = new Size(290, 169);
+            historicoListBox.TabIndex = 88;
+            historicoListBox.Visible = false;
+            // 
+            // historiclabel
+            // 
+            historiclabel.AutoSize = true;
+            historiclabel.BackColor = Color.FromArgb(202, 196, 183);
+            historiclabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            historiclabel.Location = new Point(5, 256);
+            historiclabel.Name = "historiclabel";
+            historiclabel.Size = new Size(62, 17);
+            historiclabel.TabIndex = 89;
+            historiclabel.Text = "Histórico";
+            historiclabel.Visible = false;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.BackColor = Color.FromArgb(202, 196, 183);
+            pictureBox7.Cursor = Cursors.Hand;
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(279, 256);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(15, 15);
+            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox7.TabIndex = 90;
+            pictureBox7.TabStop = false;
+            pictureBox7.Visible = false;
+            pictureBox7.Click += pictureBox7_Click;
+            // 
             // Balcão
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox7);
+            Controls.Add(historicoPicture);
+            Controls.Add(historicoLabel);
+            Controls.Add(historicoButton);
+            Controls.Add(historiclabel);
+            Controls.Add(historicoListBox);
+            Controls.Add(detalhesPedidoListBox);
+            Controls.Add(detalhesPedidoLabel);
             Controls.Add(balcaoLabel);
             Controls.Add(linha2);
             Controls.Add(produtosLabel);
@@ -292,18 +397,19 @@
             Controls.Add(excluirLabel);
             Controls.Add(excluirPicture);
             Controls.Add(entregarPicture);
-            Controls.Add(balcaoListBox);
-            Controls.Add(historicoPicture);
-            Controls.Add(historicoLabel);
             Controls.Add(label1);
             Controls.Add(pictureBox9);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
-            Controls.Add(historicoButton);
+            Controls.Add(pedidosLabel);
+            Controls.Add(pictureBox4);
+            Controls.Add(balcaoListBox);
             Name = "Balcão";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Balcão";
+            FormClosed += Balcão_FormClosed;
+            Load += Balcão_Load_1;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -314,6 +420,8 @@
             ((System.ComponentModel.ISupportInitialize)historicoButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)menuOpcoes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -339,5 +447,12 @@
         private Label linha1;
         private Label balcaoLabel;
         private Label linha2;
+        private Label pedidosLabel;
+        private Label detalhesPedidoLabel;
+        private ListBox detalhesPedidoListBox;
+        private PictureBox pictureBox4;
+        private ListBox historicoListBox;
+        private Label historiclabel;
+        private PictureBox pictureBox7;
     }
 }
