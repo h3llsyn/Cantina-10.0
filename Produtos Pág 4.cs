@@ -11,6 +11,7 @@ namespace Cantina_10._0_Projeto_Final
         private ProdutosPág1 produtosPág1;
         private ProdutosPág3 produtosPág3;
         private Balcão balcão;
+        private Cozinha cozinha;
 
         public ProdutosPág4(ProdutosPág1 produtosPág1)
         {
@@ -28,6 +29,12 @@ namespace Cantina_10._0_Projeto_Final
         {
             InitializeComponent();
             this.balcão = balcão;
+        }
+
+        public ProdutosPág4(Cozinha cozinha)
+        {
+            InitializeComponent();
+            this.cozinha = cozinha;
         }
 
         private void AdicionarAoCarrinho(int index, int quantidade)
@@ -489,6 +496,8 @@ namespace Cantina_10._0_Projeto_Final
                 linha1.Visible = false;
                 balcaoLabel.Visible = false;
                 linha2.Visible = false;
+                cozinhaLabel.Visible = false;
+                linha3.Visible = false;
             }
             else
             {
@@ -497,12 +506,16 @@ namespace Cantina_10._0_Projeto_Final
                 linha1.Visible = true;
                 balcaoLabel.Visible = true;
                 linha2.Visible = true;
+                cozinhaLabel.Visible = true;
+                linha3.Visible = true;
 
                 menuOpcoes.BringToFront();
                 linha1.BringToFront();
                 linha2.BringToFront();
+                linha3.BringToFront();
                 produtosLabel.BringToFront();
                 balcaoLabel.BringToFront();
+                cozinhaLabel.BringToFront();
             }
         }
 
@@ -513,6 +526,8 @@ namespace Cantina_10._0_Projeto_Final
             linha1.Visible = false;
             balcaoLabel.Visible = false;
             linha2.Visible = false;
+            cozinhaLabel.Visible = false;
+            linha3.Visible = false;
         }
 
         private void balcaoLabel_Click(object sender, EventArgs e)
@@ -537,6 +552,13 @@ namespace Cantina_10._0_Projeto_Final
                 var pedidoDeChapa = new Pedidos(nomeTextBox.Text, comboBox1.SelectedItem.ToString(), viagemCheckBox.Checked, produtosDeChapa);
                 PedidosPersistencia.pedidosDeChapa.Add(pedidoDeChapa);
             }
+        }
+
+        private void cozinhaLabel_Click(object sender, EventArgs e)
+        {
+            Cozinha cozinha = new Cozinha(this);
+            this.Hide();
+            cozinha.ShowDialog();
         }
     }
 }

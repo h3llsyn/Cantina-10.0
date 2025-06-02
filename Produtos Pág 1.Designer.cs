@@ -98,6 +98,8 @@
             linha1 = new Label();
             balcaoLabel = new Label();
             linha2 = new Label();
+            linha3 = new Label();
+            cozinhaLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -976,12 +978,40 @@
             linha2.Text = "________________________________________";
             linha2.Visible = false;
             // 
+            // linha3
+            // 
+            linha3.AutoSize = true;
+            linha3.BackColor = Color.FromArgb(202, 196, 183);
+            linha3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            linha3.Location = new Point(12, 95);
+            linha3.Name = "linha3";
+            linha3.Size = new Size(208, 17);
+            linha3.TabIndex = 89;
+            linha3.Text = "________________________________________";
+            linha3.Visible = false;
+            // 
+            // cozinhaLabel
+            // 
+            cozinhaLabel.AutoSize = true;
+            cozinhaLabel.BackColor = Color.FromArgb(202, 196, 183);
+            cozinhaLabel.Cursor = Cursors.Hand;
+            cozinhaLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cozinhaLabel.Location = new Point(12, 89);
+            cozinhaLabel.Name = "cozinhaLabel";
+            cozinhaLabel.Size = new Size(56, 17);
+            cozinhaLabel.TabIndex = 90;
+            cozinhaLabel.Text = "Cozinha";
+            cozinhaLabel.Visible = false;
+            cozinhaLabel.Click += cozinhaLabel_Click;
+            // 
             // ProdutosPág1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
+            Controls.Add(cozinhaLabel);
+            Controls.Add(linha3);
             Controls.Add(balcaoLabel);
             Controls.Add(linha2);
             Controls.Add(produtosLabel);
@@ -1160,5 +1190,7 @@
         private Label linha1;
         private Label balcaoLabel;
         private Label linha2;
+        private Label linha3;
+        private Label cozinhaLabel;
     }
 }

@@ -14,6 +14,7 @@ namespace Cantina_10._0_Projeto_Final
         private ProdutosPág2 produtosPág2;
         private ProdutosPág4 produtosPág4;
         private Balcão balcão;
+        private Cozinha cozinha;
 
         public ProdutosPág1()
         {
@@ -35,6 +36,12 @@ namespace Cantina_10._0_Projeto_Final
         {
             InitializeComponent();
             this.balcão = balcão;
+        }
+
+        public ProdutosPág1(Cozinha cozinha)
+        {
+            InitializeComponent();
+            this.cozinha = cozinha;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -605,6 +612,8 @@ namespace Cantina_10._0_Projeto_Final
                 linha1.Visible = false;
                 balcaoLabel.Visible = false;
                 linha2.Visible = false;
+                cozinhaLabel.Visible = false;
+                linha3.Visible = false;
             }
             else
             {
@@ -613,12 +622,16 @@ namespace Cantina_10._0_Projeto_Final
                 linha1.Visible = true;
                 balcaoLabel.Visible = true;
                 linha2.Visible = true;
+                cozinhaLabel.Visible = true;
+                linha3.Visible = true;
 
                 menuOpcoes.BringToFront();
                 linha1.BringToFront();
                 linha2.BringToFront();
+                linha3.BringToFront();
                 produtosLabel.BringToFront();
                 balcaoLabel.BringToFront();
+                cozinhaLabel.BringToFront();
             }
         }
 
@@ -629,6 +642,8 @@ namespace Cantina_10._0_Projeto_Final
             linha1.Visible = false;
             balcaoLabel.Visible = false;
             linha2.Visible = false;
+            cozinhaLabel.Visible = false;
+            linha3.Visible = false;
         }
 
         private void balcaoLabel_Click(object sender, EventArgs e)
@@ -658,6 +673,13 @@ namespace Cantina_10._0_Projeto_Final
         private void ProdutosPág1_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void cozinhaLabel_Click(object sender, EventArgs e)
+        {
+            Cozinha cozinha = new Cozinha(this);
+            this.Hide();
+            cozinha.ShowDialog();
         }
     }
 }

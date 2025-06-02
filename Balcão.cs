@@ -18,26 +18,36 @@ namespace Cantina_10._0_Projeto_Final
         private ProdutosPág2 produtosPág2;
         private ProdutosPág3 produtosPág3;
         private ProdutosPág4 produtosPág4;
+        private Cozinha cozinha;
 
         public Balcão(ProdutosPág1 produtosPág1)
         {
             InitializeComponent();
             this.produtosPág1 = produtosPág1;
         }
+
         public Balcão(ProdutosPág2 produtosPág2)
         {
             InitializeComponent();
             this.produtosPág2 = produtosPág2;
         }
+
         public Balcão(ProdutosPág3 produtosPág3)
         {
             InitializeComponent();
             this.produtosPág3 = produtosPág3;
         }
+
         public Balcão(ProdutosPág4 produtosPág4)
         {
             InitializeComponent();
             this.produtosPág4 = produtosPág4;
+        }
+
+        public Balcão(Cozinha cozinha)
+        {
+            InitializeComponent();
+            this.cozinha = cozinha;
         }
 
         public Balcão()
@@ -84,6 +94,8 @@ namespace Cantina_10._0_Projeto_Final
                 linha1.Visible = false;
                 balcaoLabel.Visible = false;
                 linha2.Visible = false;
+                cozinhaLabel.Visible = false;
+                linha3.Visible = false;
             }
             else
             {
@@ -92,12 +104,16 @@ namespace Cantina_10._0_Projeto_Final
                 linha1.Visible = true;
                 balcaoLabel.Visible = true;
                 linha2.Visible = true;
+                cozinhaLabel.Visible = true;
+                linha3.Visible = true;
 
                 menuOpcoes.BringToFront();
                 linha1.BringToFront();
                 linha2.BringToFront();
+                linha3.BringToFront();
                 produtosLabel.BringToFront();
                 balcaoLabel.BringToFront();
+                cozinhaLabel.BringToFront();
             }
         }
 
@@ -115,6 +131,8 @@ namespace Cantina_10._0_Projeto_Final
             linha1.Visible = false;
             balcaoLabel.Visible = false;
             linha2.Visible = false;
+            cozinhaLabel.Visible = false;
+            linha3.Visible = false;
         }
 
         private void Balcão_Load_1(object sender, EventArgs e)
@@ -265,6 +283,13 @@ namespace Cantina_10._0_Projeto_Final
         private void Balcão_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void cozinhaLabel_Click(object sender, EventArgs e)
+        {
+            Cozinha cozinha = new Cozinha(this);
+            this.Hide();
+            cozinha.ShowDialog();
         }
     }
 }
