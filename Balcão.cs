@@ -49,10 +49,10 @@ namespace Cantina_10._0_Projeto_Final
         private void balcaoListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             int indice = balcaoListBox.SelectedIndex;
-            if (indice >= 0 && indice < PedidosPersistencia.pedidos.Count)
+            if (indice >= 0 && indice < PedidosPersistencia.pedidosNaoChapa.Count)
             {
                 detalhesPedidoListBox.Items.Clear();
-                var pedido = PedidosPersistencia.pedidos[indice];
+                var pedido = PedidosPersistencia.pedidosNaoChapa[indice];
                 detalhesPedidoListBox.Items.Add($"Cliente: {pedido.nomeCliente}");
                 detalhesPedidoListBox.Items.Add("Produtos:");
                 foreach (var item in pedido.itensPedidos)
@@ -127,7 +127,7 @@ namespace Cantina_10._0_Projeto_Final
             balcaoListBox.Items.Clear();
             historicoListBox.Items.Clear();
 
-            foreach (var pedido in PedidosPersistencia.pedidos)
+            foreach (var pedido in PedidosPersistencia.pedidosNaoChapa)
             {
                 balcaoListBox.Items.Add(pedido.nomeCliente);
             }
@@ -156,7 +156,7 @@ namespace Cantina_10._0_Projeto_Final
         {
             if (balcaoListBox.SelectedIndex != -1)
             {
-                PedidosPersistencia.pedidos.RemoveAt(balcaoListBox.SelectedIndex);
+                PedidosPersistencia.pedidosNaoChapa.RemoveAt(balcaoListBox.SelectedIndex);
                 balcaoListBox.Items.RemoveAt(balcaoListBox.SelectedIndex);
                 detalhesPedidoListBox.Items.Clear();
             }
@@ -218,11 +218,21 @@ namespace Cantina_10._0_Projeto_Final
         private void entregarLabel_Click(object sender, EventArgs e)
         {
             int indice = balcaoListBox.SelectedIndex;
-            if (indice >= 0 && indice < PedidosPersistencia.pedidos.Count)
+            if (indice >= 0 && indice < PedidosPersistencia.pedidosNaoChapa.Count)
             {
-                var pedido = PedidosPersistencia.pedidos[indice];
+                var pedido = PedidosPersistencia.pedidosNaoChapa[indice];
+
+                bool pedidoChapaPendente = PedidosPersistencia.pedidosDeChapa
+                    .Any(p => p.nomeCliente == pedido.nomeCliente);
+
+                if (pedidoChapaPendente)
+                {
+                    MessageBox.Show("Aguardando o pedido desse cliente na cozinha", "Erro");
+                    return;
+                }
+
                 PedidosPersistencia.historicoPedidos.Add(pedido);
-                PedidosPersistencia.pedidos.RemoveAt(indice);
+                PedidosPersistencia.pedidosNaoChapa.RemoveAt(indice);
                 balcaoListBox.Items.RemoveAt(indice);
                 detalhesPedidoListBox.Items.Clear();
                 AtualizarHistorico();

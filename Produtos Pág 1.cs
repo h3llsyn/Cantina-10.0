@@ -640,9 +640,19 @@ namespace Cantina_10._0_Projeto_Final
 
         public void AtualizarBalcao()
         {
-            var produtos = Carrinho.Itens.ToList();
-            Pedidos pedidoFeito = new Pedidos(nomeTextBox.Text, comboBox1.SelectedItem.ToString(), viagemCheckBox.Checked, produtos);
-            PedidosPersistencia.pedidos.Add(pedidoFeito);
+            var produtosNaoChapa = Carrinho.Itens.Where(p => !p.produto.Chapa).ToList();
+            if (produtosNaoChapa.Any())
+            {
+                var pedidoNaoChapa = new Pedidos(nomeTextBox.Text, comboBox1.SelectedItem.ToString(), viagemCheckBox.Checked, produtosNaoChapa);
+                PedidosPersistencia.pedidosNaoChapa.Add(pedidoNaoChapa);
+            }
+
+            var produtosDeChapa = Carrinho.Itens.Where(p => p.produto.Chapa).ToList();
+            if (produtosDeChapa.Any())
+            {
+                var pedidoDeChapa = new Pedidos(nomeTextBox.Text, comboBox1.SelectedItem.ToString(), viagemCheckBox.Checked, produtosDeChapa);
+                PedidosPersistencia.pedidosDeChapa.Add(pedidoDeChapa);
+            }
         }
 
         private void ProdutosPág1_FormClosed(object sender, FormClosedEventArgs e)
