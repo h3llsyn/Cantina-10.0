@@ -169,6 +169,7 @@
             entregarPicture.SizeMode = PictureBoxSizeMode.CenterImage;
             entregarPicture.TabIndex = 67;
             entregarPicture.TabStop = false;
+            entregarPicture.Click += entregarPicture_Click;
             // 
             // excluirPicture
             // 

@@ -245,7 +245,7 @@ namespace Cantina_10._0_Projeto_Final
 
                 if (pedidoChapaPendente)
                 {
-                    MessageBox.Show("Aguardando o pedido desse cliente na cozinha", "Erro");
+                    MessageBox.Show("Aguardando o pedido do cliente na cozinha", "Erro");
                     return;
                 }
 
@@ -290,6 +290,11 @@ namespace Cantina_10._0_Projeto_Final
             Cozinha cozinha = new Cozinha(this);
             this.Hide();
             cozinha.ShowDialog();
+        }
+
+        private void entregarPicture_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

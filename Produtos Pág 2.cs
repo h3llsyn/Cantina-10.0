@@ -613,5 +613,10 @@ namespace Cantina_10._0_Projeto_Final
             this.Hide();
             cozinha.ShowDialog();
         }
+
+        private void pagarAgoraPicture_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

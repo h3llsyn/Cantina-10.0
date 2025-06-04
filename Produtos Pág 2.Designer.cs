@@ -887,6 +887,7 @@
             pagarAgoraPicture.TabIndex = 85;
             pagarAgoraPicture.TabStop = false;
             pagarAgoraPicture.Visible = false;
+            pagarAgoraPicture.Click += pagarAgoraPicture_Click;
             // 
             // pagarAgoraLabel
             // 

@@ -43,12 +43,18 @@
             linha3 = new Label();
             cozinhaLabel = new Label();
             cozinhaListBox = new ListBox();
+            cozinhaDetalhesListBox = new ListBox();
+            pedidosLabel = new Label();
+            detalhesPedidoLabel = new Label();
+            enviarPedidoBalcaoPictureBox = new PictureBox();
+            enviarPedidoBalcaoLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)menuPicture).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)menuOpcoes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)enviarPedidoBalcaoPictureBox).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -210,11 +216,65 @@
             cozinhaListBox.BackColor = Color.FromArgb(243, 241, 238);
             cozinhaListBox.FormattingEnabled = true;
             cozinhaListBox.ItemHeight = 15;
-            cozinhaListBox.Location = new Point(234, 171);
+            cozinhaListBox.Location = new Point(12, 119);
             cozinhaListBox.Name = "cozinhaListBox";
-            cozinhaListBox.Size = new Size(305, 184);
+            cozinhaListBox.Size = new Size(407, 274);
             cozinhaListBox.TabIndex = 90;
             cozinhaListBox.SelectedIndexChanged += cozinhaListBox_SelectedIndexChanged;
+            // 
+            // cozinhaDetalhesListBox
+            // 
+            cozinhaDetalhesListBox.BackColor = Color.FromArgb(243, 241, 238);
+            cozinhaDetalhesListBox.FormattingEnabled = true;
+            cozinhaDetalhesListBox.ItemHeight = 15;
+            cozinhaDetalhesListBox.Location = new Point(468, 119);
+            cozinhaDetalhesListBox.Name = "cozinhaDetalhesListBox";
+            cozinhaDetalhesListBox.Size = new Size(320, 229);
+            cozinhaDetalhesListBox.TabIndex = 91;
+            // 
+            // pedidosLabel
+            // 
+            pedidosLabel.AutoSize = true;
+            pedidosLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            pedidosLabel.Location = new Point(12, 99);
+            pedidosLabel.Name = "pedidosLabel";
+            pedidosLabel.Size = new Size(56, 17);
+            pedidosLabel.TabIndex = 92;
+            pedidosLabel.Text = "Pedidos";
+            // 
+            // detalhesPedidoLabel
+            // 
+            detalhesPedidoLabel.AutoSize = true;
+            detalhesPedidoLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            detalhesPedidoLabel.Location = new Point(662, 99);
+            detalhesPedidoLabel.Name = "detalhesPedidoLabel";
+            detalhesPedidoLabel.Size = new Size(126, 17);
+            detalhesPedidoLabel.TabIndex = 93;
+            detalhesPedidoLabel.Text = "Detalhes do Pedido";
+            // 
+            // enviarPedidoBalcaoPictureBox
+            // 
+            enviarPedidoBalcaoPictureBox.Image = (Image)resources.GetObject("enviarPedidoBalcaoPictureBox.Image");
+            enviarPedidoBalcaoPictureBox.Location = new Point(484, 338);
+            enviarPedidoBalcaoPictureBox.Name = "enviarPedidoBalcaoPictureBox";
+            enviarPedidoBalcaoPictureBox.Size = new Size(289, 78);
+            enviarPedidoBalcaoPictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
+            enviarPedidoBalcaoPictureBox.TabIndex = 94;
+            enviarPedidoBalcaoPictureBox.TabStop = false;
+            enviarPedidoBalcaoPictureBox.Click += enviarPedidoBalcaoPictureBox_Click;
+            // 
+            // enviarPedidoBalcaoLabel
+            // 
+            enviarPedidoBalcaoLabel.AutoSize = true;
+            enviarPedidoBalcaoLabel.BackColor = Color.FromArgb(202, 196, 183);
+            enviarPedidoBalcaoLabel.Cursor = Cursors.Hand;
+            enviarPedidoBalcaoLabel.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            enviarPedidoBalcaoLabel.Location = new Point(508, 363);
+            enviarPedidoBalcaoLabel.Name = "enviarPedidoBalcaoLabel";
+            enviarPedidoBalcaoLabel.Size = new Size(244, 30);
+            enviarPedidoBalcaoLabel.TabIndex = 95;
+            enviarPedidoBalcaoLabel.Text = "Enviar pedido ao balcão";
+            enviarPedidoBalcaoLabel.Click += enviarPedidoBalcaoLabel_Click;
             // 
             // Cozinha
             // 
@@ -222,7 +282,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
-            Controls.Add(cozinhaListBox);
+            Controls.Add(enviarPedidoBalcaoLabel);
+            Controls.Add(detalhesPedidoLabel);
+            Controls.Add(cozinhaDetalhesListBox);
             Controls.Add(cozinhaLabel);
             Controls.Add(linha3);
             Controls.Add(balcaoLabel);
@@ -236,6 +298,9 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
+            Controls.Add(cozinhaListBox);
+            Controls.Add(pedidosLabel);
+            Controls.Add(enviarPedidoBalcaoPictureBox);
             Name = "Cozinha";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cozinha";
@@ -247,6 +312,7 @@
             ((System.ComponentModel.ISupportInitialize)menuPicture).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)menuOpcoes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)enviarPedidoBalcaoPictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -267,5 +333,10 @@
         private Label linha3;
         private Label cozinhaLabel;
         private ListBox cozinhaListBox;
+        private ListBox cozinhaDetalhesListBox;
+        private Label pedidosLabel;
+        private Label detalhesPedidoLabel;
+        private PictureBox enviarPedidoBalcaoPictureBox;
+        private Label enviarPedidoBalcaoLabel;
     }
 }
