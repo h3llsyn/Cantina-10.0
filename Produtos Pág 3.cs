@@ -12,6 +12,7 @@ namespace Cantina_10._0_Projeto_Final
         private ProdutosPág1 produtosPág1;
         private Balcão balcão;
         private Cozinha cozinha;
+        private Tela_Chamada tela_chamada;
 
         public ProdutosPág3(ProdutosPág1 produtosPág1)
         {
@@ -41,6 +42,11 @@ namespace Cantina_10._0_Projeto_Final
         {
             InitializeComponent();
             this.cozinha = cozinha;
+        }
+        public ProdutosPág3(Tela_Chamada tela_chamada)
+        {
+            InitializeComponent();
+            this.tela_chamada = tela_chamada;
         }
 
         private void AdicionarAoCarrinho(int index, int quantidade)
@@ -556,6 +562,7 @@ namespace Cantina_10._0_Projeto_Final
                 linha2.Visible = false;
                 cozinhaLabel.Visible = false;
                 linha3.Visible = false;
+                label9.Visible = false;
             }
             else
             {
@@ -566,6 +573,7 @@ namespace Cantina_10._0_Projeto_Final
                 linha2.Visible = true;
                 cozinhaLabel.Visible = true;
                 linha3.Visible = true;
+                label9.Visible = true;
 
                 menuOpcoes.BringToFront();
                 linha1.BringToFront();
@@ -574,6 +582,7 @@ namespace Cantina_10._0_Projeto_Final
                 produtosLabel.BringToFront();
                 balcaoLabel.BringToFront();
                 cozinhaLabel.BringToFront();
+                label9.BringToFront();
             }
         }
 
@@ -586,6 +595,7 @@ namespace Cantina_10._0_Projeto_Final
             linha2.Visible = false;
             cozinhaLabel.Visible = false;
             linha3.Visible = false;
+            label9.Visible = false;
         }
 
         private void balcaoLabel_Click(object sender, EventArgs e)
@@ -617,6 +627,13 @@ namespace Cantina_10._0_Projeto_Final
             Cozinha cozinha = new Cozinha(this);
             this.Hide();
             cozinha.ShowDialog();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            Tela_Chamada tela_Chamada = new Tela_Chamada(this);
+            this.Hide();
+            tela_Chamada.ShowDialog();
         }
     }
 }

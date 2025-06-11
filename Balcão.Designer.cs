@@ -57,6 +57,7 @@
             cozinhaLabel = new Label();
             excluirLabel = new Label();
             excluirPicture = new PictureBox();
+            label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -215,7 +216,7 @@
             menuOpcoes.Image = (Image)resources.GetObject("menuOpcoes.Image");
             menuOpcoes.Location = new Point(8, 35);
             menuOpcoes.Name = "menuOpcoes";
-            menuOpcoes.Size = new Size(218, 92);
+            menuOpcoes.Size = new Size(230, 106);
             menuOpcoes.SizeMode = PictureBoxSizeMode.Zoom;
             menuOpcoes.TabIndex = 79;
             menuOpcoes.TabStop = false;
@@ -324,6 +325,7 @@
             historicoListBox.Size = new Size(290, 169);
             historicoListBox.TabIndex = 88;
             historicoListBox.Visible = false;
+            historicoListBox.SelectedIndexChanged += historicoListBox_SelectedIndexChanged;
             // 
             // historiclabel
             // 
@@ -402,12 +404,27 @@
             excluirPicture.TabStop = false;
             excluirPicture.Click += excluirPicture_Click;
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.FromArgb(202, 196, 183);
+            label9.Cursor = Cursors.Hand;
+            label9.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Location = new Point(12, 114);
+            label9.Name = "label9";
+            label9.Size = new Size(109, 17);
+            label9.TabIndex = 98;
+            label9.Text = "Tela de chamada";
+            label9.Visible = false;
+            label9.Click += label9_Click;
+            // 
             // Balcão
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
+            Controls.Add(label9);
             Controls.Add(cozinhaLabel);
             Controls.Add(linha3);
             Controls.Add(pictureBox7);
@@ -487,5 +504,6 @@
         private Label cozinhaLabel;
         private Label excluirLabel;
         private PictureBox excluirPicture;
+        private Label label9;
     }
 }
