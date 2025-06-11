@@ -38,9 +38,7 @@
             historicoLabel = new Label();
             balcaoListBox = new ListBox();
             entregarPicture = new PictureBox();
-            excluirPicture = new PictureBox();
             historicoButton = new PictureBox();
-            excluirLabel = new Label();
             entregarLabel = new Label();
             pictureBox6 = new PictureBox();
             menuOpcoes = new PictureBox();
@@ -57,18 +55,20 @@
             pictureBox7 = new PictureBox();
             linha3 = new Label();
             cozinhaLabel = new Label();
+            excluirLabel = new Label();
+            excluirPicture = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)historicoPicture).BeginInit();
             ((System.ComponentModel.ISupportInitialize)entregarPicture).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)excluirPicture).BeginInit();
             ((System.ComponentModel.ISupportInitialize)historicoButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)menuOpcoes).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)excluirPicture).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -171,18 +171,6 @@
             entregarPicture.TabStop = false;
             entregarPicture.Click += entregarPicture_Click;
             // 
-            // excluirPicture
-            // 
-            excluirPicture.Cursor = Cursors.Hand;
-            excluirPicture.Image = (Image)resources.GetObject("excluirPicture.Image");
-            excluirPicture.Location = new Point(468, 354);
-            excluirPicture.Name = "excluirPicture";
-            excluirPicture.Size = new Size(157, 52);
-            excluirPicture.SizeMode = PictureBoxSizeMode.CenterImage;
-            excluirPicture.TabIndex = 68;
-            excluirPicture.TabStop = false;
-            excluirPicture.Click += excluirPicture_Click;
-            // 
             // historicoButton
             // 
             historicoButton.Cursor = Cursors.Hand;
@@ -195,19 +183,6 @@
             historicoButton.TabStop = false;
             historicoButton.Visible = false;
             historicoButton.Click += historicoButton_Click;
-            // 
-            // excluirLabel
-            // 
-            excluirLabel.AutoSize = true;
-            excluirLabel.BackColor = Color.FromArgb(202, 196, 183);
-            excluirLabel.Cursor = Cursors.Hand;
-            excluirLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            excluirLabel.Location = new Point(482, 370);
-            excluirLabel.Name = "excluirLabel";
-            excluirLabel.Size = new Size(129, 21);
-            excluirLabel.TabIndex = 70;
-            excluirLabel.Text = "Cancelar pedido";
-            excluirLabel.Click += excluirLabel_Click;
             // 
             // entregarLabel
             // 
@@ -402,6 +377,31 @@
             cozinhaLabel.Visible = false;
             cozinhaLabel.Click += cozinhaLabel_Click;
             // 
+            // excluirLabel
+            // 
+            excluirLabel.AutoSize = true;
+            excluirLabel.BackColor = Color.FromArgb(202, 196, 183);
+            excluirLabel.Cursor = Cursors.Hand;
+            excluirLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            excluirLabel.Location = new Point(482, 370);
+            excluirLabel.Name = "excluirLabel";
+            excluirLabel.Size = new Size(129, 21);
+            excluirLabel.TabIndex = 70;
+            excluirLabel.Text = "Cancelar pedido";
+            excluirLabel.Click += excluirLabel_Click;
+            // 
+            // excluirPicture
+            // 
+            excluirPicture.Cursor = Cursors.Hand;
+            excluirPicture.Image = (Image)resources.GetObject("excluirPicture.Image");
+            excluirPicture.Location = new Point(468, 354);
+            excluirPicture.Name = "excluirPicture";
+            excluirPicture.Size = new Size(157, 52);
+            excluirPicture.SizeMode = PictureBoxSizeMode.CenterImage;
+            excluirPicture.TabIndex = 68;
+            excluirPicture.TabStop = false;
+            excluirPicture.Click += excluirPicture_Click;
+            // 
             // Balcão
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -447,12 +447,12 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)historicoPicture).EndInit();
             ((System.ComponentModel.ISupportInitialize)entregarPicture).EndInit();
-            ((System.ComponentModel.ISupportInitialize)excluirPicture).EndInit();
             ((System.ComponentModel.ISupportInitialize)historicoButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)menuOpcoes).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)excluirPicture).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -467,9 +467,7 @@
         private PictureBox historicoPicture;
         private Label historicoLabel;
         private PictureBox entregarPicture;
-        private PictureBox excluirPicture;
         private PictureBox historicoButton;
-        private Label excluirLabel;
         private Label entregarLabel;
         private PictureBox pictureBox6;
         private ListBox balcaoListBox;
@@ -487,5 +485,7 @@
         private PictureBox pictureBox7;
         private Label linha3;
         private Label cozinhaLabel;
+        private Label excluirLabel;
+        private PictureBox excluirPicture;
     }
 }

@@ -174,15 +174,43 @@ namespace Cantina_10._0_Projeto_Final
         {
             if (balcaoListBox.SelectedIndex != -1)
             {
-                PedidosPersistencia.pedidosNaoChapa.RemoveAt(balcaoListBox.SelectedIndex);
-                balcaoListBox.Items.RemoveAt(balcaoListBox.SelectedIndex);
-                detalhesPedidoListBox.Items.Clear();
+                if (balcaoListBox.SelectedIndex != -1)
+                {
+                    var pedidoBalcao = PedidosPersistencia.pedidosNaoChapa[balcaoListBox.SelectedIndex];
+                    PedidosPersistencia.pedidosNaoChapa.RemoveAt(balcaoListBox.SelectedIndex);
+                    balcaoListBox.Items.RemoveAt(balcaoListBox.SelectedIndex);
+                    detalhesPedidoListBox.Items.Clear();
+                    MessageBox.Show("Pedido excluído!", "Aviso");
+                    var pedidoCozinha = PedidosPersistencia.pedidosDeChapa.FirstOrDefault(p => p.nomeCliente.Trim() == pedidoBalcao.nomeCliente.Trim());
+                    if (pedidoCozinha != null)
+                    {
+                        PedidosPersistencia.pedidosDeChapa.Remove(pedidoCozinha);
+                        AtualizarListaPedidosCozinha();
+                    }
+                }
             }
             else
             {
                 MessageBox.Show("Selecione um pedido para remover", "Erro");
             }
         }
+
+        public void AtualizarListaPedidosCozinha()
+        {
+            if (cozinha != null)
+            {
+                cozinha.CozinhaListBox.Items.Clear();
+
+                foreach (var pedido in PedidosPersistencia.pedidosDeChapa)
+                {
+                    if (pedido.itensPedidos != null && pedido.itensPedidos.Count > 0)
+                    {
+                        cozinha.CozinhaListBox.Items.Add(pedido.nomeCliente);
+                    }
+                }
+            }
+        }
+
 
         private void historicoButton_Click(object sender, EventArgs e)
         {
@@ -239,21 +267,18 @@ namespace Cantina_10._0_Projeto_Final
             if (indice >= 0 && indice < PedidosPersistencia.pedidosNaoChapa.Count)
             {
                 var pedido = PedidosPersistencia.pedidosNaoChapa[indice];
-
-                bool pedidoChapaPendente = PedidosPersistencia.pedidosDeChapa
-                    .Any(p => p.nomeCliente == pedido.nomeCliente);
-
+                bool pedidoChapaPendente = PedidosPersistencia.pedidosDeChapa.Any(p => p.nomeCliente == pedido.nomeCliente);
                 if (pedidoChapaPendente)
                 {
                     MessageBox.Show("Aguardando o pedido do cliente na cozinha", "Erro");
                     return;
                 }
-
                 PedidosPersistencia.historicoPedidos.Add(pedido);
                 PedidosPersistencia.pedidosNaoChapa.RemoveAt(indice);
                 balcaoListBox.Items.RemoveAt(indice);
                 detalhesPedidoListBox.Items.Clear();
                 AtualizarHistorico();
+                MessageBox.Show("Pedido entregue!", "Confirmação");
             }
             else
             {

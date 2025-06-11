@@ -17,6 +17,11 @@ namespace Cantina_10._0_Projeto_Final
         private ProdutosPág3 produtosPág3;
         private ProdutosPág4 produtosPág4;
         private Balcão balcão;
+        public ListBox CozinhaListBox
+        {
+            get { return cozinhaListBox; }
+        }
+
 
         public Cozinha(ProdutosPág1 produtosPág1)
         {
@@ -129,26 +134,35 @@ namespace Cantina_10._0_Projeto_Final
         private void cozinhaListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             int indice = cozinhaListBox.SelectedIndex;
-            if (indice >= 0 && indice < PedidosPersistencia.pedidosNaoChapa.Count)
+            if (indice >= 0 && indice < PedidosPersistencia.pedidosDeChapa.Count)
             {
-                cozinhaDetalhesListBox.Items.Clear();
                 var pedido = PedidosPersistencia.pedidosDeChapa[indice];
-                cozinhaDetalhesListBox.Items.Add($"Cliente: {pedido.nomeCliente}");
-                cozinhaDetalhesListBox.Items.Add("Produtos:");
+                cozinhaDetalhesListBox.Items.Clear();
                 foreach (var item in pedido.itensPedidos)
                 {
                     cozinhaDetalhesListBox.Items.Add($"x{item.quantidade} - {item.produto.Descriçao}");
                 }
-                cozinhaDetalhesListBox.Items.Add($"Pagamento: {pedido.formaPagamento}");
-                string viagem = pedido.isViagem ? "Para viagem" : "Consumir no local";
-                cozinhaDetalhesListBox.Items.Add($"Status: {viagem}");
             }
         }
+
         public void AtualizarListaPedidosCozinha()
         {
             cozinhaListBox.Items.Clear();
 
-            foreach (var pedido in PedidosPersistencia.pedidosNaoChapa)
+            foreach (var pedido in PedidosPersistencia.pedidosDeChapa)
+            {
+                if (pedido.itensPedidos != null && pedido.itensPedidos.Count > 0)
+                {
+                    cozinhaListBox.Items.Add(pedido.nomeCliente);
+                }
+            }
+        }
+
+        public void AtualizarListaPedidosChapa()
+        {
+            cozinhaListBox.Items.Clear();
+
+            foreach (var pedido in PedidosPersistencia.pedidosDeChapa)
             {
                 cozinhaListBox.Items.Add(pedido.nomeCliente);
             }
@@ -159,11 +173,23 @@ namespace Cantina_10._0_Projeto_Final
             int indice = cozinhaListBox.SelectedIndex;
             if (indice >= 0 && indice < PedidosPersistencia.pedidosDeChapa.Count)
             {
-                var pedido = PedidosPersistencia.pedidosDeChapa[indice];
-                PedidosPersistencia.pedidosNaoChapa.Add(pedido);
+                var pedidoChapa = PedidosPersistencia.pedidosDeChapa[indice];
+
+                var pedidoExistente = PedidosPersistencia.pedidosNaoChapa
+                    .FirstOrDefault(p => p.nomeCliente.Trim() == pedidoChapa.nomeCliente.Trim());
+
+                if (pedidoExistente != null)
+                {
+                    pedidoExistente.itensPedidos.AddRange(pedidoChapa.itensPedidos);
+                }
+                else
+                {
+                    PedidosPersistencia.pedidosNaoChapa.Add(pedidoChapa);
+                }
                 PedidosPersistencia.pedidosDeChapa.RemoveAt(indice);
                 cozinhaListBox.Items.RemoveAt(indice);
                 cozinhaDetalhesListBox.Items.Clear();
+                AtualizarListaPedidosChapa();
             }
         }
 
@@ -172,11 +198,22 @@ namespace Cantina_10._0_Projeto_Final
             int indice = cozinhaListBox.SelectedIndex;
             if (indice >= 0 && indice < PedidosPersistencia.pedidosDeChapa.Count)
             {
-                var pedido = PedidosPersistencia.pedidosDeChapa[indice];
-                PedidosPersistencia.pedidosNaoChapa.Add(pedido);
+                var pedidoChapa = PedidosPersistencia.pedidosDeChapa[indice];
+                var pedidoExistente = PedidosPersistencia.pedidosNaoChapa.FirstOrDefault(p => p.nomeCliente.Trim() == pedidoChapa.nomeCliente.Trim());
+                if (pedidoExistente != null)
+                {
+                    pedidoExistente.itensPedidos.AddRange(pedidoChapa.itensPedidos);
+                    MessageBox.Show("Pedido enviado ao balcão!", "Confirmação");
+                }
+                else
+                {
+                    PedidosPersistencia.pedidosNaoChapa.Add(pedidoChapa);
+                    MessageBox.Show("Pedido enviado ao balcão!", "Confirmação");
+                }
                 PedidosPersistencia.pedidosDeChapa.RemoveAt(indice);
                 cozinhaListBox.Items.RemoveAt(indice);
                 cozinhaDetalhesListBox.Items.Clear();
+                AtualizarListaPedidosChapa();
             }
         }
     }
