@@ -44,6 +44,10 @@
             cozinhaLabel = new Label();
             label9 = new Label();
             label2 = new Label();
+            preparandoListBox = new ListBox();
+            preparandoLabel = new Label();
+            prontosLabel = new Label();
+            prontosListBox = new ListBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -230,12 +234,54 @@
             label2.TabIndex = 101;
             label2.Text = "Chamada";
             // 
+            // preparandoListBox
+            // 
+            preparandoListBox.FormattingEnabled = true;
+            preparandoListBox.ItemHeight = 15;
+            preparandoListBox.Location = new Point(12, 119);
+            preparandoListBox.Name = "preparandoListBox";
+            preparandoListBox.Size = new Size(290, 304);
+            preparandoListBox.TabIndex = 102;
+            // 
+            // preparandoLabel
+            // 
+            preparandoLabel.AutoSize = true;
+            preparandoLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            preparandoLabel.Location = new Point(12, 99);
+            preparandoLabel.Name = "preparandoLabel";
+            preparandoLabel.Size = new Size(131, 17);
+            preparandoLabel.TabIndex = 103;
+            preparandoLabel.Text = "Pedidos Em Preparo";
+            // 
+            // prontosLabel
+            // 
+            prontosLabel.AutoSize = true;
+            prontosLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            prontosLabel.Location = new Point(662, 99);
+            prontosLabel.Name = "prontosLabel";
+            prontosLabel.Size = new Size(108, 17);
+            prontosLabel.TabIndex = 104;
+            prontosLabel.Text = "Pedidos Prontos";
+            // 
+            // prontosListBox
+            // 
+            prontosListBox.FormattingEnabled = true;
+            prontosListBox.ItemHeight = 15;
+            prontosListBox.Location = new Point(480, 119);
+            prontosListBox.Name = "prontosListBox";
+            prontosListBox.Size = new Size(290, 304);
+            prontosListBox.TabIndex = 105;
+            // 
             // Tela_Chamada
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
+            Controls.Add(prontosListBox);
+            Controls.Add(prontosLabel);
+            Controls.Add(preparandoLabel);
+            Controls.Add(preparandoListBox);
             Controls.Add(label9);
             Controls.Add(cozinhaLabel);
             Controls.Add(balcaoLabel);
@@ -283,5 +329,9 @@
         private Label cozinhaLabel;
         private Label label9;
         private Label label2;
+        private ListBox preparandoListBox;
+        private Label preparandoLabel;
+        private Label prontosLabel;
+        private ListBox prontosListBox;
     }
 }

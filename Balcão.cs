@@ -21,6 +21,10 @@ namespace Cantina_10._0_Projeto_Final
         private Cozinha cozinha;
         private Chamada chamada;
         private Tela_Chamada tela_Chamada;
+        public ListBox balcaoPublic
+        {
+            get { return balcaoListBox; }
+        }
 
         public Balcão(ProdutosPág1 produtosPág1)
         {

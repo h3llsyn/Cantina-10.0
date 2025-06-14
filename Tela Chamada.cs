@@ -57,7 +57,7 @@ namespace Cantina_10._0_Projeto_Final
 
         private void Tela_Chamada_Load(object sender, EventArgs e)
         {
-
+            AtualizarChamada();
         }
 
         private void Tela_Chamada_FormClosed(object sender, FormClosedEventArgs e)
@@ -130,6 +130,24 @@ namespace Cantina_10._0_Projeto_Final
                 balcaoLabel.BringToFront();
                 cozinhaLabel.BringToFront();
                 label9.BringToFront();
+            }
+        }
+
+        public void AtualizarChamada()
+        {
+            {
+                preparandoListBox.Items.Clear();
+                prontosListBox.Items.Clear();
+
+                var pedidosPreparando = PedidosPersistencia.pedidosNaoChapa.Select(p => p.nomeCliente).Concat(PedidosPersistencia.pedidosDeChapa.Select(p => p.nomeCliente)).Distinct();
+                foreach (var preparandoPedido in pedidosPreparando)
+                {
+                    preparandoListBox.Items.Add(preparandoPedido);
+                }
+                foreach (var pedidoPronto in PedidosPersistencia.historicoPedidos)
+                {
+                    prontosListBox.Items.Add(pedidoPronto.nomeCliente);
+                }
             }
         }
     }
