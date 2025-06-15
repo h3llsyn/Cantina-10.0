@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Chamada));
             pictureBox1 = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -35,14 +36,12 @@
             label1 = new Label();
             pictureBox4 = new PictureBox();
             nomeClienteChamada = new Label();
-            pictureBox5 = new PictureBox();
-            entregarLabel = new Label();
             label2 = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -106,30 +105,6 @@
             nomeClienteChamada.TabIndex = 90;
             nomeClienteChamada.Text = "label2";
             // 
-            // pictureBox5
-            // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(274, 335);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(240, 75);
-            pictureBox5.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox5.TabIndex = 91;
-            pictureBox5.TabStop = false;
-            // 
-            // entregarLabel
-            // 
-            entregarLabel.AutoSize = true;
-            entregarLabel.BackColor = Color.FromArgb(124, 122, 106);
-            entregarLabel.Cursor = Cursors.Hand;
-            entregarLabel.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            entregarLabel.ForeColor = Color.White;
-            entregarLabel.Location = new Point(300, 356);
-            entregarLabel.Name = "entregarLabel";
-            entregarLabel.Size = new Size(189, 32);
-            entregarLabel.TabIndex = 92;
-            entregarLabel.Text = "Entregar pedido";
-            entregarLabel.Click += entregarLabel_Click;
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -148,8 +123,6 @@
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
             Controls.Add(label2);
-            Controls.Add(entregarLabel);
-            Controls.Add(pictureBox5);
             Controls.Add(nomeClienteChamada);
             Controls.Add(pictureBox4);
             Controls.Add(label1);
@@ -165,7 +138,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -178,8 +150,7 @@
         private Label label1;
         private PictureBox pictureBox4;
         private Label nomeClienteChamada;
-        private PictureBox pictureBox5;
-        private Label entregarLabel;
         private Label label2;
+        private System.Windows.Forms.Timer timer1;
     }
 }

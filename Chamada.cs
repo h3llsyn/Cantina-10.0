@@ -28,6 +28,10 @@ namespace Cantina_10._0_Projeto_Final
         private void Chamada_Load(object sender, EventArgs e)
         {
             AtualizarTela();
+            CentralizarNome();
+            timer1.Interval = 3000;
+            timer1.Tick += timer1_Tick;
+            timer1.Start();
         }
 
         private void Chamada_FormClosed(object sender, FormClosedEventArgs e)
@@ -49,12 +53,31 @@ namespace Cantina_10._0_Projeto_Final
             }
         }
 
+        private void CentralizarNome()
+        {
+            using (Graphics g = CreateGraphics())
+            {
+                SizeF tamanhoTexto = g.MeasureString(nomeClienteChamada.Text, nomeClienteChamada.Font);
+
+                int novaPosX = (this.ClientSize.Width - (int)tamanhoTexto.Width) / 2;
+                int novaPosY = (this.ClientSize.Height - (int)tamanhoTexto.Height) / 2 + 50;
+
+                nomeClienteChamada.Location = new Point(novaPosX, novaPosY);
+            }
+        }
+
+
         private void entregarLabel_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Pedido entregue!", "Confirmação");
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
             Balcão balcão = new Balcão(this);
             this.Hide();
             balcão.ShowDialog();
+            timer1.Stop();
         }
     }
 }
