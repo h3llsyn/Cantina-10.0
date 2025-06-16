@@ -48,6 +48,8 @@
             preparandoLabel = new Label();
             prontosLabel = new Label();
             prontosListBox = new ListBox();
+            linha4 = new Label();
+            estoqueLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -126,7 +128,7 @@
             menuOpcoes.Image = (Image)resources.GetObject("menuOpcoes.Image");
             menuOpcoes.Location = new Point(8, 35);
             menuOpcoes.Name = "menuOpcoes";
-            menuOpcoes.Size = new Size(230, 106);
+            menuOpcoes.Size = new Size(233, 125);
             menuOpcoes.SizeMode = PictureBoxSizeMode.Zoom;
             menuOpcoes.TabIndex = 81;
             menuOpcoes.TabStop = false;
@@ -272,17 +274,43 @@
             prontosListBox.Size = new Size(290, 304);
             prontosListBox.TabIndex = 105;
             // 
+            // linha4
+            // 
+            linha4.AutoSize = true;
+            linha4.BackColor = Color.FromArgb(202, 196, 183);
+            linha4.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            linha4.Location = new Point(12, 120);
+            linha4.Name = "linha4";
+            linha4.Size = new Size(208, 17);
+            linha4.TabIndex = 106;
+            linha4.Text = "________________________________________";
+            linha4.Visible = false;
+            // 
+            // estoqueLabel
+            // 
+            estoqueLabel.AutoSize = true;
+            estoqueLabel.BackColor = Color.FromArgb(202, 196, 183);
+            estoqueLabel.Cursor = Cursors.Hand;
+            estoqueLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            estoqueLabel.Location = new Point(12, 137);
+            estoqueLabel.Name = "estoqueLabel";
+            estoqueLabel.Size = new Size(57, 17);
+            estoqueLabel.TabIndex = 107;
+            estoqueLabel.Text = "Estoque";
+            estoqueLabel.Visible = false;
+            estoqueLabel.Click += estoqueLabel_Click;
+            // 
             // Tela_Chamada
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
+            Controls.Add(estoqueLabel);
+            Controls.Add(label9);
+            Controls.Add(linha4);
             Controls.Add(prontosListBox);
             Controls.Add(prontosLabel);
-            Controls.Add(preparandoLabel);
-            Controls.Add(preparandoListBox);
-            Controls.Add(label9);
             Controls.Add(cozinhaLabel);
             Controls.Add(balcaoLabel);
             Controls.Add(produtosLabel);
@@ -297,6 +325,8 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
+            Controls.Add(preparandoLabel);
+            Controls.Add(preparandoListBox);
             Name = "Tela_Chamada";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Telão Chamada";
@@ -333,5 +363,7 @@
         private Label preparandoLabel;
         private Label prontosLabel;
         private ListBox prontosListBox;
+        private Label linha4;
+        private Label estoqueLabel;
     }
 }

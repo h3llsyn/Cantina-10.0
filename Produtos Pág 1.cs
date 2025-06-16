@@ -16,6 +16,7 @@ namespace Cantina_10._0_Projeto_Final
         private Balcão balcão;
         private Cozinha cozinha;
         private Tela_Chamada tela_Chamada;
+        private Estoque estoque;
 
         public ProdutosPág1()
         {
@@ -49,6 +50,12 @@ namespace Cantina_10._0_Projeto_Final
         {
             InitializeComponent();
             this.tela_Chamada = tela_Chamada;
+        }
+
+        public ProdutosPág1(Estoque estoque)
+        {
+            InitializeComponent();
+            this.estoque = estoque;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -168,6 +175,14 @@ namespace Cantina_10._0_Projeto_Final
             AdicionarAoCarrinho(0, quantidade);
             AtualizarTotal();
             quantidadePaoQueijoLabel.Text = "1";
+            if (quantidade == 1)
+            {
+                MessageBox.Show($"x{quantidade} pão de queijo adicionado ao carrinho", "Confirmação");
+            }
+            else
+            {
+                MessageBox.Show($"x{quantidade} pães de queijo adicionados ao carrinho", "Confirmação");
+            }
         }
 
         private void label5_CursorChanged(object sender, EventArgs e)
@@ -226,6 +241,14 @@ namespace Cantina_10._0_Projeto_Final
             AdicionarAoCarrinho(1, quantidade);
             AtualizarTotal();
             quantidadeCoxinhaLabel.Text = "1";
+            if (quantidade == 1)
+            {
+                MessageBox.Show($"x{quantidade} coxinha adicionada ao carrinho", "Confirmação");
+            }
+            else
+            {
+                MessageBox.Show($"x{quantidade} coxinhas adicionadas ao carrinho", "Confirmação");
+            }
         }
 
         private void maisButtonCoxinha_Click(object sender, EventArgs e)
@@ -285,6 +308,14 @@ namespace Cantina_10._0_Projeto_Final
             AdicionarAoCarrinho(2, quantidade);
             AtualizarTotal();
             quantidadePastelCarneLabel.Text = "1";
+            if (quantidade == 1)
+            {
+                MessageBox.Show($"x{quantidade} pastel de carne adicionado ao carrinho", "Confirmação");
+            }
+            else
+            {
+                MessageBox.Show($"x{quantidade} pastéis de carne adicionados ao carrinho", "Confirmação");
+            }
         }
 
         private void excluirItemButton_Click(object sender, EventArgs e)
@@ -622,6 +653,8 @@ namespace Cantina_10._0_Projeto_Final
                 cozinhaLabel.Visible = false;
                 linha3.Visible = false;
                 label9.Visible = false;
+                label13.Visible = false;
+                estoqueLabel.Visible = false;
             }
             else
             {
@@ -633,15 +666,19 @@ namespace Cantina_10._0_Projeto_Final
                 cozinhaLabel.Visible = true;
                 linha3.Visible = true;
                 label9.Visible = true;
+                label13.Visible = true;
+                estoqueLabel.Visible = true;
 
                 menuOpcoes.BringToFront();
                 linha1.BringToFront();
                 linha2.BringToFront();
                 linha3.BringToFront();
+                label13.BringToFront();
                 produtosLabel.BringToFront();
                 balcaoLabel.BringToFront();
                 cozinhaLabel.BringToFront();
                 label9.BringToFront();
+                estoqueLabel.BringToFront();
             }
         }
 
@@ -654,7 +691,9 @@ namespace Cantina_10._0_Projeto_Final
             linha2.Visible = false;
             cozinhaLabel.Visible = false;
             linha3.Visible = false;
-            label9.Visible = false; 
+            label9.Visible = false;
+            label13.Visible = false;
+            estoqueLabel.Visible = false;
         }
 
         private void balcaoLabel_Click(object sender, EventArgs e)
@@ -698,6 +737,13 @@ namespace Cantina_10._0_Projeto_Final
             Tela_Chamada tela_Chamada = new Tela_Chamada(this);
             this.Hide();
             tela_Chamada.ShowDialog();
+        }
+
+        private void estoqueLabel_Click(object sender, EventArgs e)
+        {
+            Estoque estoque = new Estoque(this);
+            this.Hide();
+            estoque.ShowDialog();
         }
     }
 }

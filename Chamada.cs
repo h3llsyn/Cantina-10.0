@@ -74,10 +74,10 @@ namespace Cantina_10._0_Projeto_Final
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            timer1.Stop();
             Balcão balcão = new Balcão(this);
             this.Hide();
             balcão.ShowDialog();
-            timer1.Stop();
         }
     }
 }

@@ -101,6 +101,8 @@
             cozinhaLabel = new Label();
             menuOpcoes = new PictureBox();
             label9 = new Label();
+            label13 = new Label();
+            estoqueLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -999,7 +1001,7 @@
             menuOpcoes.Image = (Image)resources.GetObject("menuOpcoes.Image");
             menuOpcoes.Location = new Point(8, 35);
             menuOpcoes.Name = "menuOpcoes";
-            menuOpcoes.Size = new Size(230, 106);
+            menuOpcoes.Size = new Size(233, 125);
             menuOpcoes.SizeMode = PictureBoxSizeMode.Zoom;
             menuOpcoes.TabIndex = 78;
             menuOpcoes.TabStop = false;
@@ -1019,13 +1021,41 @@
             label9.Visible = false;
             label9.Click += label9_Click;
             // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.BackColor = Color.FromArgb(202, 196, 183);
+            label13.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.Location = new Point(12, 120);
+            label13.Name = "label13";
+            label13.Size = new Size(208, 17);
+            label13.TabIndex = 92;
+            label13.Text = "________________________________________";
+            label13.Visible = false;
+            // 
+            // estoqueLabel
+            // 
+            estoqueLabel.AutoSize = true;
+            estoqueLabel.BackColor = Color.FromArgb(202, 196, 183);
+            estoqueLabel.Cursor = Cursors.Hand;
+            estoqueLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            estoqueLabel.Location = new Point(12, 137);
+            estoqueLabel.Name = "estoqueLabel";
+            estoqueLabel.Size = new Size(57, 17);
+            estoqueLabel.TabIndex = 93;
+            estoqueLabel.Text = "Estoque";
+            estoqueLabel.Visible = false;
+            estoqueLabel.Click += estoqueLabel_Click;
+            // 
             // ProdutosPág1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
+            Controls.Add(estoqueLabel);
             Controls.Add(label9);
+            Controls.Add(label13);
             Controls.Add(cozinhaLabel);
             Controls.Add(linha3);
             Controls.Add(balcaoLabel);
@@ -1209,5 +1239,7 @@
         private Label cozinhaLabel;
         private PictureBox menuOpcoes;
         private Label label9;
+        private Label label13;
+        private Label estoqueLabel;
     }
 }

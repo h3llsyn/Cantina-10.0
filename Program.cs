@@ -11,7 +11,7 @@ namespace Cantina_10._0_Projeto_Final
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Estoque());
+            Application.Run(new ProdutosPág1());
         }
     }
 }

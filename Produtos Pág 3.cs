@@ -205,6 +205,14 @@ namespace Cantina_10._0_Projeto_Final
             AdicionarAoCarrinho(6, quantidade);
             AtualizarTotal();
             quantidadeHamburguerSimpLabel.Text = "1";
+            if (quantidade == 1)
+            {
+                MessageBox.Show($"x{quantidade} hambúrguer simples adicionado ao carrinho", "Confirmação");
+            }
+            else
+            {
+                MessageBox.Show($"x{quantidade} hambúrgueres simples adicionados ao carrinho", "Confirmação");
+            }
         }
 
         private void menosButtonHamburguerQueijo_Click(object sender, EventArgs e)
@@ -224,6 +232,14 @@ namespace Cantina_10._0_Projeto_Final
             AdicionarAoCarrinho(7, quantidade);
             AtualizarTotal();
             quantidadeHamburguerQueijoLabel.Text = "1";
+            if (quantidade == 1)
+            {
+                MessageBox.Show($"x{quantidade} hambúrguer de queijo adicionado ao carrinho", "Confirmação");
+            }
+            else
+            {
+                MessageBox.Show($"x{quantidade} hambúrgueres de queijo adicionados ao carrinho", "Confirmação");
+            }
         }
 
         private void maisButtonXTudo_Click(object sender, EventArgs e)
@@ -250,6 +266,14 @@ namespace Cantina_10._0_Projeto_Final
             AdicionarAoCarrinho(8, quantidade);
             AtualizarTotal();
             quantidadeXTudoLabel.Text = "1";
+            if (quantidade == 1)
+            {
+                MessageBox.Show($"x{quantidade} x-tudo adicionado ao carrinho", "Confirmação");
+            }
+            else
+            {
+                MessageBox.Show($"x{quantidade} x-tudos adicionados ao carrinho", "Confirmação");
+            }
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
@@ -563,6 +587,8 @@ namespace Cantina_10._0_Projeto_Final
                 cozinhaLabel.Visible = false;
                 linha3.Visible = false;
                 label9.Visible = false;
+                linha4.Visible = false;
+                estoqueLabel.Visible = false;
             }
             else
             {
@@ -574,15 +600,19 @@ namespace Cantina_10._0_Projeto_Final
                 cozinhaLabel.Visible = true;
                 linha3.Visible = true;
                 label9.Visible = true;
+                linha4.Visible = true;
+                estoqueLabel.Visible = true;
 
                 menuOpcoes.BringToFront();
                 linha1.BringToFront();
                 linha2.BringToFront();
                 linha3.BringToFront();
+                linha4.BringToFront();
                 produtosLabel.BringToFront();
                 balcaoLabel.BringToFront();
                 cozinhaLabel.BringToFront();
                 label9.BringToFront();
+                estoqueLabel.BringToFront();
             }
         }
 
@@ -596,6 +626,8 @@ namespace Cantina_10._0_Projeto_Final
             cozinhaLabel.Visible = false;
             linha3.Visible = false;
             label9.Visible = false;
+            linha4.Visible = false;
+            estoqueLabel.Visible = false;
         }
 
         private void balcaoLabel_Click(object sender, EventArgs e)
@@ -634,6 +666,18 @@ namespace Cantina_10._0_Projeto_Final
             Tela_Chamada tela_Chamada = new Tela_Chamada(this);
             this.Hide();
             tela_Chamada.ShowDialog();
+        }
+
+        private void estoqueLabel_Click(object sender, EventArgs e)
+        {
+            Estoque estoque = new Estoque(this);
+            this.Hide();
+            estoque.ShowDialog();
+        }
+
+        private void pictureBox21_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

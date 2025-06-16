@@ -18,12 +18,12 @@ namespace Cantina_10._0_Projeto_Final
         private ProdutosPág4 produtosPág4;
         private Balcão balcão;
         private Tela_Chamada tela_Chamada;
+        private Estoque estoque;
 
         public ListBox CozinhaListBox
         {
             get { return cozinhaListBox; }
         }
-
 
         public Cozinha(ProdutosPág1 produtosPág1)
         {
@@ -60,6 +60,12 @@ namespace Cantina_10._0_Projeto_Final
             this.tela_Chamada = tela_Chamada;
         }
 
+        public Cozinha(Estoque estoque)
+        {
+            InitializeComponent();
+            this.estoque = estoque;
+        }
+
         public Cozinha()
         {
             InitializeComponent();
@@ -86,6 +92,8 @@ namespace Cantina_10._0_Projeto_Final
             cozinhaLabel.Visible = false;
             linha3.Visible = false;
             label9.Visible = false;
+            linha4.Visible = false;
+            estoqueLabel.Visible = false;
         }
 
         private void menuPicture_Click(object sender, EventArgs e)
@@ -100,6 +108,8 @@ namespace Cantina_10._0_Projeto_Final
                 cozinhaLabel.Visible = false;
                 linha3.Visible = false;
                 label9.Visible = false;
+                linha4.Visible = false;
+                estoqueLabel.Visible = false;
             }
             else
             {
@@ -111,15 +121,19 @@ namespace Cantina_10._0_Projeto_Final
                 cozinhaLabel.Visible = true;
                 linha3.Visible = true;
                 label9.Visible = true;
+                linha4.Visible = true;
+                estoqueLabel.Visible = true;
 
                 menuOpcoes.BringToFront();
                 linha1.BringToFront();
                 linha2.BringToFront();
                 linha3.BringToFront();
+                linha4.BringToFront();
                 produtosLabel.BringToFront();
                 balcaoLabel.BringToFront();
                 cozinhaLabel.BringToFront();
                 label9.BringToFront();
+                estoqueLabel.BringToFront();
             }
         }
 
@@ -233,6 +247,13 @@ namespace Cantina_10._0_Projeto_Final
             Tela_Chamada tela_Chamada = new Tela_Chamada(this);
             this.Hide();
             tela_Chamada.ShowDialog();
+        }
+
+        private void estoqueLabel_Click(object sender, EventArgs e)
+        {
+            Estoque estoque = new Estoque(this);
+            this.Hide();
+            estoque.ShowDialog();
         }
     }
 }
