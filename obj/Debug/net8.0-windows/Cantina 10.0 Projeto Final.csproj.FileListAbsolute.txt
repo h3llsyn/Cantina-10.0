@@ -200,3 +200,4 @@ C:\Users\lavin\source\repos\Cantina 10.0 Projeto Final\Cantina-10.0\obj\Debug\ne
 C:\Users\lavin\source\repos\Cantina 10.0 Projeto Final\Cantina-10.0\obj\Debug\net8.0-windows\Cantina 10.0 Projeto Final.genruntimeconfig.cache
 C:\Users\lavin\source\repos\Cantina 10.0 Projeto Final\Cantina-10.0\obj\Debug\net8.0-windows\ref\Cantina 10.0 Projeto Final.dll
 C:\Users\lavin\source\repos\Cantina 10.0 Projeto Final\Cantina-10.0\obj\Debug\net8.0-windows\Cantina_10._0_Projeto_Final.Estoque.resources
+C:\Users\lavin\source\repos\Cantina 10.0 Projeto Final\Cantina-10.0\obj\Debug\net8.0-windows\Cantina_10._0_Projeto_Final.Estoque_Pág_2.resources
