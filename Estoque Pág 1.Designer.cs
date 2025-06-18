@@ -58,6 +58,14 @@
             cozinhaLabel = new Label();
             label9 = new Label();
             estoqueLabel = new Label();
+            numericPaoDeQueijo = new NumericUpDown();
+            numericCoxinha = new NumericUpDown();
+            numericPastelDeCarne = new NumericUpDown();
+            numericPastelDeQueijo = new NumericUpDown();
+            numericSucoNatural = new NumericUpDown();
+            numericRefrigeranteLata = new NumericUpDown();
+            pictureBox11 = new PictureBox();
+            pictureBox12 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)menuPicture).BeginInit();
@@ -71,6 +79,14 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)menuOpcoes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericPaoDeQueijo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericCoxinha).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericPastelDeCarne).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericPastelDeQueijo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericSucoNatural).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericRefrigeranteLata).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -143,8 +159,8 @@
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.Location = new Point(12, 96);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(220, 150);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.Size = new Size(220, 170);
+            pictureBox4.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox4.TabIndex = 77;
             pictureBox4.TabStop = false;
             // 
@@ -153,7 +169,7 @@
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
             pictureBox5.Location = new Point(284, 96);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(220, 150);
+            pictureBox5.Size = new Size(220, 170);
             pictureBox5.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox5.TabIndex = 90;
             pictureBox5.TabStop = false;
@@ -163,7 +179,7 @@
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
             pictureBox7.Location = new Point(558, 96);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(220, 150);
+            pictureBox7.Size = new Size(220, 170);
             pictureBox7.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox7.TabIndex = 91;
             pictureBox7.TabStop = false;
@@ -186,7 +202,7 @@
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
             pictureBox8.Location = new Point(12, 273);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(220, 150);
+            pictureBox8.Size = new Size(220, 170);
             pictureBox8.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox8.TabIndex = 93;
             pictureBox8.TabStop = false;
@@ -196,7 +212,7 @@
             pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
             pictureBox9.Location = new Point(284, 273);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(220, 150);
+            pictureBox9.Size = new Size(220, 170);
             pictureBox9.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox9.TabIndex = 94;
             pictureBox9.TabStop = false;
@@ -206,7 +222,7 @@
             pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
             pictureBox10.Location = new Point(558, 273);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(220, 150);
+            pictureBox10.Size = new Size(220, 170);
             pictureBox10.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox10.TabIndex = 95;
             pictureBox10.TabStop = false;
@@ -217,7 +233,7 @@
             label2.BackColor = Color.FromArgb(202, 196, 183);
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(63, 156);
+            label2.Location = new Point(63, 163);
             label2.Name = "label2";
             label2.Size = new Size(117, 21);
             label2.TabIndex = 96;
@@ -229,7 +245,7 @@
             label3.BackColor = Color.FromArgb(202, 196, 183);
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(358, 156);
+            label3.Location = new Point(358, 163);
             label3.Name = "label3";
             label3.Size = new Size(73, 21);
             label3.TabIndex = 97;
@@ -241,7 +257,7 @@
             label4.BackColor = Color.FromArgb(202, 196, 183);
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(606, 156);
+            label4.Location = new Point(606, 163);
             label4.Name = "label4";
             label4.Size = new Size(127, 21);
             label4.TabIndex = 98;
@@ -253,7 +269,7 @@
             label5.BackColor = Color.FromArgb(202, 196, 183);
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(55, 333);
+            label5.Location = new Point(55, 340);
             label5.Name = "label5";
             label5.Size = new Size(134, 21);
             label5.TabIndex = 99;
@@ -265,7 +281,7 @@
             label6.BackColor = Color.FromArgb(202, 196, 183);
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(308, 333);
+            label6.Location = new Point(308, 340);
             label6.Name = "label6";
             label6.Size = new Size(172, 21);
             label6.TabIndex = 100;
@@ -277,7 +293,7 @@
             label7.BackColor = Color.FromArgb(202, 196, 183);
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(606, 333);
+            label7.Location = new Point(606, 340);
             label7.Name = "label7";
             label7.Size = new Size(126, 21);
             label7.TabIndex = 101;
@@ -412,12 +428,88 @@
             estoqueLabel.Visible = false;
             estoqueLabel.Click += estoqueLabel_Click;
             // 
+            // numericPaoDeQueijo
+            // 
+            numericPaoDeQueijo.BackColor = Color.FromArgb(243, 241, 238);
+            numericPaoDeQueijo.Location = new Point(77, 188);
+            numericPaoDeQueijo.Name = "numericPaoDeQueijo";
+            numericPaoDeQueijo.Size = new Size(88, 23);
+            numericPaoDeQueijo.TabIndex = 112;
+            // 
+            // numericCoxinha
+            // 
+            numericCoxinha.BackColor = Color.FromArgb(243, 241, 238);
+            numericCoxinha.Location = new Point(348, 192);
+            numericCoxinha.Name = "numericCoxinha";
+            numericCoxinha.Size = new Size(88, 23);
+            numericCoxinha.TabIndex = 113;
+            // 
+            // numericPastelDeCarne
+            // 
+            numericPastelDeCarne.BackColor = Color.FromArgb(243, 241, 238);
+            numericPastelDeCarne.Location = new Point(626, 192);
+            numericPastelDeCarne.Name = "numericPastelDeCarne";
+            numericPastelDeCarne.Size = new Size(88, 23);
+            numericPastelDeCarne.TabIndex = 114;
+            // 
+            // numericPastelDeQueijo
+            // 
+            numericPastelDeQueijo.BackColor = Color.FromArgb(243, 241, 238);
+            numericPastelDeQueijo.Location = new Point(77, 369);
+            numericPastelDeQueijo.Name = "numericPastelDeQueijo";
+            numericPastelDeQueijo.Size = new Size(88, 23);
+            numericPastelDeQueijo.TabIndex = 115;
+            // 
+            // numericSucoNatural
+            // 
+            numericSucoNatural.BackColor = Color.FromArgb(243, 241, 238);
+            numericSucoNatural.Location = new Point(348, 369);
+            numericSucoNatural.Name = "numericSucoNatural";
+            numericSucoNatural.Size = new Size(88, 23);
+            numericSucoNatural.TabIndex = 116;
+            // 
+            // numericRefrigeranteLata
+            // 
+            numericRefrigeranteLata.BackColor = Color.FromArgb(243, 241, 238);
+            numericRefrigeranteLata.Location = new Point(626, 369);
+            numericRefrigeranteLata.Name = "numericRefrigeranteLata";
+            numericRefrigeranteLata.Size = new Size(88, 23);
+            numericRefrigeranteLata.TabIndex = 117;
+            // 
+            // pictureBox11
+            // 
+            pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
+            pictureBox11.Location = new Point(38, 211);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(168, 40);
+            pictureBox11.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox11.TabIndex = 118;
+            pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
+            pictureBox12.Location = new Point(316, 205);
+            pictureBox12.Name = "pictureBox12";
+            pictureBox12.Size = new Size(168, 40);
+            pictureBox12.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox12.TabIndex = 119;
+            pictureBox12.TabStop = false;
+            // 
             // Estoque
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox12);
+            Controls.Add(numericPaoDeQueijo);
+            Controls.Add(pictureBox11);
+            Controls.Add(numericRefrigeranteLata);
+            Controls.Add(numericSucoNatural);
+            Controls.Add(numericPastelDeQueijo);
+            Controls.Add(numericPastelDeCarne);
+            Controls.Add(numericCoxinha);
             Controls.Add(estoqueLabel);
             Controls.Add(label9);
             Controls.Add(cozinhaLabel);
@@ -465,6 +557,14 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)menuOpcoes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericPaoDeQueijo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericCoxinha).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericPastelDeCarne).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericPastelDeQueijo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericSucoNatural).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericRefrigeranteLata).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -500,5 +600,13 @@
         private Label cozinhaLabel;
         private Label label9;
         private Label estoqueLabel;
+        private NumericUpDown numericPaoDeQueijo;
+        private NumericUpDown numericCoxinha;
+        private NumericUpDown numericPastelDeCarne;
+        private NumericUpDown numericPastelDeQueijo;
+        private NumericUpDown numericSucoNatural;
+        private NumericUpDown numericRefrigeranteLata;
+        private PictureBox pictureBox11;
+        private PictureBox pictureBox12;
     }
 }

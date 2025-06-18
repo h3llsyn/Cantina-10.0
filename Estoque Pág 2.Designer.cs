@@ -54,6 +54,10 @@
             cozinhaLabel = new Label();
             label9 = new Label();
             estoqueLabel = new Label();
+            numericHamburguerSimples = new NumericUpDown();
+            numericHamburguerComQueijo = new NumericUpDown();
+            numericAguaMineral = new NumericUpDown();
+            numericXTudo = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)menuPicture).BeginInit();
@@ -65,6 +69,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)menuOpcoes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericHamburguerSimples).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericHamburguerComQueijo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericAguaMineral).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericXTudo).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -137,7 +145,7 @@
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.Location = new Point(22, 96);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(220, 150);
+            pictureBox4.Size = new Size(220, 170);
             pictureBox4.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox4.TabIndex = 91;
             pictureBox4.TabStop = false;
@@ -147,7 +155,7 @@
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
             pictureBox8.Location = new Point(22, 273);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(220, 150);
+            pictureBox8.Size = new Size(220, 170);
             pictureBox8.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox8.TabIndex = 94;
             pictureBox8.TabStop = false;
@@ -171,7 +179,7 @@
             label2.BackColor = Color.FromArgb(202, 196, 183);
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(47, 156);
+            label2.Location = new Point(47, 163);
             label2.Name = "label2";
             label2.Size = new Size(171, 21);
             label2.TabIndex = 97;
@@ -183,11 +191,11 @@
             label3.BackColor = Color.FromArgb(202, 196, 183);
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(331, 156);
+            label3.Location = new Point(313, 163);
             label3.Name = "label3";
-            label3.Size = new Size(146, 42);
+            label3.Size = new Size(183, 21);
             label3.TabIndex = 98;
-            label3.Text = "Hambúrguer Com\r\nQueijo";
+            label3.Text = "Hambúrguer C/ Queijo";
             label3.TextAlign = ContentAlignment.TopCenter;
             // 
             // label4
@@ -196,7 +204,7 @@
             label4.BackColor = Color.FromArgb(202, 196, 183);
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(649, 156);
+            label4.Location = new Point(649, 163);
             label4.Name = "label4";
             label4.Size = new Size(64, 21);
             label4.TabIndex = 99;
@@ -208,7 +216,7 @@
             label5.BackColor = Color.FromArgb(202, 196, 183);
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(44, 333);
+            label5.Location = new Point(44, 340);
             label5.Name = "label5";
             label5.Size = new Size(176, 21);
             label5.TabIndex = 100;
@@ -219,7 +227,7 @@
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
             pictureBox7.Location = new Point(294, 96);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(220, 150);
+            pictureBox7.Size = new Size(220, 170);
             pictureBox7.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox7.TabIndex = 103;
             pictureBox7.TabStop = false;
@@ -229,7 +237,7 @@
             pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
             pictureBox10.Location = new Point(568, 96);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(220, 150);
+            pictureBox10.Size = new Size(220, 170);
             pictureBox10.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox10.TabIndex = 104;
             pictureBox10.TabStop = false;
@@ -363,12 +371,48 @@
             estoqueLabel.Visible = false;
             estoqueLabel.Click += estoqueLabel_Click;
             // 
+            // numericHamburguerSimples
+            // 
+            numericHamburguerSimples.BackColor = Color.FromArgb(243, 241, 238);
+            numericHamburguerSimples.Location = new Point(85, 192);
+            numericHamburguerSimples.Name = "numericHamburguerSimples";
+            numericHamburguerSimples.Size = new Size(88, 23);
+            numericHamburguerSimples.TabIndex = 117;
+            // 
+            // numericHamburguerComQueijo
+            // 
+            numericHamburguerComQueijo.BackColor = Color.FromArgb(243, 241, 238);
+            numericHamburguerComQueijo.Location = new Point(360, 192);
+            numericHamburguerComQueijo.Name = "numericHamburguerComQueijo";
+            numericHamburguerComQueijo.Size = new Size(88, 23);
+            numericHamburguerComQueijo.TabIndex = 118;
+            // 
+            // numericAguaMineral
+            // 
+            numericAguaMineral.BackColor = Color.FromArgb(243, 241, 238);
+            numericAguaMineral.Location = new Point(85, 369);
+            numericAguaMineral.Name = "numericAguaMineral";
+            numericAguaMineral.Size = new Size(88, 23);
+            numericAguaMineral.TabIndex = 119;
+            // 
+            // numericXTudo
+            // 
+            numericXTudo.BackColor = Color.FromArgb(243, 241, 238);
+            numericXTudo.Location = new Point(636, 192);
+            numericXTudo.Name = "numericXTudo";
+            numericXTudo.Size = new Size(88, 23);
+            numericXTudo.TabIndex = 120;
+            // 
             // Estoque_Pág_2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
+            Controls.Add(numericXTudo);
+            Controls.Add(numericAguaMineral);
+            Controls.Add(numericHamburguerComQueijo);
+            Controls.Add(numericHamburguerSimples);
             Controls.Add(estoqueLabel);
             Controls.Add(label9);
             Controls.Add(cozinhaLabel);
@@ -398,6 +442,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Estoque_Pág_2";
             FormClosed += Estoque_Pág_2_FormClosed;
+            Load += Estoque_Pág_2_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)menuPicture).EndInit();
@@ -409,6 +454,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)menuOpcoes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericHamburguerSimples).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericHamburguerComQueijo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericAguaMineral).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericXTudo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -440,5 +489,9 @@
         private Label cozinhaLabel;
         private Label label9;
         private Label estoqueLabel;
+        private NumericUpDown numericHamburguerSimples;
+        private NumericUpDown numericHamburguerComQueijo;
+        private NumericUpDown numericAguaMineral;
+        private NumericUpDown numericXTudo;
     }
 }

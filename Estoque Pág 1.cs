@@ -88,7 +88,12 @@ namespace Cantina_10._0_Projeto_Final
 
         private void Estoque_Load(object sender, EventArgs e)
         {
-
+            numericPaoDeQueijo.Maximum = decimal.MaxValue;
+            numericCoxinha.Maximum = decimal.MaxValue;
+            numericPastelDeCarne.Maximum = decimal.MaxValue;
+            numericPastelDeQueijo.Maximum = decimal.MaxValue;
+            numericSucoNatural.Maximum = decimal.MaxValue;
+            numericRefrigeranteLata.Maximum = decimal.MaxValue;
         }
 
         private void menuPicture_Click(object sender, EventArgs e)

@@ -119,5 +119,13 @@ namespace Cantina_10._0_Projeto_Final
             linha4.Visible = false;
             estoqueLabel.Visible = false;
         }
+
+        private void Estoque_Pág_2_Load(object sender, EventArgs e)
+        {
+            numericHamburguerSimples.Maximum = decimal.MaxValue;
+            numericHamburguerComQueijo.Maximum = decimal.MaxValue;
+            numericXTudo.Maximum = decimal.MaxValue;
+            numericAguaMineral.Maximum = decimal.MaxValue;
+        }
     }
 }
