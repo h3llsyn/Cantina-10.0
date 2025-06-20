@@ -40,12 +40,20 @@ namespace Cantina_10._0_Projeto_Final
         private void AdicionarAoCarrinho(int index, int quantidade)
         {
             Produtos produto = Produtos.ListaProdutos[index];
-            double total = produto.Preço * quantidade;
-            Produtos produtos = Produtos.ListaProdutos[index];
-            Carrinho.Itens.Add((produto, quantidade));
-            carrinhoListBox4.Items.Add($"{produto.Descriçao} - R${total.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} x{quantidade}");
-            extratoListBox.Items.Add($"{produto.Descriçao} - R${total.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} x{quantidade}");
+            if (produto.Estoque >= quantidade)
+            {
+                double total = produto.Preço * quantidade;
+                Carrinho.Itens.Add((produto, quantidade));
+                carrinhoListBox4.Items.Add($"{produto.Descriçao} - R${total.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} x{quantidade}");
+                extratoListBox.Items.Add($"{produto.Descriçao} - R${total.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} x{quantidade}");
+                produto.Estoque -= quantidade;
+            }
+            else
+            {
+                MessageBox.Show($"Estoque insuficiente para {produto.Descriçao}.\nDisponível: {produto.Estoque}", "Erro");
+            }
         }
+
         public void AtualizarTotal()
         {
             double total = 0;
@@ -188,16 +196,25 @@ namespace Cantina_10._0_Projeto_Final
         private void adicionarAgua_Click(object sender, EventArgs e)
         {
             int quantidade = int.Parse(quantidadeAguaLabel.Text);
-            AdicionarAoCarrinho(9, quantidade);
-            AtualizarTotal();
-            quantidadeAguaLabel.Text = "1";
-            if (quantidade == 1)
+            var produto = Produtos.ListaProdutos[9];
+            if (produto.Estoque >= quantidade)
             {
-                MessageBox.Show($"x{quantidade} coxinha adicionada ao carrinho", "Confirmação");
+                AdicionarAoCarrinho(9, quantidade);
+                AtualizarTotal();
+                quantidadeAguaLabel.Text = "1";
+                if (quantidade == 1)
+                {
+                    MessageBox.Show($"x{quantidade} água mineral adicionada ao carrinho", "Confirmação");
+                }
+                else
+                {
+                    MessageBox.Show($"x{quantidade} águas minerais adicionadas ao carrinho", "Confirmação");
+                }
             }
             else
             {
-                MessageBox.Show($"x{quantidade} coxinhas adicionadas ao carrinho", "Confirmação");
+                MessageBox.Show($"Estoque insuficiente para {produto.Descriçao}.\nDisponível: {produto.Estoque}", "Erro");
+                quantidadeAguaLabel.Text = "1";
             }
         }
 

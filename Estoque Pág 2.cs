@@ -122,10 +122,123 @@ namespace Cantina_10._0_Projeto_Final
 
         private void Estoque_Pág_2_Load(object sender, EventArgs e)
         {
+            AtualizarTelaEstoque2();
             numericHamburguerSimples.Maximum = decimal.MaxValue;
             numericHamburguerComQueijo.Maximum = decimal.MaxValue;
             numericXTudo.Maximum = decimal.MaxValue;
             numericAguaMineral.Maximum = decimal.MaxValue;
+        }
+
+        private void atualizarHamburguerSimplesLabel_Click(object sender, EventArgs e)
+        {
+            Produtos.ListaProdutos[6].Estoque += (int)numericHamburguerSimples.Value;
+            MessageBox.Show($"Estoque de hambúrguer simples atualizado para {Produtos.ListaProdutos[6].Estoque}!", "Estoque atualizado");
+            AtualizarTelaEstoque2();
+            numericHamburguerSimples.Value = 0;
+        }
+
+        private void atualizarHamburguerComQueijoLabel_Click(object sender, EventArgs e)
+        {
+            Produtos.ListaProdutos[7].Estoque += (int)numericHamburguerComQueijo.Value;
+            MessageBox.Show($"Estoque de hambúrguer com queijo atualizado para {Produtos.ListaProdutos[7].Estoque}!", "Estoque atualizado");
+            AtualizarTelaEstoque2();
+            numericHamburguerComQueijo.Value = 0;
+        }
+
+        private void atualizarXTudoLabel_Click(object sender, EventArgs e)
+        {
+            Produtos.ListaProdutos[8].Estoque += (int)numericXTudo.Value;
+            MessageBox.Show($"Estoque de x-tudo atualizado para {Produtos.ListaProdutos[8].Estoque}!", "Estoque atualizado");
+            AtualizarTelaEstoque2();
+            numericXTudo.Value = 0;
+        }
+
+        private void atualizarAguaMineralLabel_Click(object sender, EventArgs e)
+        {
+            Produtos.ListaProdutos[9].Estoque += (int)numericAguaMineral.Value;
+            MessageBox.Show($"Estoque de água mineral atualizado para {Produtos.ListaProdutos[9].Estoque}!", "Estoque atualizado");
+            AtualizarTelaEstoque2();
+            numericAguaMineral.Value = 0;
+        }
+
+        public void AtualizarTelaEstoque2()
+        {
+            int estoqueHamburguerSimples = Produtos.ListaProdutos[6].Estoque;
+            estoqueTotalHamburguerSimples.Text = estoqueHamburguerSimples.ToString();
+            int estoqueHamburguerQueijo = Produtos.ListaProdutos[7].Estoque;
+            estoqueTotalHamburguerComQueijo.Text = estoqueHamburguerQueijo.ToString();
+            int estoqueXTudo = Produtos.ListaProdutos[8].Estoque;
+            estoqueTotalXTudo.Text = estoqueXTudo.ToString();
+            int estoqueAguaMineral = Produtos.ListaProdutos[9].Estoque;
+            estoqueTotalAguaMineral.Text = estoqueAguaMineral.ToString(); 
+        }
+
+        private void diminuirHamburguerSimples_Click(object sender, EventArgs e)
+        {
+            int estoqueHamburguerSimples = Produtos.ListaProdutos[6].Estoque;
+            if (estoqueHamburguerSimples >= numericHamburguerSimples.Value)
+            {
+                Produtos.ListaProdutos[6].Estoque -= (int)numericHamburguerSimples.Value;
+                MessageBox.Show($"Estoque de hambúrguer simples atualizado para {Produtos.ListaProdutos[6].Estoque}!", "Estoque atualizado");
+                AtualizarTelaEstoque2();
+                numericHamburguerSimples.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Valor inválido", "Erro");
+                numericHamburguerSimples.Value = 0;
+            }
+        }
+
+        private void diminuirHamburguerComQueijo_Click(object sender, EventArgs e)
+        {
+            int estoqueHamburguerComQueijo = Produtos.ListaProdutos[7].Estoque;
+            if (estoqueHamburguerComQueijo >= numericHamburguerComQueijo.Value)
+            {
+                Produtos.ListaProdutos[7].Estoque -= (int)numericHamburguerComQueijo.Value;
+                MessageBox.Show($"Estoque de hambúrguer com queijo atualizado para {Produtos.ListaProdutos[7].Estoque}!", "Estoque atualizado");
+                AtualizarTelaEstoque2();
+                numericHamburguerComQueijo.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Valor inválido", "Erro");
+                numericHamburguerComQueijo.Value = 0;
+            }
+        }
+
+        private void diminuirXTudo_Click(object sender, EventArgs e)
+        {
+            int estoqueXTudo = Produtos.ListaProdutos[8].Estoque;
+            if (estoqueXTudo >= numericXTudo.Value)
+            {
+                Produtos.ListaProdutos[8].Estoque -= (int)numericXTudo.Value;
+                MessageBox.Show($"Estoque de x-tudo atualizado para {Produtos.ListaProdutos[8].Estoque}!", "Estoque atualizado");
+                AtualizarTelaEstoque2();
+                numericXTudo.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Valor inválido", "Erro");
+                numericXTudo.Value = 0;
+            }
+        }
+
+        private void diminuirAguaMineral_Click(object sender, EventArgs e)
+        {
+            int estoqueAguaMineral = Produtos.ListaProdutos[9].Estoque;
+            if(estoqueAguaMineral >= numericAguaMineral.Value)
+            {
+                Produtos.ListaProdutos[9].Estoque -= (int)numericAguaMineral.Value;
+                MessageBox.Show($"Estoque de água mineral atualizado para {Produtos.ListaProdutos[9].Estoque}!", "Estoque atualizado");
+                AtualizarTelaEstoque2();
+                numericAguaMineral.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Valor inválido", "Erro");
+                numericAguaMineral.Value = 0;
+            }
         }
     }
 }

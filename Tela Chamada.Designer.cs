@@ -238,12 +238,14 @@
             // 
             // preparandoListBox
             // 
+            preparandoListBox.BackColor = Color.FromArgb(243, 241, 238);
             preparandoListBox.FormattingEnabled = true;
             preparandoListBox.ItemHeight = 15;
             preparandoListBox.Location = new Point(12, 119);
             preparandoListBox.Name = "preparandoListBox";
             preparandoListBox.Size = new Size(290, 304);
             preparandoListBox.TabIndex = 102;
+            preparandoListBox.SelectedIndexChanged += preparandoListBox_SelectedIndexChanged;
             // 
             // preparandoLabel
             // 
@@ -267,12 +269,14 @@
             // 
             // prontosListBox
             // 
+            prontosListBox.BackColor = Color.FromArgb(243, 241, 238);
             prontosListBox.FormattingEnabled = true;
             prontosListBox.ItemHeight = 15;
             prontosListBox.Location = new Point(480, 119);
             prontosListBox.Name = "prontosListBox";
             prontosListBox.Size = new Size(290, 304);
             prontosListBox.TabIndex = 105;
+            prontosListBox.SelectedIndexChanged += prontosListBox_SelectedIndexChanged;
             // 
             // linha4
             // 

@@ -88,6 +88,7 @@ namespace Cantina_10._0_Projeto_Final
 
         private void Estoque_Load(object sender, EventArgs e)
         {
+            AtualizarTelaEstoque1();
             numericPaoDeQueijo.Maximum = decimal.MaxValue;
             numericCoxinha.Maximum = decimal.MaxValue;
             numericPastelDeCarne.Maximum = decimal.MaxValue;
@@ -177,6 +178,177 @@ namespace Cantina_10._0_Projeto_Final
             label9.Visible = false;
             linha4.Visible = false;
             estoqueLabel.Visible = false;
+        }
+
+        private void atualizarPaoDeQueijoLabel_Click(object sender, EventArgs e)
+        {
+            Produtos.ListaProdutos[0].Estoque += (int)numericPaoDeQueijo.Value;
+            MessageBox.Show($"Estoque de pão de queijo atualizado para {Produtos.ListaProdutos[0].Estoque}!", "Estoque atualizado");
+            AtualizarTelaEstoque1();
+            numericPaoDeQueijo.Value = 0;
+        }
+
+        private void atualizarCoxinhaLabel_Click(object sender, EventArgs e)
+        {
+            Produtos.ListaProdutos[1].Estoque += (int)numericCoxinha.Value;
+            MessageBox.Show($"Estoque de coxinha atualizada para {Produtos.ListaProdutos[1].Estoque}!", "Estoque atualizado");
+            AtualizarTelaEstoque1();
+            numericCoxinha.Value = 0;
+        }
+
+        private void atualizarPastelDeCarneLabel_Click(object sender, EventArgs e)
+        {
+            Produtos.ListaProdutos[2].Estoque += (int)numericPastelDeCarne.Value;
+            MessageBox.Show($"Estoque de pastel de carne atualizado para {Produtos.ListaProdutos[2].Estoque}!", "Estoque atualizado");
+            AtualizarTelaEstoque1();
+            numericPastelDeCarne.Value = 0;
+        }
+
+        private void atualizarPastelDeQueijoLabel_Click(object sender, EventArgs e)
+        {
+            Produtos.ListaProdutos[3].Estoque += (int)numericPastelDeQueijo.Value;
+            MessageBox.Show($"Estoque de pastel de queijo atualizado para {Produtos.ListaProdutos[3].Estoque}!", "Estoque atualizado");
+            AtualizarTelaEstoque1();
+            numericPastelDeQueijo.Value = 0;
+        }
+
+        private void atualizarSucoNaturalLabel_Click(object sender, EventArgs e)
+        {
+            Produtos.ListaProdutos[4].Estoque += (int)numericSucoNatural.Value;
+            MessageBox.Show($"Estoque de suco natural atualizado para {Produtos.ListaProdutos[4].Estoque}!", "Estoque atualizado");
+            AtualizarTelaEstoque1();
+            numericSucoNatural.Value = 0;
+        }
+
+        private void atualizarRefrigeranteLataLabel_Click(object sender, EventArgs e)
+        {
+            Produtos.ListaProdutos[5].Estoque += (int)numericRefrigeranteLata.Value;
+            MessageBox.Show($"Estoque de refrigerante lata atualizado para {Produtos.ListaProdutos[5].Estoque}!", "Estoque atualizado");
+            AtualizarTelaEstoque1();
+            numericRefrigeranteLata.Value = 0;
+        }
+
+        public void AtualizarTelaEstoque1()
+        {
+            int estoquePaoQueijo = Produtos.ListaProdutos[0].Estoque;
+            estoqueTotalPaoQueijo.Text = estoquePaoQueijo.ToString();
+            int estoqueCoxinha = Produtos.ListaProdutos[1].Estoque;
+            estoqueTotalCoxinha.Text = estoqueCoxinha.ToString();
+            int estoquePastelCarne = Produtos.ListaProdutos[2].Estoque;
+            estoqueTotalPastelCarne.Text = estoquePastelCarne.ToString();
+            int estoquePastelQueijo = Produtos.ListaProdutos[3].Estoque;
+            estoqueTotalPastelQueijo.Text = estoquePastelQueijo.ToString();
+            int estoqueSucoNatural = Produtos.ListaProdutos[4].Estoque;
+            estoqueTotalSucoNatural.Text = estoqueSucoNatural.ToString();
+            int estoqueRefrigeranteLata = Produtos.ListaProdutos[5].Estoque;
+            estoqueTotalRefrigeranteLata.Text = estoqueRefrigeranteLata.ToString();
+        }
+
+        private void diminuirPastelQueijo_Click(object sender, EventArgs e)
+        {
+            int estoquePastelDeQueijo = Produtos.ListaProdutos[3].Estoque;
+            if (estoquePastelDeQueijo >= numericPastelDeQueijo.Value)
+            {
+                Produtos.ListaProdutos[3].Estoque -= (int)numericPastelDeQueijo.Value;
+                MessageBox.Show($"Estoque de pastel de queijo atualizado para {Produtos.ListaProdutos[3].Estoque}!", "Estoque atualizado");
+                AtualizarTelaEstoque1();
+                numericPastelDeQueijo.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Valor inválido", "Erro");
+                numericPastelDeQueijo.Value = 0;
+            }
+        }
+
+        private void diminuirPastelCarne_Click(object sender, EventArgs e)
+        {
+            int estoquePastelDeCarne = Produtos.ListaProdutos[2].Estoque;
+            if (estoquePastelDeCarne >= numericPastelDeCarne.Value)
+            {
+                Produtos.ListaProdutos[2].Estoque -= (int)numericPastelDeCarne.Value;
+                MessageBox.Show($"Estoque de pastel de carne atualizado para {Produtos.ListaProdutos[2].Estoque}!", "Estoque atualizado");
+                AtualizarTelaEstoque1();
+                numericPastelDeCarne.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Valor inválido", "Erro");
+                numericPastelDeCarne.Value = 0;
+            }
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            int estoqueCoxinha = Produtos.ListaProdutos[1].Estoque;
+            if (estoqueCoxinha >= numericCoxinha.Value)
+            {
+                Produtos.ListaProdutos[1].Estoque -= (int)numericCoxinha.Value;
+                MessageBox.Show($"Estoque de coxinha atualizada para {Produtos.ListaProdutos[1].Estoque}!", "Estoque atualizado");
+                AtualizarTelaEstoque1();
+                numericCoxinha.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Valor inválido", "Erro");
+                numericCoxinha.Value = 0;
+            }
+        }
+
+        private void diminuirPaoDeQueijo_Click(object sender, EventArgs e)
+        {
+            int estoquePaoDeQueijo = Produtos.ListaProdutos[0].Estoque;
+            if (estoquePaoDeQueijo >= numericPaoDeQueijo.Value)
+            {
+                Produtos.ListaProdutos[0].Estoque -= (int)numericPaoDeQueijo.Value;
+                MessageBox.Show($"Estoque de pão de queijo atualizado para {Produtos.ListaProdutos[0].Estoque}!", "Estoque atualizado");
+                AtualizarTelaEstoque1();
+                numericPaoDeQueijo.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Valor inválido", "Erro");
+                numericPaoDeQueijo.Value = 0;
+            }
+        }
+
+        private void pictureBox19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void diminuirSucoNatural_Click(object sender, EventArgs e)
+        {
+            int estoqueSucoNatural = Produtos.ListaProdutos[4].Estoque;
+            if (estoqueSucoNatural >= numericSucoNatural.Value)
+            {
+                Produtos.ListaProdutos[4].Estoque -= (int)numericSucoNatural.Value;
+                MessageBox.Show($"Estoque de suco natural atualizado para {Produtos.ListaProdutos[4].Estoque}!", "Estoque atualizado");
+                AtualizarTelaEstoque1();
+                numericSucoNatural.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Valor inválido", "Erro");
+                numericSucoNatural.Value = 0;
+            }
+        }
+
+        private void diminuirRefrigeranteLata_Click(object sender, EventArgs e)
+        {
+            int estoqueRefrigeranteLata = Produtos.ListaProdutos[5].Estoque;
+            if(estoqueRefrigeranteLata >= numericRefrigeranteLata.Value)
+            {
+                Produtos.ListaProdutos[5].Estoque -= (int)numericRefrigeranteLata.Value;
+                MessageBox.Show($"Estoque de refrigerante lata atualizado para {Produtos.ListaProdutos[5].Estoque}!", "Estoque atualizado");
+                AtualizarTelaEstoque1();
+                numericRefrigeranteLata.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Valor inválido", "Erro");
+                numericRefrigeranteLata.Value = 0;
+            }
         }
     }
 }

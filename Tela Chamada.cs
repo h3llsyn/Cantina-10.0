@@ -177,5 +177,15 @@ namespace Cantina_10._0_Projeto_Final
             this.Hide();
             estoque.ShowDialog();
         }
+
+        private void prontosListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void preparandoListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -11,18 +11,21 @@ namespace Cantina_10._0_Projeto_Final
         private string descriçao;
         private double preço;
         private bool chapa;
+        private int estoque;
 
         public Produtos()
         {
             descriçao = string.Empty;
             preço = 0;
+            estoque = 0;
         }
 
-        public Produtos(string descriçao, double preço, bool chapa)
+        public Produtos(string descriçao, double preço, bool chapa, int estoque)
         {
             this.descriçao = descriçao;
             this.preço = preço;
             this.chapa = chapa;
+            this.estoque = estoque;
         }
 
         public string Descriçao
@@ -43,6 +46,12 @@ namespace Cantina_10._0_Projeto_Final
             set { chapa=value;}
         }
 
+        public int Estoque
+        {
+            get { return estoque;}
+            set { estoque = value;}
+        }
+
         public override string ToString()
         {
             return descriçao + " - R$" + preço.ToString("F2");
@@ -50,16 +59,16 @@ namespace Cantina_10._0_Projeto_Final
 
         public static List<Produtos> ListaProdutos = new List<Produtos>()
         {
-            new Produtos("Pão de Queijo", 3.50, false),
-            new Produtos("Coxinha", 5.00, false),
-            new Produtos("Pastel de Carne", 6.00, true),
-            new Produtos("Pastel de Queijo", 5.50, true),
-            new Produtos("Suco Natural (300ml)", 5.00, false),
-            new Produtos("Refrigerante Lata", 4.50, false),
-            new Produtos("Hambúrguer Simples", 8.00, true),
-            new Produtos("Hambúrguer Com Queijo", 9.00, true),
-            new Produtos("X-Tudo", 12.00, true),
-            new Produtos("Água Mineral (500ml)", 2.50, false)
+            new Produtos("Pão de Queijo", 3.50, false, 0),
+            new Produtos("Coxinha", 5.00, false, 0),
+            new Produtos("Pastel de Carne", 6.00, true, 0),
+            new Produtos("Pastel de Queijo", 5.50, true, 0),
+            new Produtos("Suco Natural (300ml)", 5.00, false, 0),
+            new Produtos("Refrigerante Lata", 4.50, false, 0),
+            new Produtos("Hambúrguer Simples", 8.00, true, 0),
+            new Produtos("Hambúrguer Com Queijo", 9.00, true, 0),
+            new Produtos("X-Tudo", 12.00, true, 0),
+            new Produtos("Água Mineral (500ml)", 2.50, false, 0)
         };
     }
 }

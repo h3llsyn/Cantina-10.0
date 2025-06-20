@@ -162,26 +162,42 @@ namespace Cantina_10._0_Projeto_Final
         private void AdicionarAoCarrinho(int index, int quantidade)
         {
             Produtos produto = Produtos.ListaProdutos[index];
-            double total = produto.Preço * quantidade;
-            Produtos produtos = Produtos.ListaProdutos[index];
-            Carrinho.Itens.Add((produto, quantidade));
-            carrinhoListBox1.Items.Add($"{produto.Descriçao} - R${total.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} x{quantidade}");
-            extratoListBox.Items.Add($"{produto.Descriçao} - R${total.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} x{quantidade}");
+            if (produto.Estoque >= quantidade)
+            {
+                double total = produto.Preço * quantidade;
+                Carrinho.Itens.Add((produto, quantidade));
+                carrinhoListBox1.Items.Add($"{produto.Descriçao} - R${total.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} x{quantidade}");
+                extratoListBox.Items.Add($"{produto.Descriçao} - R${total.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} x{quantidade}");
+                produto.Estoque -= quantidade;
+            }
+            else
+            {
+                MessageBox.Show($"Estoque insuficiente para {produto.Descriçao}.\nDisponível: {produto.Estoque}", "Erro");
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
             int quantidade = int.Parse(quantidadePaoQueijoLabel.Text);
-            AdicionarAoCarrinho(0, quantidade);
-            AtualizarTotal();
-            quantidadePaoQueijoLabel.Text = "1";
-            if (quantidade == 1)
+            var produto = Produtos.ListaProdutos[0];
+            if (produto.Estoque >= quantidade)
             {
-                MessageBox.Show($"x{quantidade} pão de queijo adicionado ao carrinho", "Confirmação");
+                AdicionarAoCarrinho(0, quantidade);
+                AtualizarTotal();
+                quantidadePaoQueijoLabel.Text = "1";
+                if (quantidade == 1)
+                {
+                    MessageBox.Show($"x{quantidade} pão de queijo adicionado ao carrinho", "Confirmação");
+                }
+                else
+                {
+                    MessageBox.Show($"x{quantidade} pães de queijo adicionados ao carrinho", "Confirmação");
+                }
             }
             else
             {
-                MessageBox.Show($"x{quantidade} pães de queijo adicionados ao carrinho", "Confirmação");
+                MessageBox.Show($"Estoque insuficiente para {produto.Descriçao}.\nDisponível: {produto.Estoque}", "Erro");
+                quantidadePaoQueijoLabel.Text = "1";
             }
         }
 
@@ -238,16 +254,25 @@ namespace Cantina_10._0_Projeto_Final
         private void adicionarCoxinha_Click(object sender, EventArgs e)
         {
             int quantidade = int.Parse(quantidadeCoxinhaLabel.Text);
-            AdicionarAoCarrinho(1, quantidade);
-            AtualizarTotal();
-            quantidadeCoxinhaLabel.Text = "1";
-            if (quantidade == 1)
+            var produto = Produtos.ListaProdutos[1];
+            if (produto.Estoque >= quantidade)
             {
-                MessageBox.Show($"x{quantidade} coxinha adicionada ao carrinho", "Confirmação");
+                AdicionarAoCarrinho(1, quantidade);
+                AtualizarTotal();
+                quantidadeCoxinhaLabel.Text = "1";
+                if (quantidade == 1)
+                {
+                    MessageBox.Show($"x{quantidade} coxinha adicionada ao carrinho", "Confirmação");
+                }
+                else
+                {
+                    MessageBox.Show($"x{quantidade} coxinhas adicionadas ao carrinho", "Confirmação");
+                }
             }
             else
             {
-                MessageBox.Show($"x{quantidade} coxinhas adicionadas ao carrinho", "Confirmação");
+                MessageBox.Show($"Estoque insuficiente para {produto.Descriçao}.\nDisponível: {produto.Estoque}", "Erro");
+                quantidadeCoxinhaLabel.Text = "1";
             }
         }
 
@@ -305,16 +330,25 @@ namespace Cantina_10._0_Projeto_Final
         private void adicionarPastelCarne_Click(object sender, EventArgs e)
         {
             int quantidade = int.Parse(quantidadePastelCarneLabel.Text);
-            AdicionarAoCarrinho(2, quantidade);
-            AtualizarTotal();
-            quantidadePastelCarneLabel.Text = "1";
-            if (quantidade == 1)
+            var produto = Produtos.ListaProdutos[2];
+            if (produto.Estoque >= quantidade)
             {
-                MessageBox.Show($"x{quantidade} pastel de carne adicionado ao carrinho", "Confirmação");
+                AdicionarAoCarrinho(2, quantidade);
+                AtualizarTotal();
+                quantidadePastelCarneLabel.Text = "1";
+                if (quantidade == 1)
+                {
+                    MessageBox.Show($"x{quantidade} pastel de carne adicionado ao carrinho", "Confirmação");
+                }
+                else
+                {
+                    MessageBox.Show($"x{quantidade} pastéis de carne adicionados ao carrinho", "Confirmação");
+                }
             }
             else
             {
-                MessageBox.Show($"x{quantidade} pastéis de carne adicionados ao carrinho", "Confirmação");
+                MessageBox.Show($"Estoque insuficiente para {produto.Descriçao}.\nDisponível: {produto.Estoque}", "Erro");
+                quantidadePastelCarneLabel.Text = "1";
             }
         }
 

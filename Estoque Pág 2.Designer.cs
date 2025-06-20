@@ -58,6 +58,30 @@
             numericHamburguerComQueijo = new NumericUpDown();
             numericAguaMineral = new NumericUpDown();
             numericXTudo = new NumericUpDown();
+            atualizarHamburguerSimplesLabel = new Label();
+            atualizarHamburguerComQueijoLabel = new Label();
+            atualizarXTudoLabel = new Label();
+            atualizarAguaMineralLabel = new Label();
+            pictureBox16 = new PictureBox();
+            pictureBox5 = new PictureBox();
+            diminuirHamburguerSimples = new Label();
+            label12 = new Label();
+            estoqueTotalHamburguerSimples = new Label();
+            pictureBox9 = new PictureBox();
+            pictureBox11 = new PictureBox();
+            diminuirHamburguerComQueijo = new Label();
+            label6 = new Label();
+            estoqueTotalHamburguerComQueijo = new Label();
+            pictureBox12 = new PictureBox();
+            pictureBox13 = new PictureBox();
+            diminuirXTudo = new Label();
+            label7 = new Label();
+            estoqueTotalXTudo = new Label();
+            pictureBox14 = new PictureBox();
+            pictureBox15 = new PictureBox();
+            diminuirAguaMineral = new Label();
+            label8 = new Label();
+            estoqueTotalAguaMineral = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)menuPicture).BeginInit();
@@ -73,6 +97,14 @@
             ((System.ComponentModel.ISupportInitialize)numericHamburguerComQueijo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericAguaMineral).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericXTudo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -179,7 +211,7 @@
             label2.BackColor = Color.FromArgb(202, 196, 183);
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(47, 163);
+            label2.Location = new Point(47, 151);
             label2.Name = "label2";
             label2.Size = new Size(171, 21);
             label2.TabIndex = 97;
@@ -191,7 +223,7 @@
             label3.BackColor = Color.FromArgb(202, 196, 183);
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(313, 163);
+            label3.Location = new Point(313, 151);
             label3.Name = "label3";
             label3.Size = new Size(183, 21);
             label3.TabIndex = 98;
@@ -204,7 +236,7 @@
             label4.BackColor = Color.FromArgb(202, 196, 183);
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(649, 163);
+            label4.Location = new Point(649, 151);
             label4.Name = "label4";
             label4.Size = new Size(64, 21);
             label4.TabIndex = 99;
@@ -216,7 +248,7 @@
             label5.BackColor = Color.FromArgb(202, 196, 183);
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(44, 340);
+            label5.Location = new Point(44, 328);
             label5.Name = "label5";
             label5.Size = new Size(176, 21);
             label5.TabIndex = 100;
@@ -374,7 +406,7 @@
             // numericHamburguerSimples
             // 
             numericHamburguerSimples.BackColor = Color.FromArgb(243, 241, 238);
-            numericHamburguerSimples.Location = new Point(85, 192);
+            numericHamburguerSimples.Location = new Point(85, 175);
             numericHamburguerSimples.Name = "numericHamburguerSimples";
             numericHamburguerSimples.Size = new Size(88, 23);
             numericHamburguerSimples.TabIndex = 117;
@@ -382,7 +414,7 @@
             // numericHamburguerComQueijo
             // 
             numericHamburguerComQueijo.BackColor = Color.FromArgb(243, 241, 238);
-            numericHamburguerComQueijo.Location = new Point(360, 192);
+            numericHamburguerComQueijo.Location = new Point(360, 175);
             numericHamburguerComQueijo.Name = "numericHamburguerComQueijo";
             numericHamburguerComQueijo.Size = new Size(88, 23);
             numericHamburguerComQueijo.TabIndex = 118;
@@ -390,7 +422,7 @@
             // numericAguaMineral
             // 
             numericAguaMineral.BackColor = Color.FromArgb(243, 241, 238);
-            numericAguaMineral.Location = new Point(85, 369);
+            numericAguaMineral.Location = new Point(85, 352);
             numericAguaMineral.Name = "numericAguaMineral";
             numericAguaMineral.Size = new Size(88, 23);
             numericAguaMineral.TabIndex = 119;
@@ -398,10 +430,298 @@
             // numericXTudo
             // 
             numericXTudo.BackColor = Color.FromArgb(243, 241, 238);
-            numericXTudo.Location = new Point(636, 192);
+            numericXTudo.Location = new Point(636, 175);
             numericXTudo.Name = "numericXTudo";
             numericXTudo.Size = new Size(88, 23);
             numericXTudo.TabIndex = 120;
+            // 
+            // atualizarHamburguerSimplesLabel
+            // 
+            atualizarHamburguerSimplesLabel.AutoSize = true;
+            atualizarHamburguerSimplesLabel.BackColor = Color.FromArgb(124, 122, 106);
+            atualizarHamburguerSimplesLabel.Cursor = Cursors.Hand;
+            atualizarHamburguerSimplesLabel.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold);
+            atualizarHamburguerSimplesLabel.Location = new Point(151, 227);
+            atualizarHamburguerSimplesLabel.Name = "atualizarHamburguerSimplesLabel";
+            atualizarHamburguerSimplesLabel.Size = new Size(56, 26);
+            atualizarHamburguerSimplesLabel.TabIndex = 125;
+            atualizarHamburguerSimplesLabel.Text = "Aumentar\r\nestoque";
+            atualizarHamburguerSimplesLabel.TextAlign = ContentAlignment.TopCenter;
+            atualizarHamburguerSimplesLabel.Click += atualizarHamburguerSimplesLabel_Click;
+            // 
+            // atualizarHamburguerComQueijoLabel
+            // 
+            atualizarHamburguerComQueijoLabel.AutoSize = true;
+            atualizarHamburguerComQueijoLabel.BackColor = Color.FromArgb(124, 122, 106);
+            atualizarHamburguerComQueijoLabel.Cursor = Cursors.Hand;
+            atualizarHamburguerComQueijoLabel.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold);
+            atualizarHamburguerComQueijoLabel.Location = new Point(424, 227);
+            atualizarHamburguerComQueijoLabel.Name = "atualizarHamburguerComQueijoLabel";
+            atualizarHamburguerComQueijoLabel.Size = new Size(56, 26);
+            atualizarHamburguerComQueijoLabel.TabIndex = 126;
+            atualizarHamburguerComQueijoLabel.Text = "Aumentar\r\nestoque";
+            atualizarHamburguerComQueijoLabel.TextAlign = ContentAlignment.TopCenter;
+            atualizarHamburguerComQueijoLabel.Click += atualizarHamburguerComQueijoLabel_Click;
+            // 
+            // atualizarXTudoLabel
+            // 
+            atualizarXTudoLabel.AutoSize = true;
+            atualizarXTudoLabel.BackColor = Color.FromArgb(124, 122, 106);
+            atualizarXTudoLabel.Cursor = Cursors.Hand;
+            atualizarXTudoLabel.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold);
+            atualizarXTudoLabel.Location = new Point(698, 227);
+            atualizarXTudoLabel.Name = "atualizarXTudoLabel";
+            atualizarXTudoLabel.Size = new Size(56, 26);
+            atualizarXTudoLabel.TabIndex = 127;
+            atualizarXTudoLabel.Text = "Aumentar\r\nestoque";
+            atualizarXTudoLabel.TextAlign = ContentAlignment.TopCenter;
+            atualizarXTudoLabel.Click += atualizarXTudoLabel_Click;
+            // 
+            // atualizarAguaMineralLabel
+            // 
+            atualizarAguaMineralLabel.AutoSize = true;
+            atualizarAguaMineralLabel.BackColor = Color.FromArgb(124, 122, 106);
+            atualizarAguaMineralLabel.Cursor = Cursors.Hand;
+            atualizarAguaMineralLabel.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold);
+            atualizarAguaMineralLabel.Location = new Point(151, 404);
+            atualizarAguaMineralLabel.Name = "atualizarAguaMineralLabel";
+            atualizarAguaMineralLabel.Size = new Size(56, 26);
+            atualizarAguaMineralLabel.TabIndex = 128;
+            atualizarAguaMineralLabel.Text = "Aumentar\r\nestoque";
+            atualizarAguaMineralLabel.TextAlign = ContentAlignment.TopCenter;
+            atualizarAguaMineralLabel.Click += atualizarAguaMineralLabel_Click;
+            // 
+            // pictureBox16
+            // 
+            pictureBox16.Cursor = Cursors.Hand;
+            pictureBox16.Image = (Image)resources.GetObject("pictureBox16.Image");
+            pictureBox16.Location = new Point(136, 220);
+            pictureBox16.Name = "pictureBox16";
+            pictureBox16.Size = new Size(85, 40);
+            pictureBox16.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox16.TabIndex = 146;
+            pictureBox16.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Cursor = Cursors.Hand;
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(42, 220);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(85, 40);
+            pictureBox5.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox5.TabIndex = 147;
+            pictureBox5.TabStop = false;
+            // 
+            // diminuirHamburguerSimples
+            // 
+            diminuirHamburguerSimples.AutoSize = true;
+            diminuirHamburguerSimples.BackColor = Color.FromArgb(124, 122, 106);
+            diminuirHamburguerSimples.Cursor = Cursors.Hand;
+            diminuirHamburguerSimples.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            diminuirHamburguerSimples.Location = new Point(60, 227);
+            diminuirHamburguerSimples.Name = "diminuirHamburguerSimples";
+            diminuirHamburguerSimples.Size = new Size(50, 26);
+            diminuirHamburguerSimples.TabIndex = 148;
+            diminuirHamburguerSimples.Text = "Diminuir\r\nestoque";
+            diminuirHamburguerSimples.TextAlign = ContentAlignment.TopCenter;
+            diminuirHamburguerSimples.Click += diminuirHamburguerSimples_Click;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.BackColor = Color.FromArgb(202, 196, 183);
+            label12.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.Location = new Point(60, 202);
+            label12.Name = "label12";
+            label12.Size = new Size(93, 17);
+            label12.TabIndex = 149;
+            label12.Text = "Estoque Total:";
+            // 
+            // estoqueTotalHamburguerSimples
+            // 
+            estoqueTotalHamburguerSimples.AutoSize = true;
+            estoqueTotalHamburguerSimples.BackColor = Color.FromArgb(202, 196, 183);
+            estoqueTotalHamburguerSimples.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            estoqueTotalHamburguerSimples.Location = new Point(150, 202);
+            estoqueTotalHamburguerSimples.Name = "estoqueTotalHamburguerSimples";
+            estoqueTotalHamburguerSimples.Size = new Size(15, 17);
+            estoqueTotalHamburguerSimples.TabIndex = 150;
+            estoqueTotalHamburguerSimples.Text = "0";
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.Cursor = Cursors.Hand;
+            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
+            pictureBox9.Location = new Point(409, 220);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(85, 40);
+            pictureBox9.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox9.TabIndex = 151;
+            pictureBox9.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            pictureBox11.Cursor = Cursors.Hand;
+            pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
+            pictureBox11.Location = new Point(315, 220);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(85, 40);
+            pictureBox11.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox11.TabIndex = 152;
+            pictureBox11.TabStop = false;
+            // 
+            // diminuirHamburguerComQueijo
+            // 
+            diminuirHamburguerComQueijo.AutoSize = true;
+            diminuirHamburguerComQueijo.BackColor = Color.FromArgb(124, 122, 106);
+            diminuirHamburguerComQueijo.Cursor = Cursors.Hand;
+            diminuirHamburguerComQueijo.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            diminuirHamburguerComQueijo.Location = new Point(333, 227);
+            diminuirHamburguerComQueijo.Name = "diminuirHamburguerComQueijo";
+            diminuirHamburguerComQueijo.Size = new Size(50, 26);
+            diminuirHamburguerComQueijo.TabIndex = 153;
+            diminuirHamburguerComQueijo.Text = "Diminuir\r\nestoque";
+            diminuirHamburguerComQueijo.TextAlign = ContentAlignment.TopCenter;
+            diminuirHamburguerComQueijo.Click += diminuirHamburguerComQueijo_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.FromArgb(202, 196, 183);
+            label6.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(331, 202);
+            label6.Name = "label6";
+            label6.Size = new Size(93, 17);
+            label6.TabIndex = 154;
+            label6.Text = "Estoque Total:";
+            // 
+            // estoqueTotalHamburguerComQueijo
+            // 
+            estoqueTotalHamburguerComQueijo.AutoSize = true;
+            estoqueTotalHamburguerComQueijo.BackColor = Color.FromArgb(202, 196, 183);
+            estoqueTotalHamburguerComQueijo.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            estoqueTotalHamburguerComQueijo.Location = new Point(421, 202);
+            estoqueTotalHamburguerComQueijo.Name = "estoqueTotalHamburguerComQueijo";
+            estoqueTotalHamburguerComQueijo.Size = new Size(15, 17);
+            estoqueTotalHamburguerComQueijo.TabIndex = 155;
+            estoqueTotalHamburguerComQueijo.Text = "0";
+            // 
+            // pictureBox12
+            // 
+            pictureBox12.Cursor = Cursors.Hand;
+            pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
+            pictureBox12.Location = new Point(683, 220);
+            pictureBox12.Name = "pictureBox12";
+            pictureBox12.Size = new Size(85, 40);
+            pictureBox12.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox12.TabIndex = 156;
+            pictureBox12.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            pictureBox13.Cursor = Cursors.Hand;
+            pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
+            pictureBox13.Location = new Point(589, 220);
+            pictureBox13.Name = "pictureBox13";
+            pictureBox13.Size = new Size(85, 40);
+            pictureBox13.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox13.TabIndex = 157;
+            pictureBox13.TabStop = false;
+            // 
+            // diminuirXTudo
+            // 
+            diminuirXTudo.AutoSize = true;
+            diminuirXTudo.BackColor = Color.FromArgb(124, 122, 106);
+            diminuirXTudo.Cursor = Cursors.Hand;
+            diminuirXTudo.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            diminuirXTudo.Location = new Point(607, 227);
+            diminuirXTudo.Name = "diminuirXTudo";
+            diminuirXTudo.Size = new Size(50, 26);
+            diminuirXTudo.TabIndex = 158;
+            diminuirXTudo.Text = "Diminuir\r\nestoque";
+            diminuirXTudo.TextAlign = ContentAlignment.TopCenter;
+            diminuirXTudo.Click += diminuirXTudo_Click;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.FromArgb(202, 196, 183);
+            label7.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Location = new Point(609, 202);
+            label7.Name = "label7";
+            label7.Size = new Size(93, 17);
+            label7.TabIndex = 159;
+            label7.Text = "Estoque Total:";
+            // 
+            // estoqueTotalXTudo
+            // 
+            estoqueTotalXTudo.AutoSize = true;
+            estoqueTotalXTudo.BackColor = Color.FromArgb(202, 196, 183);
+            estoqueTotalXTudo.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            estoqueTotalXTudo.Location = new Point(699, 202);
+            estoqueTotalXTudo.Name = "estoqueTotalXTudo";
+            estoqueTotalXTudo.Size = new Size(15, 17);
+            estoqueTotalXTudo.TabIndex = 160;
+            estoqueTotalXTudo.Text = "0";
+            // 
+            // pictureBox14
+            // 
+            pictureBox14.Cursor = Cursors.Hand;
+            pictureBox14.Image = (Image)resources.GetObject("pictureBox14.Image");
+            pictureBox14.Location = new Point(42, 397);
+            pictureBox14.Name = "pictureBox14";
+            pictureBox14.Size = new Size(85, 40);
+            pictureBox14.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox14.TabIndex = 161;
+            pictureBox14.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            pictureBox15.Cursor = Cursors.Hand;
+            pictureBox15.Image = (Image)resources.GetObject("pictureBox15.Image");
+            pictureBox15.Location = new Point(136, 397);
+            pictureBox15.Name = "pictureBox15";
+            pictureBox15.Size = new Size(85, 40);
+            pictureBox15.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox15.TabIndex = 162;
+            pictureBox15.TabStop = false;
+            // 
+            // diminuirAguaMineral
+            // 
+            diminuirAguaMineral.AutoSize = true;
+            diminuirAguaMineral.BackColor = Color.FromArgb(124, 122, 106);
+            diminuirAguaMineral.Cursor = Cursors.Hand;
+            diminuirAguaMineral.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            diminuirAguaMineral.Location = new Point(60, 404);
+            diminuirAguaMineral.Name = "diminuirAguaMineral";
+            diminuirAguaMineral.Size = new Size(50, 26);
+            diminuirAguaMineral.TabIndex = 163;
+            diminuirAguaMineral.Text = "Diminuir\r\nestoque";
+            diminuirAguaMineral.TextAlign = ContentAlignment.TopCenter;
+            diminuirAguaMineral.Click += diminuirAguaMineral_Click;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.FromArgb(202, 196, 183);
+            label8.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Location = new Point(60, 379);
+            label8.Name = "label8";
+            label8.Size = new Size(93, 17);
+            label8.TabIndex = 164;
+            label8.Text = "Estoque Total:";
+            // 
+            // estoqueTotalAguaMineral
+            // 
+            estoqueTotalAguaMineral.AutoSize = true;
+            estoqueTotalAguaMineral.BackColor = Color.FromArgb(202, 196, 183);
+            estoqueTotalAguaMineral.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            estoqueTotalAguaMineral.Location = new Point(150, 379);
+            estoqueTotalAguaMineral.Name = "estoqueTotalAguaMineral";
+            estoqueTotalAguaMineral.Size = new Size(15, 17);
+            estoqueTotalAguaMineral.TabIndex = 165;
+            estoqueTotalAguaMineral.Text = "0";
             // 
             // Estoque_Pág_2
             // 
@@ -409,6 +729,30 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
+            Controls.Add(estoqueTotalAguaMineral);
+            Controls.Add(label8);
+            Controls.Add(diminuirAguaMineral);
+            Controls.Add(atualizarAguaMineralLabel);
+            Controls.Add(pictureBox15);
+            Controls.Add(pictureBox14);
+            Controls.Add(estoqueTotalXTudo);
+            Controls.Add(label7);
+            Controls.Add(diminuirXTudo);
+            Controls.Add(atualizarXTudoLabel);
+            Controls.Add(pictureBox13);
+            Controls.Add(pictureBox12);
+            Controls.Add(estoqueTotalHamburguerComQueijo);
+            Controls.Add(label6);
+            Controls.Add(diminuirHamburguerComQueijo);
+            Controls.Add(atualizarHamburguerComQueijoLabel);
+            Controls.Add(pictureBox11);
+            Controls.Add(pictureBox9);
+            Controls.Add(estoqueTotalHamburguerSimples);
+            Controls.Add(label12);
+            Controls.Add(diminuirHamburguerSimples);
+            Controls.Add(atualizarHamburguerSimplesLabel);
+            Controls.Add(pictureBox5);
+            Controls.Add(pictureBox16);
             Controls.Add(numericXTudo);
             Controls.Add(numericAguaMineral);
             Controls.Add(numericHamburguerComQueijo);
@@ -458,6 +802,14 @@
             ((System.ComponentModel.ISupportInitialize)numericHamburguerComQueijo).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericAguaMineral).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericXTudo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -493,5 +845,29 @@
         private NumericUpDown numericHamburguerComQueijo;
         private NumericUpDown numericAguaMineral;
         private NumericUpDown numericXTudo;
+        private Label atualizarHamburguerSimplesLabel;
+        private Label atualizarHamburguerComQueijoLabel;
+        private Label atualizarXTudoLabel;
+        private Label atualizarAguaMineralLabel;
+        private PictureBox pictureBox16;
+        private PictureBox pictureBox5;
+        private Label diminuirHamburguerSimples;
+        private Label label12;
+        private Label estoqueTotalHamburguerSimples;
+        private PictureBox pictureBox9;
+        private PictureBox pictureBox11;
+        private Label diminuirHamburguerComQueijo;
+        private Label label6;
+        private Label estoqueTotalHamburguerComQueijo;
+        private PictureBox pictureBox12;
+        private PictureBox pictureBox13;
+        private Label diminuirXTudo;
+        private Label label7;
+        private Label estoqueTotalXTudo;
+        private PictureBox pictureBox14;
+        private PictureBox pictureBox15;
+        private Label diminuirAguaMineral;
+        private Label label8;
+        private Label estoqueTotalAguaMineral;
     }
 }

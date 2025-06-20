@@ -52,11 +52,18 @@ namespace Cantina_10._0_Projeto_Final
         private void AdicionarAoCarrinho(int index, int quantidade)
         {
             Produtos produto = Produtos.ListaProdutos[index];
-            double total = produto.Preço * quantidade;
-            Produtos produtos = Produtos.ListaProdutos[index];
-            Carrinho.Itens.Add((produto, quantidade));
-            carrinhoListBox2.Items.Add($"{produto.Descriçao} - R${total.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} x{quantidade}");
-            extratoListBox.Items.Add($"{produto.Descriçao} - R${total.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} x{quantidade}");
+            if (produto.Estoque >= quantidade)
+            {
+                double total = produto.Preço * quantidade;
+                Carrinho.Itens.Add((produto, quantidade));
+                carrinhoListBox2.Items.Add($"{produto.Descriçao} - R${total.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} x{quantidade}");
+                extratoListBox.Items.Add($"{produto.Descriçao} - R${total.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} x{quantidade}");
+                produto.Estoque -= quantidade;
+            }
+            else
+            {
+                MessageBox.Show($"Estoque insuficiente para {produto.Descriçao}.\nDisponível: {produto.Estoque}", "Erro");
+            }
         }
         public void AtualizarTotal()
         {
@@ -192,16 +199,25 @@ namespace Cantina_10._0_Projeto_Final
         private void adicionarPastelQueijo_Click(object sender, EventArgs e)
         {
             int quantidade = int.Parse(quantidadePastelQueijoLabel.Text);
-            AdicionarAoCarrinho(3, quantidade);
-            AtualizarTotal();
-            quantidadePastelQueijoLabel.Text = "1";
-            if (quantidade == 1)
+            var produto = Produtos.ListaProdutos[3];
+            if (produto.Estoque >= quantidade)
             {
-                MessageBox.Show($"x{quantidade} pastel de queijo adicionado ao carrinho", "Confirmação");
+                AdicionarAoCarrinho(3, quantidade);
+                AtualizarTotal();
+                quantidadePastelQueijoLabel.Text = "1";
+                if (quantidade == 1)
+                {
+                    MessageBox.Show($"x{quantidade} pastel de queijo adicionado ao carrinho", "Confirmação");
+                }
+                else
+                {
+                    MessageBox.Show($"x{quantidade} pastéis de queijo adicionados ao carrinho", "Confirmação");
+                }
             }
             else
             {
-                MessageBox.Show($"x{quantidade} pastéis de queijo adicionados ao carrinho", "Confirmação");
+                MessageBox.Show($"Estoque insuficiente para {produto.Descriçao}.\nDisponível: {produto.Estoque}", "Erro");
+                quantidadePastelQueijoLabel.Text = "1";
             }
         }
 
@@ -224,16 +240,25 @@ namespace Cantina_10._0_Projeto_Final
         private void adicionarSuco_Click(object sender, EventArgs e)
         {
             int quantidade = int.Parse(quantidadeSucoLabel.Text);
-            AdicionarAoCarrinho(4, quantidade);
-            AtualizarTotal();
-            quantidadeSucoLabel.Text = "1";
-            if (quantidade == 1)
+            var produto = Produtos.ListaProdutos[4];
+            if (produto.Estoque >= quantidade)
             {
-                MessageBox.Show($"x{quantidade} suco natural adicionado ao carrinho", "Confirmação");
+                AdicionarAoCarrinho(4, quantidade);
+                AtualizarTotal();
+                quantidadeSucoLabel.Text = "1";
+                if (quantidade == 1)
+                {
+                    MessageBox.Show($"x{quantidade} suco natural adicionado ao carrinho", "Confirmação");
+                }
+                else
+                {
+                    MessageBox.Show($"x{quantidade} sucos naturais adicionados ao carrinho", "Confirmação");
+                }
             }
             else
             {
-                MessageBox.Show($"x{quantidade} sucos naturais adicionados ao carrinho", "Confirmação");
+                MessageBox.Show($"Estoque insuficiente para {produto.Descriçao}.\nDisponível: {produto.Estoque}", "Erro");
+                quantidadeSucoLabel.Text = "1";
             }
         }
 
@@ -258,16 +283,25 @@ namespace Cantina_10._0_Projeto_Final
         private void label17_Click(object sender, EventArgs e)
         {
             int quantidade = int.Parse(quantidadeRefriLabel.Text);
-            AdicionarAoCarrinho(5, quantidade);
-            AtualizarTotal();
-            quantidadeRefriLabel.Text = "1";
-            if (quantidade == 1)
+            var produto = Produtos.ListaProdutos[5];
+            if (produto.Estoque >= quantidade)
             {
-                MessageBox.Show($"x{quantidade} refrigerante lata adicionado ao carrinho", "Confirmação");
+                AdicionarAoCarrinho(5, quantidade);
+                AtualizarTotal();
+                quantidadeRefriLabel.Text = "1";
+                if (quantidade == 1)
+                {
+                    MessageBox.Show($"x{quantidade} refrigerante lata adicionado ao carrinho", "Confirmação");
+                }
+                else
+                {
+                    MessageBox.Show($"x{quantidade} refrigerantes latas adicionados ao carrinho", "Confirmação");
+                }
             }
             else
             {
-                MessageBox.Show($"x{quantidade} refrigerantes latas adicionados ao carrinho", "Confirmação");
+                MessageBox.Show($"Estoque insuficiente para {produto.Descriçao}.\nDisponível: {produto.Estoque}", "Erro");
+                quantidadeRefriLabel.Text = "1";
             }
         }
 
