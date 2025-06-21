@@ -15,6 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="9.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Produtos Pág 4.cs">
       <SubType>Form</SubType>
     </Compile>

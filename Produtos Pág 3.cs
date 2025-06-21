@@ -13,6 +13,8 @@ namespace Cantina_10._0_Projeto_Final
         private Balcão balcão;
         private Cozinha cozinha;
         private Tela_Chamada tela_chamada;
+        private Estoque estoque;
+        private Gestão_de_Produtos gestão_De_Produtos;
 
         public ProdutosPág3(ProdutosPág1 produtosPág1)
         {
@@ -43,10 +45,23 @@ namespace Cantina_10._0_Projeto_Final
             InitializeComponent();
             this.cozinha = cozinha;
         }
+
         public ProdutosPág3(Tela_Chamada tela_chamada)
         {
             InitializeComponent();
             this.tela_chamada = tela_chamada;
+        }
+
+        public ProdutosPág3(Estoque estoque)
+        {
+            InitializeComponent();
+            this.estoque = estoque;
+        }
+
+        public ProdutosPág3(Gestão_de_Produtos gestão_De_Produtos)
+        {
+            InitializeComponent();
+            this.gestão_De_Produtos = gestão_De_Produtos;
         }
 
         private void AdicionarAoCarrinho(int index, int quantidade)
@@ -623,6 +638,8 @@ namespace Cantina_10._0_Projeto_Final
                 label9.Visible = false;
                 linha4.Visible = false;
                 estoqueLabel.Visible = false;
+                linha5.Visible = false;
+                gestãoDeProdutosLabel.Visible = false;
             }
             else
             {
@@ -636,17 +653,21 @@ namespace Cantina_10._0_Projeto_Final
                 label9.Visible = true;
                 linha4.Visible = true;
                 estoqueLabel.Visible = true;
+                linha5.Visible = true;
+                gestãoDeProdutosLabel.Visible = true;
 
                 menuOpcoes.BringToFront();
                 linha1.BringToFront();
                 linha2.BringToFront();
                 linha3.BringToFront();
                 linha4.BringToFront();
+                linha5.BringToFront();
                 produtosLabel.BringToFront();
                 balcaoLabel.BringToFront();
                 cozinhaLabel.BringToFront();
                 label9.BringToFront();
                 estoqueLabel.BringToFront();
+                gestãoDeProdutosLabel.BringToFront();
             }
         }
 
@@ -662,6 +683,8 @@ namespace Cantina_10._0_Projeto_Final
             label9.Visible = false;
             linha4.Visible = false;
             estoqueLabel.Visible = false;
+            linha5.Visible = false;
+            gestãoDeProdutosLabel.Visible = false;
         }
 
         private void balcaoLabel_Click(object sender, EventArgs e)
@@ -712,6 +735,13 @@ namespace Cantina_10._0_Projeto_Final
         private void pictureBox21_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void gestãoDeProdutosLabel_Click(object sender, EventArgs e)
+        {
+            Gestão_de_Produtos gestão_De_Produtos = new Gestão_de_Produtos(this);
+            this.Hide();
+            gestão_De_Produtos.ShowDialog();
         }
     }
 }

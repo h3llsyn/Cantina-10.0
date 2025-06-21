@@ -82,6 +82,9 @@
             diminuirAguaMineral = new Label();
             label8 = new Label();
             estoqueTotalAguaMineral = new Label();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            linha5 = new Label();
+            gestãoDeProdutosLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)menuPicture).BeginInit();
@@ -279,7 +282,7 @@
             menuOpcoes.Image = (Image)resources.GetObject("menuOpcoes.Image");
             menuOpcoes.Location = new Point(8, 35);
             menuOpcoes.Name = "menuOpcoes";
-            menuOpcoes.Size = new Size(233, 125);
+            menuOpcoes.Size = new Size(232, 160);
             menuOpcoes.SizeMode = PictureBoxSizeMode.Zoom;
             menuOpcoes.TabIndex = 105;
             menuOpcoes.TabStop = false;
@@ -395,7 +398,7 @@
             estoqueLabel.BackColor = Color.FromArgb(202, 196, 183);
             estoqueLabel.Cursor = Cursors.Hand;
             estoqueLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            estoqueLabel.Location = new Point(12, 137);
+            estoqueLabel.Location = new Point(12, 139);
             estoqueLabel.Name = "estoqueLabel";
             estoqueLabel.Size = new Size(57, 17);
             estoqueLabel.TabIndex = 114;
@@ -723,12 +726,50 @@
             estoqueTotalAguaMineral.TabIndex = 165;
             estoqueTotalAguaMineral.Text = "0";
             // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Location = new Point(294, 273);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(494, 170);
+            flowLayoutPanel1.TabIndex = 166;
+            // 
+            // linha5
+            // 
+            linha5.AutoSize = true;
+            linha5.BackColor = Color.FromArgb(202, 196, 183);
+            linha5.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            linha5.Location = new Point(12, 145);
+            linha5.Name = "linha5";
+            linha5.Size = new Size(208, 17);
+            linha5.TabIndex = 167;
+            linha5.Text = "________________________________________";
+            linha5.Visible = false;
+            // 
+            // gestãoDeProdutosLabel
+            // 
+            gestãoDeProdutosLabel.AutoSize = true;
+            gestãoDeProdutosLabel.BackColor = Color.FromArgb(202, 196, 183);
+            gestãoDeProdutosLabel.Cursor = Cursors.Hand;
+            gestãoDeProdutosLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gestãoDeProdutosLabel.Location = new Point(12, 164);
+            gestãoDeProdutosLabel.Name = "gestãoDeProdutosLabel";
+            gestãoDeProdutosLabel.Size = new Size(129, 17);
+            gestãoDeProdutosLabel.TabIndex = 168;
+            gestãoDeProdutosLabel.Text = "Gestão de Produtos";
+            gestãoDeProdutosLabel.Visible = false;
+            gestãoDeProdutosLabel.Click += gestãoDeProdutosLabel_Click;
+            // 
             // Estoque_Pág_2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
+            Controls.Add(gestãoDeProdutosLabel);
+            Controls.Add(estoqueLabel);
+            Controls.Add(linha5);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(estoqueTotalAguaMineral);
             Controls.Add(label8);
             Controls.Add(diminuirAguaMineral);
@@ -757,7 +798,6 @@
             Controls.Add(numericAguaMineral);
             Controls.Add(numericHamburguerComQueijo);
             Controls.Add(numericHamburguerSimples);
-            Controls.Add(estoqueLabel);
             Controls.Add(label9);
             Controls.Add(cozinhaLabel);
             Controls.Add(balcaoLabel);
@@ -869,5 +909,8 @@
         private Label diminuirAguaMineral;
         private Label label8;
         private Label estoqueTotalAguaMineral;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Label linha5;
+        private Label gestãoDeProdutosLabel;
     }
 }

@@ -57,6 +57,11 @@ namespace Cantina_10._0_Projeto_Final
             return descriçao + " - R$" + preço.ToString("F2");
         }
 
+        public string DetalhesCompletos()
+        {
+            return $"{descriçao} - R${preço:F2} | {(chapa ? "Chapa" : "Não Chapa")} | Estoque: {estoque}";
+        }
+
         public static List<Produtos> ListaProdutos = new List<Produtos>()
         {
             new Produtos("Pão de Queijo", 3.50, false, 0),

@@ -104,6 +104,8 @@
             label9 = new Label();
             linha4 = new Label();
             estoqueLabel = new Label();
+            linha5 = new Label();
+            gestãoDeProdutosLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -928,7 +930,7 @@
             menuOpcoes.Image = (Image)resources.GetObject("menuOpcoes.Image");
             menuOpcoes.Location = new Point(8, 35);
             menuOpcoes.Name = "menuOpcoes";
-            menuOpcoes.Size = new Size(233, 125);
+            menuOpcoes.Size = new Size(232, 160);
             menuOpcoes.SizeMode = PictureBoxSizeMode.Zoom;
             menuOpcoes.TabIndex = 87;
             menuOpcoes.TabStop = false;
@@ -1044,7 +1046,7 @@
             estoqueLabel.BackColor = Color.FromArgb(202, 196, 183);
             estoqueLabel.Cursor = Cursors.Hand;
             estoqueLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            estoqueLabel.Location = new Point(12, 137);
+            estoqueLabel.Location = new Point(12, 139);
             estoqueLabel.Name = "estoqueLabel";
             estoqueLabel.Size = new Size(57, 17);
             estoqueLabel.TabIndex = 98;
@@ -1052,13 +1054,41 @@
             estoqueLabel.Visible = false;
             estoqueLabel.Click += estoqueLabel_Click;
             // 
+            // linha5
+            // 
+            linha5.AutoSize = true;
+            linha5.BackColor = Color.FromArgb(202, 196, 183);
+            linha5.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            linha5.Location = new Point(12, 145);
+            linha5.Name = "linha5";
+            linha5.Size = new Size(208, 17);
+            linha5.TabIndex = 99;
+            linha5.Text = "________________________________________";
+            linha5.Visible = false;
+            // 
+            // gestãoDeProdutosLabel
+            // 
+            gestãoDeProdutosLabel.AutoSize = true;
+            gestãoDeProdutosLabel.BackColor = Color.FromArgb(202, 196, 183);
+            gestãoDeProdutosLabel.Cursor = Cursors.Hand;
+            gestãoDeProdutosLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gestãoDeProdutosLabel.Location = new Point(12, 164);
+            gestãoDeProdutosLabel.Name = "gestãoDeProdutosLabel";
+            gestãoDeProdutosLabel.Size = new Size(129, 17);
+            gestãoDeProdutosLabel.TabIndex = 100;
+            gestãoDeProdutosLabel.Text = "Gestão de Produtos";
+            gestãoDeProdutosLabel.Visible = false;
+            gestãoDeProdutosLabel.Click += gestãoDeProdutosLabel_Click;
+            // 
             // ProdutosPág3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
+            Controls.Add(gestãoDeProdutosLabel);
             Controls.Add(estoqueLabel);
+            Controls.Add(linha5);
             Controls.Add(label9);
             Controls.Add(linha4);
             Controls.Add(cozinhaLabel);
@@ -1249,5 +1279,7 @@
         private Label label9;
         private Label linha4;
         private Label estoqueLabel;
+        private Label linha5;
+        private Label gestãoDeProdutosLabel;
     }
 }

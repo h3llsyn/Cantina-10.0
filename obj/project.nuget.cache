@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "V0jknJVFZZc=",
+  "dgSpecHash": "tI+eX5o41eQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\lavin\\source\\repos\\Cantina 10.0 Projeto Final\\Cantina-10.0\\Cantina 10.0 Projeto Final.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\lavin\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.6\\microsoft.win32.systemevents.9.0.6.nupkg.sha512",
+    "C:\\Users\\lavin\\.nuget\\packages\\system.drawing.common\\9.0.6\\system.drawing.common.9.0.6.nupkg.sha512"
+  ],
   "logs": []
 }
