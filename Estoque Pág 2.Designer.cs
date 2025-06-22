@@ -224,13 +224,13 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.FromArgb(202, 196, 183);
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Segoe UI", 11F, FontStyle.Bold | FontStyle.Underline);
             label3.ForeColor = Color.Black;
             label3.Location = new Point(313, 151);
             label3.Name = "label3";
-            label3.Size = new Size(183, 21);
+            label3.Size = new Size(183, 20);
             label3.TabIndex = 98;
-            label3.Text = "Hambúrguer C/ Queijo";
+            label3.Text = "Hambúrguer Com Queijo";
             label3.TextAlign = ContentAlignment.TopCenter;
             // 
             // label4

@@ -271,13 +271,13 @@
             // 
             label10.AutoSize = true;
             label10.BackColor = Color.FromArgb(202, 196, 183);
-            label10.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            label10.Font = new Font("Segoe UI", 12.5F, FontStyle.Bold | FontStyle.Underline);
             label10.ForeColor = Color.Black;
-            label10.Location = new Point(59, 187);
+            label10.Location = new Point(35, 195);
             label10.Name = "label10";
-            label10.Size = new Size(146, 60);
+            label10.Size = new Size(186, 23);
             label10.TabIndex = 33;
-            label10.Text = "Água Mineral\r\n(500ml)";
+            label10.Text = "Água Mineral (500ml)";
             label10.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label11

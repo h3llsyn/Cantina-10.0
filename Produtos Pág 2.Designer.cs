@@ -292,13 +292,13 @@
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.FromArgb(202, 196, 183);
-            label6.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Segoe UI", 12.5F, FontStyle.Bold | FontStyle.Underline);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(326, 185);
+            label6.Location = new Point(305, 192);
             label6.Name = "label6";
-            label6.Size = new Size(141, 60);
+            label6.Size = new Size(181, 23);
             label6.TabIndex = 25;
-            label6.Text = "Suco Natural\r\n(300ml)";
+            label6.Text = "Suco Natural (300ml)";
             label6.TextAlign = ContentAlignment.MiddleCenter;
             label6.Click += label6_Click;
             // 

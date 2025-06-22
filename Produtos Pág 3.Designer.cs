@@ -306,13 +306,13 @@
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.FromArgb(202, 196, 183);
-            label6.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Segoe UI", 11F, FontStyle.Bold | FontStyle.Underline);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(327, 170);
+            label6.Location = new Point(305, 180);
             label6.Name = "label6";
-            label6.Size = new Size(138, 60);
+            label6.Size = new Size(183, 20);
             label6.TabIndex = 25;
-            label6.Text = "Hambúrguer\r\nCom Queijo";
+            label6.Text = "Hambúrguer Com Queijo";
             label6.TextAlign = ContentAlignment.MiddleCenter;
             label6.Click += label6_Click;
             // 
@@ -403,13 +403,13 @@
             // 
             label10.AutoSize = true;
             label10.BackColor = Color.FromArgb(202, 196, 183);
-            label10.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            label10.Font = new Font("Segoe UI", 12.5F, FontStyle.Bold | FontStyle.Underline);
             label10.ForeColor = Color.Black;
-            label10.Location = new Point(59, 170);
+            label10.Location = new Point(38, 177);
             label10.Name = "label10";
-            label10.Size = new Size(138, 60);
+            label10.Size = new Size(181, 23);
             label10.TabIndex = 33;
-            label10.Text = "Hambúrguer\r\nSimples";
+            label10.Text = "Hambúrguer Simples";
             label10.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label11

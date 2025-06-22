@@ -132,6 +132,7 @@ namespace Cantina_10._0_Projeto_Final
         {
             //AtualizarProdutosNaTelaApartirDe10();
             AtualizarTelaEstoque2();
+            AtualizarProdutosEdicao2();
             numericHamburguerSimples.Maximum = decimal.MaxValue;
             numericHamburguerComQueijo.Maximum = decimal.MaxValue;
             numericXTudo.Maximum = decimal.MaxValue;
@@ -319,6 +320,16 @@ namespace Cantina_10._0_Projeto_Final
             Gestão_de_Produtos gestão_De_Produtos = new Gestão_de_Produtos(this);
             this.Hide();
             gestão_De_Produtos.ShowDialog();
+        }
+        private void AtualizarProdutosEdicao2()
+        {
+            List<Label> labelsProdutos2 = new List<Label> { label2, label3, label4, label5};
+            int inicio = 6;
+
+            for (int i = 0; i < labelsProdutos2.Count && (i + inicio) < Produtos.ListaProdutos.Count; i++)
+            {
+                labelsProdutos2[i].Text = Produtos.ListaProdutos[i + inicio].Descriçao;
+            }
         }
     }
 }

@@ -96,6 +96,7 @@ namespace Cantina_10._0_Projeto_Final
         private void Estoque_Load(object sender, EventArgs e)
         {
             AtualizarTelaEstoque1();
+            AtualizarProdutosEdicao();
             numericPaoDeQueijo.Maximum = decimal.MaxValue;
             numericCoxinha.Maximum = decimal.MaxValue;
             numericPastelDeCarne.Maximum = decimal.MaxValue;
@@ -371,6 +372,20 @@ namespace Cantina_10._0_Projeto_Final
             Gestão_de_Produtos gestão_De_Produtos = new Gestão_de_Produtos(this);
             this.Hide();
             gestão_De_Produtos.ShowDialog();
+        }
+
+        private void AtualizarProdutosEdicao()
+        {
+            List<Label> labelsProdutos = new List<Label> { label2, label3, label4, label5, label6, label7};
+            for (int i = 0; i < labelsProdutos.Count && i < Produtos.ListaProdutos.Count; i++)
+            {
+                labelsProdutos[i].Text = Produtos.ListaProdutos[i].Descriçao;
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

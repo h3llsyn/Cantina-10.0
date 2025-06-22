@@ -72,12 +72,12 @@ namespace Cantina_10._0_Projeto_Final
         public Gestão_de_Produtos()
         {
             InitializeComponent();
-            estoqueProdutoNumericUpDown.Maximum = decimal.MaxValue;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
         }
 
         private void Gestão_de_Produtos_Load(object sender, EventArgs e)
         {
+            estoqueProdutoNumericUpDown.Maximum = decimal.MaxValue;
             AtualizarListBox();
         }
 
@@ -194,6 +194,7 @@ namespace Cantina_10._0_Projeto_Final
             produtoSelecionado.Preço = (double)novoPreco;
             produtoSelecionado.Chapa = novaChapa;
             produtoSelecionado.Estoque = novoEstoque;
+
 
             AtualizarListBox();
 

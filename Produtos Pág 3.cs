@@ -2,6 +2,7 @@ using System.Globalization;
 using System.Reflection.Emit;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Label = System.Windows.Forms.Label;
 
 namespace Cantina_10._0_Projeto_Final
 {
@@ -131,6 +132,7 @@ namespace Cantina_10._0_Projeto_Final
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            AtualizarProdutosEdicao();
             preçoTotalCarrinhoLabel.Text = "R$00,00";
             precoPagarLabel.Text = "R$00,00";
             AtualizarCarrinho();
@@ -742,6 +744,22 @@ namespace Cantina_10._0_Projeto_Final
             Gestão_de_Produtos gestão_De_Produtos = new Gestão_de_Produtos(this);
             this.Hide();
             gestão_De_Produtos.ShowDialog();
+        }
+
+        private void AtualizarProdutosEdicao()
+        {
+            int inicio = 6;
+            List<Label> labelsProdutosPag3 = new List<Label> { label10, label6, label3 };
+            for (int i = 0; i < labelsProdutosPag3.Count && (i + inicio) < Produtos.ListaProdutos.Count; i++)
+            {
+                labelsProdutosPag3[i].Text = Produtos.ListaProdutos[i + inicio].Descriçao;
+            }
+
+            List<Label> precosProdutosPag3 = new List<Label> { label15, label2, label18 };
+            for (int i = 0; i < precosProdutosPag3.Count && (i + inicio) < Produtos.ListaProdutos.Count; i++)
+            {
+                precosProdutosPag3[i].Text = "R$ " + Produtos.ListaProdutos[i + inicio].Preço.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"));
+            }
         }
     }
 }

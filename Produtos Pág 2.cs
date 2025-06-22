@@ -2,6 +2,7 @@ using System.Globalization;
 using System.Reflection.Emit;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Label = System.Windows.Forms.Label;
 
 namespace Cantina_10._0_Projeto_Final
 {
@@ -123,6 +124,7 @@ namespace Cantina_10._0_Projeto_Final
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            AtualizarProdutosEdicao();
             preçoTotalCarrinhoLabel.Text = "R$00,00";
             precoPagarLabel.Text = "R$00,00";
             AtualizarCarrinho();
@@ -746,6 +748,22 @@ namespace Cantina_10._0_Projeto_Final
         private void fundoPagamentoPictureBox_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AtualizarProdutosEdicao()
+        {
+            int inicio = 3;
+            List<Label> labelsProdutosPag2 = new List<Label> { label10, label6, label3 };
+            for (int i = 0; i < labelsProdutosPag2.Count && (i + inicio) < Produtos.ListaProdutos.Count; i++)
+            {
+                labelsProdutosPag2[i].Text = Produtos.ListaProdutos[i + inicio].Descriçao;
+            }
+
+            List<Label> precosProdutosPag2 = new List<Label> { label15, label2, label18 };
+            for (int i = 0; i < precosProdutosPag2.Count && (i + inicio) < Produtos.ListaProdutos.Count; i++)
+            {
+                precosProdutosPag2[i].Text = "R$ " + Produtos.ListaProdutos[i + inicio].Preço.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"));
+            }
         }
     }
 }
