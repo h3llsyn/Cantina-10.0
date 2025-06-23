@@ -262,3 +262,11 @@ C:\Users\lavin\source\repos\Cantina 10.0 Projeto Final\Cantina-10.0\bin\Debug\ne
 C:\Users\lavin\source\repos\Cantina 10.0 Projeto Final\Cantina-10.0\obj\Debug\net8.0-windows\Cantina 10.0 Projeto Final.csproj.AssemblyReference.cache
 C:\Users\lavin\source\repos\Cantina 10.0 Projeto Final\Cantina-10.0\obj\Debug\net8.0-windows\Cantina_10._0_Projeto_Final.Gestão_de_Produtos.resources
 C:\Users\lavin\source\repos\Cantina 10.0 Projeto Final\Cantina-10.0\obj\Debug\net8.0-windows\Cantina .76BDFE97.Up2Date
+C:\Users\25162917\source\repos\Cantina 10.0\Cantina-10.0\bin\Debug\net8.0-windows\Microsoft.Win32.SystemEvents.dll
+C:\Users\25162917\source\repos\Cantina 10.0\Cantina-10.0\bin\Debug\net8.0-windows\System.Drawing.Common.dll
+C:\Users\25162917\source\repos\Cantina 10.0\Cantina-10.0\bin\Debug\net8.0-windows\System.Private.Windows.Core.dll
+C:\Users\25162917\source\repos\Cantina 10.0\Cantina-10.0\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\25162917\source\repos\Cantina 10.0\Cantina-10.0\obj\Debug\net8.0-windows\Cantina 10.0 Projeto Final.csproj.AssemblyReference.cache
+C:\Users\25162917\source\repos\Cantina 10.0\Cantina-10.0\obj\Debug\net8.0-windows\Cantina_10._0_Projeto_Final.Gestão_de_Produtos.resources
+C:\Users\25162917\source\repos\Cantina 10.0\Cantina-10.0\obj\Debug\net8.0-windows\Cantina_10._0_Projeto_Final.Login.resources
+C:\Users\25162917\source\repos\Cantina 10.0\Cantina-10.0\obj\Debug\net8.0-windows\Cantina .76BDFE97.Up2Date
